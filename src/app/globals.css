@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+/* 
+  font-weight: 400;
+  color: #6b7280;
+  font-family: var(--font-ubuntu); */
+}
+
+body {
+  margin: 0;
+
+}

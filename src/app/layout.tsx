@@ -1,0 +1,38 @@
+// app/layout.tsx (or similar file)
+
+import './globals.css'
+
+import { Analytics } from '@vercel/analytics/react'
+import type { Metadata } from 'next'
+import { Arsenal} from 'next/font/google'
+
+import Container from './components/Container'
+
+const arsenal = Arsenal({
+  variable: '--font-family-arsenal',
+  weight: ['400', '700'],
+  style: ['normal', 'italic'],
+  subsets: ['latin'],
+})
+
+export const metadata: Metadata = {
+  title: 'Joëlle Villegas',
+  description: 'Géo-biologue',
+}
+
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode
+}>) {
+  return (
+    <html className={` ${arsenal.variable} `}>
+      <body className="h-full">
+        <Container>
+          {children}
+          <Analytics />
+        </Container>
+      </body>
+    </html>
+  )
+}
