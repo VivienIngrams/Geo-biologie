@@ -1,7 +1,6 @@
 import Image from 'next/legacy/image'
 import Link from 'next/link'
 
-import Verification from '~/app/components/Verification'
 import { getClient } from '~/sanity/lib/sanity.client'
 import { urlForImage } from '~/sanity/lib/sanity.image';
 import { getHomePage } from '~/sanity/lib/sanity.queries'
