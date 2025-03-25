@@ -16,7 +16,7 @@ export default function ServicesPage() {
         <div className="space-y-4">
           <p className="text-center mx-auto max-w-[800px]">
             Je me propose de vous aider dans ces domaines particuliers que sont les relations avec votre environnement,
-            l'analyse et le traîtement de déséquilibres liés à des interactions dont on ne perçoit pas toujours la
+            l&apos;analyse et le traîtement de déséquilibres liés à des interactions dont on ne perçoit pas toujours la
             cause.
           </p>
         </div>
@@ -25,7 +25,7 @@ export default function ServicesPage() {
           {/* Card 1 */}
           <div className="flex flex-col rounded-lg border bg-card text-card-foreground shadow-sm">
             <div className="flex flex-col space-y-1.5 p-6">
-              <h3 className="text-lg font-semibold leading-none tracking-tight">Harmonisation de l'habitat</h3>
+              <h3 className="text-lg font-semibold leading-none tracking-tight">Harmonisation de l&apos;habitat</h3>
               <p className="text-sm text-muted-foreground">Pour un espace de vie équilibré</p>
             </div>
             <div className="flex-1 p-6 pt-0">
@@ -36,7 +36,7 @@ export default function ServicesPage() {
                 </li>
                 <li className="flex items-start gap-2">
                   <Check className="h-5 w-5 text-primary shrink-0 mt-0.5" />
-                  <span>Identification des sources d'influence positives et négatives</span>
+                  <span>Identification des sources d&apos;influence positives et négatives</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <Check className="h-5 w-5 text-primary shrink-0 mt-0.5" />
@@ -96,13 +96,13 @@ export default function ServicesPage() {
           <div className="flex flex-col rounded-lg border bg-card text-card-foreground shadow-sm">
             <div className="flex flex-col space-y-1.5 p-6">
               <h3 className="text-lg font-semibold leading-none tracking-tight">Radiesthésie</h3>
-              <p className="text-sm text-muted-foreground">Recherche d'eau et d'informations</p>
+              <p className="text-sm text-muted-foreground">Recherche d&apos;eau et d&apos;informations</p>
             </div>
             <div className="flex-1 p-6 pt-0">
               <ul className="space-y-2">
                 <li className="flex items-start gap-2">
                   <Check className="h-5 w-5 text-primary shrink-0 mt-0.5" />
-                  <span>Recherche de sources d'eau</span>
+                  <span>Recherche de sources d&apos;eau</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <Check className="h-5 w-5 text-primary shrink-0 mt-0.5" />
@@ -207,7 +207,7 @@ export default function ServicesPage() {
               <ul className="space-y-2">
                 <li className="flex items-start gap-2">
                   <Check className="h-5 w-5 text-primary shrink-0 mt-0.5" />
-                  <span>Conseils pour l'aménagement de votre espace</span>
+                  <span>Conseils pour l&apos;aménagement de votre espace</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <Check className="h-5 w-5 text-primary shrink-0 mt-0.5" />
@@ -244,7 +244,7 @@ export default function ServicesPage() {
               <div className="p-6 pt-0">
                 <p>
                   Nous échangeons par téléphone ou par email pour comprendre vos besoins et définir le type
-                  d'intervention nécessaire.
+                  d&apos;intervention nécessaire.
                 </p>
               </div>
             </div>
@@ -269,7 +269,7 @@ export default function ServicesPage() {
               </div>
               <div className="p-6 pt-0">
                 <p>
-                  Je vous propose des solutions adaptées et assure un suivi pour vérifier l'efficacité des mesures mises
+                  Je vous propose des solutions adaptées et assure un suivi pour vérifier l&apos;efficacité des mesures mises
                   en place.
                 </p>
               </div>
@@ -280,7 +280,7 @@ export default function ServicesPage() {
         <div className="flex justify-center pt-8">
           <Link href="/contact">
             <button className="inline-flex items-center justify-center rounded-md bg-primary px-8 py-3 text-base font-medium text-primary-foreground ring-offset-background transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50">
-              Me contacter pour plus d'informations
+              Me contacter pour plus d&apos;informations
               <ArrowRight className="ml-2 h-4 w-4" />
             </button>
           </Link>
