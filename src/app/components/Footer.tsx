@@ -1,7 +1,6 @@
 'use client'
 
 import Link from 'next/link'
-import NavMenu from './NavMenu'
 
 export default function Footer() {
   return (
@@ -20,7 +19,7 @@ export default function Footer() {
         </Link>
       </div>
 
-      <NavMenu />
+   
     </footer>
   )
 }

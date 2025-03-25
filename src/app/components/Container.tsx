@@ -1,5 +1,6 @@
 'use client'
 
+import NavMenu from '../components/NavMenu'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 
@@ -14,15 +15,7 @@ export default function Container({ children }: { children: React.ReactNode }) {
 
   return (
     <div className="max-w-screen h-full font-ubuntu">
-      <div
-        className={`${
-          isHomePage
-            ? 'hidden'
-            : 'fixed  top-0 z-50 h-12 w-full  bg-white flex flex-col items-center justify-center'
-        }`}
-      >
-        
-      </div>
+     <NavMenu />
 
       <main className="w-full ">{children}</main>
 
