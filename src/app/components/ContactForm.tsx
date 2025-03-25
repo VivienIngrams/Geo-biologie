@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useRef, useState, useEffect } from 'react'
+import React, { useEffect,useRef, useState } from 'react'
 import ReCAPTCHA from 'react-google-recaptcha'
 
 const ContactForm: React.FC = () => {
@@ -11,6 +11,7 @@ const ContactForm: React.FC = () => {
   useEffect(() => {
     window.scrollTo(0, 0)
   }, [])
+  console.log(siteKey)
 
   const handleCaptchaChange = (token: string | null) => {
     if (token) setIsVerified(true)
@@ -133,12 +134,12 @@ const ContactForm: React.FC = () => {
 
       <div className="md:grid grid-cols-2">
         <div className="flex flex-col py-4">
-          <ReCAPTCHA
+          {/* <ReCAPTCHA
             sitekey={siteKey}
             ref={recaptchaRef}
             onChange={handleCaptchaChange}
             onExpired={handleCaptchaExpired}
-          />
+          /> */}
         </div>
         <div className="flex md:items-start md:justify-end">
           <button

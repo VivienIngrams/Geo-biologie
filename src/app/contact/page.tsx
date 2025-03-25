@@ -1,4 +1,5 @@
 import ContactForm from '../components/ContactForm';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "../components/ui/card";
 
 export default function ContactPage() {
 
