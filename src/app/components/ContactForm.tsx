@@ -3,6 +3,9 @@
 import React, { useEffect,useRef, useState } from 'react'
 import ReCAPTCHA from 'react-google-recaptcha'
 
+import { Button } from '../components/ui/button'
+import { Card } from '../components/ui/card'
+
 const ContactForm: React.FC = () => {
   const siteKey = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY || ''
   const recaptchaRef = useRef<ReCAPTCHA>(null)
@@ -61,6 +64,7 @@ const ContactForm: React.FC = () => {
   }
 
   return (
+    <Card className='p-2'>
     <form
       method="post"
       action="/api"
@@ -80,7 +84,7 @@ const ContactForm: React.FC = () => {
           required
           minLength={3}
           maxLength={150}
-          className="font-arsenal border-2 rounded border-gray-400 p-1"
+          className="rounded-lg border bg-card text-card-foreground shadow"
           type="text"
         />
       </div>
@@ -96,7 +100,7 @@ const ContactForm: React.FC = () => {
           required
           minLength={8}
           maxLength={150}
-          className="font-arsenal border-2 rounded border-gray-400 p-1"
+          className="rounded-lg border bg-card text-card-foreground shadow"
           type="email"
         />
       </div>
@@ -109,7 +113,7 @@ const ContactForm: React.FC = () => {
           id="subject"
           name="subject"
           autoComplete="off"
-          className="font-arsenal border-2 rounded border-gray-400 p-1"
+          className="rounded-lg border bg-card text-card-foreground shadow"
           type="text"
         />
       </div>
@@ -125,7 +129,7 @@ const ContactForm: React.FC = () => {
           required
           minLength={20}
           maxLength={600}
-          className="font-arsenal border-2 rounded border-gray-400 p-1"
+          className="rounded-lg border bg-card text-card-foreground shadow"
           rows={5}
         />
       </div>
@@ -142,16 +146,16 @@ const ContactForm: React.FC = () => {
           /> */}
         </div>
         <div className="flex md:items-start md:justify-end">
-          <button
+          <Button
             type="submit"
-            className=" mb-20 md:mt-4 text-gray-700 hover:text-black hover:scale-105 ease-in duration-600 border-2 border-gray-400 rounded-lg shadow-md p-2 "
             disabled={!isVerified}
           >
             Envoyer
-          </button>
+          </Button>
         </div>
       </div>
     </form>
+    </Card>
   )
 }
 
