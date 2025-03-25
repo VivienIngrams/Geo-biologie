@@ -27,7 +27,7 @@ export default function RootLayout({
 }>) {
   return (
     <html className={` ${arsenal.variable} `}>
-      <body className="h-full">
+      <body className="h-full mx-2">
         <Container>
           {children}
           <Analytics />

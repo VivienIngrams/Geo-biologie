@@ -64,7 +64,7 @@ const ContactForm: React.FC = () => {
   }
 
   return (
-    <Card className='p-2'>
+    <Card className='p-4'>
     <form
       method="post"
       action="/api"
@@ -84,7 +84,7 @@ const ContactForm: React.FC = () => {
           required
           minLength={3}
           maxLength={150}
-          className="rounded-lg border bg-card text-card-foreground shadow"
+          className="p-2 rounded-lg border bg-card text-card-foreground shadow"
           type="text"
         />
       </div>
@@ -100,7 +100,7 @@ const ContactForm: React.FC = () => {
           required
           minLength={8}
           maxLength={150}
-          className="rounded-lg border bg-card text-card-foreground shadow"
+          className="p-2 rounded-lg border bg-card text-card-foreground shadow"
           type="email"
         />
       </div>
@@ -113,7 +113,7 @@ const ContactForm: React.FC = () => {
           id="subject"
           name="subject"
           autoComplete="off"
-          className="rounded-lg border bg-card text-card-foreground shadow"
+          className="p-2 rounded-lg border bg-card text-card-foreground shadow"
           type="text"
         />
       </div>
@@ -129,23 +129,16 @@ const ContactForm: React.FC = () => {
           required
           minLength={20}
           maxLength={600}
-          className="rounded-lg border bg-card text-card-foreground shadow"
-          rows={5}
+          className="p-2 rounded-lg border bg-card text-card-foreground shadow"
+          rows={6}
         />
       </div>
 
     
 
-      <div className="md:grid grid-cols-2">
-        <div className="flex flex-col py-4">
-          {/* <ReCAPTCHA
-            sitekey={siteKey}
-            ref={recaptchaRef}
-            onChange={handleCaptchaChange}
-            onExpired={handleCaptchaExpired}
-          /> */}
-        </div>
-        <div className="flex md:items-start md:justify-end">
+      <div className="">
+      
+        <div className="py-4 flex md:items-start md:justify-end">
           <Button
             type="submit"
             disabled={!isVerified}
