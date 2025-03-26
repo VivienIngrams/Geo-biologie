@@ -36,10 +36,9 @@ export default function ServicesPage() {
       title: "Harmonisation de l'habitat",
       subtitle: 'Pour un espace de vie équilibré',
       features: [
-        'Analyse complète de votre environnement',
-        "Identification des sources d'influence positives et négatives",
-        'Solutions personnalisées pour harmoniser votre espace',
-        'Utilisation de géométrie adaptée et tracés régulateurs',
+        'Analyse des influences positives et négatives de votre environnement',
+        'Harmonisation de l’espace avec des solutions adaptées',
+        'Utilisation de géométrie et tracés régulateurs',
       ],
     },
     {
@@ -47,8 +46,7 @@ export default function ServicesPage() {
       subtitle: 'Identifier les sources de perturbation',
       features: [
         'Mesure des champs électromagnétiques',
-        'Détection des courants souterrains',
-        'Identification des failles géologiques',
+        'Détection des courants souterrains et failles géologiques',
         'Analyse des perturbations énergétiques',
       ],
     },
@@ -56,40 +54,33 @@ export default function ServicesPage() {
       title: 'Radiesthésie',
       subtitle: "Recherche d'eau et d'informations",
       features: [
-        "Recherche de sources d'eau",
-        'Évaluation de la profondeur et du débit',
-        'Détection de réseaux énergétiques',
-        'Analyse des influences subtiles',
+        "Recherche de sources d'eau et estimation de leur potentiel",
+        'Détection de réseaux et influences énergétiques subtiles',
       ],
     },
     {
       title: 'Nettoyage aurique',
       subtitle: 'Purification énergétique',
       features: [
-        'Nettoyage des entités parasites',
-        'Effacement des mémoires négatives',
-        'Harmonisation des champs énergétiques',
-        'Rééquilibrage énergétique des lieux',
+        'Élimination des entités parasites et mémoires négatives',
+        'Rééquilibrage des champs énergétiques des lieux',
       ],
     },
     {
       title: 'Bien-être animal',
       subtitle: 'Harmonisation pour les animaux',
       features: [
-        'Analyse des espaces pour animaux domestiques',
-        'Optimisation des fermes et élevages',
-        'Harmonisation des ruches',
-        'Amélioration du bien-être animal',
+        'Analyse et optimisation des espaces pour animaux',
+        'Harmonisation des lieux de vie et élevages pour améliorer leur bien-être',
       ],
     },
     {
       title: 'Conseils personnalisés',
       subtitle: 'Accompagnement sur mesure',
       features: [
-        "Conseils pour l'aménagement de votre espace",
-        'Recommandations pour améliorer votre bien-être',
+        'Recommandations pour aménager vos espaces',
         'Solutions adaptées à vos besoins spécifiques',
-        'Suivi personnalisé',
+        'Suivi personnalisé pour un bien-être durable',
       ],
     },
   ]
@@ -97,43 +88,36 @@ export default function ServicesPage() {
   const applicationDomains = [
     {
       icon: <Home className="w-8 h-8" />,
-      title: "Habitat et Rénovation",
-      subtitle: "Espaces de vie et projets résidentiels",
+      title: 'Habitat et Rénovation',
       description: `
-         Identifier et neutraliser les perturbations géopathogènes.
-         Optimiser les espaces pour le bien-être et un sommeil de qualité.
-        Conseils sur les matériaux respectueux et études pré-construction.
+         Identifier et neutraliser les perturbations géopathogènes pour des espaces sains.
+         Conseils sur les matériaux et études pré-construction pour optimiser votre habitat.
       `,
     },
     {
       icon: <Server className="w-8 h-8" />,
-      title: "Commerces, Entreprises et Industries",
-      subtitle: "Espaces professionnels et productivité",
+      title: 'Commerces, Entreprises et Industries',
       description: `
-         Réduction des perturbations pour améliorer concentration et productivité.
-         Adaptation des grandes surfaces (bureaux, locaux industriels).
+         Améliorer la concentration et la productivité dans les espaces professionnels.
+         Adapter les environnements industriels et bureaux pour un bien-être accru.
       `,
     },
     {
       icon: <Tractor className="w-8 h-8" />,
-      title: "Espaces Verts et Exploitations Agricoles",
-      subtitle: "Agriculture, élevages et jardins",
+      title: 'Espaces Verts et Exploitations Agricoles',
       description: `
-         Amélioration de la qualité des cultures et des vins.
-         Bien-être animal grâce à l'identification des zones neutres.
+         Optimiser les zones agricoles et améliorer la qualité des cultures.
+         Créer des environnements favorables au bien-être animal.
       `,
     },
     {
       icon: <Building2 className="w-8 h-8" />,
-      title: "Établissements Collectifs",
-      subtitle: "Harmonie dans les espaces partagés",
+      title: 'Établissements Collectifs',
       description: `
-         Optimisation des espaces dans les centres collectifs.
-         Amélioration du bien-être des résidents et visiteurs.
+         Harmoniser les espaces partagés pour un meilleur confort des résidents et visiteurs.
       `,
     },
-  ];
-  
+  ]
 
   return (
     <div className="container py-12 md:py-16 lg:py-20">
@@ -144,20 +128,18 @@ export default function ServicesPage() {
             Mes Services
           </h1>
           <p className="text-lg text-muted-foreground mx-auto max-w-[700px]">
-            Une approche personnalisée pour harmoniser votre environnement et
-            améliorer votre bien-être
+          Des consultations personnalisées en géobiologie pour améliorer votre
+    bien-être, harmoniser vos espaces de vie, et analyser les déséquilibres
+    environnementaux
           </p>
           <div className="h-px w-[100px] bg-border mx-auto my-4"></div>
         </div>
 
         {/* Introduction */}
         <div className="space-y-4">
-          <p className="text-center mx-auto max-w-[800px]">
-            Je me propose de vous aider dans ces domaines particuliers que sont
-            les relations avec votre environnement, l&apos;analyse et le
-            traîtement de déséquilibres liés à des interactions dont on ne
-            perçoit pas toujours la cause.
-          </p>
+        <h2 className="text-xl font-bold ">
+        Découvrez mes services conçus pour vous aider à créer un environnement sain et harmonieux
+          </h2>
         </div>
 
         {/* Services Grid */}
@@ -198,9 +180,10 @@ export default function ServicesPage() {
             Champs d&apos;application : Dans quels domaines je peux vous aider
           </h2>
           <p className="text-center mx-auto max-w-[800px] text-muted-foreground">
-            Mes services en géobiologie visent à harmoniser vos espaces de vie
-            et de travail, en tenant compte des énergies naturelles et des
-            besoins spécifiques.
+            Lorsqu&apos;on ne peut pas changer un lieu, on peut néanmoins le
+            transformer et développer l&apos;art d&apos;habiter. Réussir une
+            harmonisation, c&apos;est alléger les corps subtils qui polluent
+            l&apos;état d&apos;esprit et la santé globale de l&apos;occupant.
           </p>
           <div className="grid gap-6 md:grid-cols-2">
             {applicationDomains.map((domain, index) => (
@@ -213,9 +196,6 @@ export default function ServicesPage() {
                     {domain.icon}
                   </div>
                   <CardTitle className="mt-2">{domain.title}</CardTitle>
-                  <p className=" mt-2">
-                    {domain.subtitle}
-                  </p>
                   <CardDescription>{domain.description}</CardDescription>
                 </CardContent>
               </Card>
@@ -233,17 +213,17 @@ export default function ServicesPage() {
               {
                 title: '1. Premier contact',
                 description:
-                  "Nous échangeons par téléphone ou par email pour comprendre vos besoins et définir le type d'intervention nécessaire.",
+                  'Un échange téléphonique ou par email pour comprendre vos besoins et définir l’intervention.',
               },
               {
                 title: '2. Visite et analyse',
                 description:
-                  'Je me déplace sur le lieu concerné pour réaliser une analyse complète et identifier les problématiques spécifiques.',
+                  'Une analyse approfondie sur place pour identifier les problématiques spécifiques.',
               },
               {
                 title: '3. Solutions et suivi',
                 description:
-                  "Je vous propose des solutions adaptées et assure un suivi pour vérifier l'efficacité des mesures mises en place.",
+                  'Des solutions adaptées suivies d’un accompagnement pour garantir leur efficacité.',
               },
             ].map((step, index) => (
               <Card key={index}>

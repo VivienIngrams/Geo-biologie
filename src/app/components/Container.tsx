@@ -14,10 +14,10 @@ export default function Container({ children }: { children: React.ReactNode }) {
   const isContactPage = path === '/contact'
 
   return (
-    <div className="max-w-screen h-full px-auto px-4 md:px-10 lg:px-16 xl:px-24 2xl:px-40">
+    <div className="max-w-screen h-full">
      <NavMenu />
 
-      <main className="w-full ">{children}</main>
+      <main className="w-full  px-auto px-4 md:px-10 lg:px-16 xl:px-24 2xl:px-40">{children}</main>
 
       {/* Footer */}
       <Footer />

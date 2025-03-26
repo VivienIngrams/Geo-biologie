@@ -135,7 +135,7 @@ export default async function HomePage() {
                 <CardContent>
                   <p>
                     Identification des sources d&apos;influence, positives ou négatives, pour harmoniser une maison, un lieu,
-                    des animaux de ferme, des ruches...
+                    des animaux de ferme, des ruches, des vignes...
                   </p>
                 </CardContent>
               </Card>
