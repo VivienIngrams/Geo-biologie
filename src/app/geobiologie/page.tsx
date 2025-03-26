@@ -1,5 +1,14 @@
-import { ArrowRight } from 'lucide-react'
-import { Map } from 'lucide-react'
+import {
+  ArrowRight,
+  Map,
+  Scale,
+  Leaf,
+  Globe,
+  Lightbulb,
+  Users,
+  BookOpen,
+  Award,
+} from 'lucide-react'
 import Link from 'next/link'
 
 import { Button } from '../components/ui/button'
@@ -11,264 +20,331 @@ import {
   CardTitle,
 } from '../components/ui/card'
 import { Separator } from '../components/ui/separator'
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '../components/ui/tabs'
 
 export default function GeobiologiePage() {
   return (
-    <div className="container py-12 md:py-16 lg:py-20">
-      <div className="mx-auto max-w-3xl space-y-12">
-        <div className="space-y-4">
-          <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
+    <div className="container py-8 md:py-12">
+      <div className="mx-auto max-w-4xl">
+        {/* Hero Section */}
+        <div className="mb-10 text-center">
+          <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl mb-3">
             La Géobiologie
           </h1>
-          <p className="text-lg text-muted-foreground">
-            Comprendre l&apos;influence de l&apos;environnement sur le vivant
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+            La géobiologie étudie l&apos;influence de l&apos;environnement sur
+            le vivant, en considérant les forces telluriques, cosmiques et les
+            influences modernes.
           </p>
-          <Separator className="my-4" />
+          <Separator className="my-6" />
         </div>
 
-        <section className="space-y-6">
-          <h2 className="text-2xl font-bold">Définition et origines</h2>
-          <div className="space-y-4">
+    
+        <div className="mb-10">
+          <CardHeader>
+            <CardTitle className="flex items-center">
+              <BookOpen className="h-5 w-5 text-primary mr-2" />
+              La géobiologie est une science basée sur les lois universelles
+              utilisée pour purifier notre espace de vie
+            </CardTitle>
+          </CardHeader>
+          <CardContent className="space-y-4">
             <p>
-              Étymologiquement, la géobiologie se décompose en &quot;gé&quot;
-              (la terre), &quot;bios&quot; (la vie) et &quot;logos&quot;
-              (l&apos;étude).
+               Lorsqu&apos;on ne peut pas changer un lieu, on peut
+              néanmoins le transformer et développer l&apos;art d&apos;habiter.
+              Réussir une harmonisation, c&apos;est alléger les corps subtils
+              qui polluent l&apos;état d&apos;esprit et la santé globale de
+              l&apos;occupant. Les influences peuvent être nombreuses: mémoires,
+              âmes errantes, forces telluriques et géophysiques, influences
+              électromagnétiques artificielles, réseaux, vortex, etc.
             </p>
-            <p>
-              D&apos;après une définition classique de la géobiologie (Larousse)
-              elle serait une &quot;science qui s&apos;occupe des rapports de
-              l&apos;évolution cosmique et géologique de la planète avec celle
-              de la matière vivante&quot;.
-            </p>
-            <p>
-              Le géobiologue étudie donc, et tend à optimiser leur interaction
-              avec le vivant, les influences naturelles d&apos;origine
-              tellurique d&apos;une part, et celles plus artificielles mais bien
-              réelles initiées par le monde moderne (électromagnétisme,
-              radioactivité ..)
-            </p>
-            <p>
-              À cela, il faut ajouter les phénomènes &quot;paranormaux&quot; qui
-              peuvent parfois apporter des perturbations sensibles dans un lieu.
-            </p>
-            <blockquote className="border-l-4 border-primary pl-4 italic">
-              &quot;La géobiologie est l&apos;influence de la Terre sur tout ce
-              qui vit. Notre globe est considéré dans son contexte planétaire,
-              car ses mouvements sont conditionnés par ceux des astres qui nous
-              entourent. Cette discipline prend donc en compte deux types de
-              forces:
-              <br />
-              <br />- celles qui sont propres à la Terre, elles sont appelées
-              &quot;telluriques&quot;.
-              <br />- celles qui viennent du ciel sont les
-              &quot;cosmiques&quot;.
-              <br />
-              <br />
-              La géobiologie va donc faire appel aussi bien à la géologie, la
-              biologie, l&apos;hydrologie qu&apos;à l&apos;astrophysique.&quot;
-              <br />— Gilbert Le Cossec, &quot;Le souffle de la Terre&quot;
-            </blockquote>
-          </div>
-        </section>
-
-        <section className="space-y-6">
-          <h2 className="text-2xl font-bold">Histoire de la géobiologie</h2>
-          <div className="space-y-4">
-            <p>
-              Le Feng Shui est apparu en Chine voilà plus de 3000 ans, et vise à
-              optimiser les emplacements des maisons d&apos;habitation ou des
-              tombeaux, ainsi que leur disposition interne, en fonction des
-              &quot;vents et de l&apos;eau&quot; (si l&apos;on s&apos;en tient à
-              la traduction littérale du terme); il est considéré comme
-              l&apos;ancêtre de la géobiologie.
-            </p>
-            <p>
-              On peut remonter encore plus loin avec le &quot;Vaastu
-              Shaastra&quot; pour les hindous, ou la géomancie pour les perses.
-            </p>
-            <p>
-              Toutes les anciennes cultures considèrent que le lieu a une
-              influence déterminante, que certains emplacements sont
-              particuliers, ne serait-ce qu&apos;en observant (comme le
-              faisaient par exemple les indiens d&apos;Amérique) la réaction des
-              animaux en certains endroits.
-            </p>
-            <p>
-              Hippocrate, le célèbre médecin et philosophe grec, déclarait, 4
-              siècles avant notre ère, que la santé des individus dépendait de
-              quatre facteurs: leur constitution, l&apos;air, l&apos;eau, et
-              l&apos;état du sous-sol.
-            </p>
-            <p>
-              Très tôt, le rôle des cours d&apos;eau souterrains a été étudié et
-              pris en compte, de même que la manière de les détecter, ce qui a
-              induit l&apos;apparition des &quot;sourciers&quot; (appelés
-              autrefois les &quot;rhabdomanciens&quot;), capables de découvrir
-              l&apos;eau, mais aussi pour certains, sa profondeur sous terre,
-              voire son débit.
-            </p>
-            <p>
-              La technique utilisée par le sourcier est appelée radiesthésie,
-              elle permet d&apos;ailleurs de dépasser largement le seul cadre de
-              la recherche d&apos;eaux souterraines.
-            </p>
-          </div>
-        </section>
-        <section className="space-y-6">
-          <Card>
-            <CardHeader>
-              <Map className="h-10 w-10 text-primary mb-2" />
-              <CardTitle>Guide pratique</CardTitle>
-              <CardDescription>
-              La Confédération nationale de géobiologie met à disposition des
-              personnes intéressé par les services d&apos;un géobiologue un
-              guide pratique des clients:
-              </CardDescription>
-            </CardHeader>
-            <CardContent>
-              
-              <div className="flex justify-center pt-8">
-              <Link href="/services">
-                <Button>
-                  Lire le guide pratique des clients
-                  <ArrowRight className="ml-2 h-4 w-4" />
-                </Button>
-              </Link>
+            <div className="grid md:grid-cols-2 gap-6">
+              <div>
+                <h3 className="font-medium mb-2">Origines</h3>
+                <p className=" text-muted-foreground">
+                  Pratiquée depuis plus de 3000 ans (Feng Shui en Chine, Vaastu
+                  Shaastra en Inde), la géobiologie moderne intègre science et
+                  traditions. C&apos;est un processus oral issu d&apos;une tradition ancestrale
+              qui influence l&apos;état vibratoire du lieu, telle une invisible
+              présence.
+                </p>
+              </div>
+              <div>
+                <h3 className="font-medium mb-2">Applications</h3>
+                <ul className=" text-muted-foreground space-y-1">
+                  <li className="flex items-start">
+                    <div className="mr-2 mt-1.5 h-1.5 w-1.5 rounded-full bg-primary"></div>
+                    <span>Habitat et bien-être</span>
+                  </li>
+                  <li className="flex items-start">
+                    <div className="mr-2 mt-1.5 h-1.5 w-1.5 rounded-full bg-primary"></div>
+                    <span>Espaces professionnels</span>
+                  </li>
+                  <li className="flex items-start">
+                    <div className="mr-2 mt-1.5 h-1.5 w-1.5 rounded-full bg-primary"></div>
+                    <span>Agriculture et élevage</span>
+                  </li>
+                </ul>
+              </div>
             </div>
-            </CardContent>
-          </Card>
-          <div className="space-y-4">
-            <p>
-              
+          </CardContent>
+        </div>
+
+        {/* Main Content */}
+        <div className="space-y-8 mb-10">
+          {/* Principles Cards */}
+          <div>
+            <h2 className="text-xl font-bold mb-4 flex items-center">
+              <Leaf className="h-5 w-5 text-primary mr-2" />
+              Principes fondamentaux
+            </h2>
+            <div className="grid gap-4 sm:grid-cols-2">
+              <Card className="bg-muted/50">
+                <CardHeader className="pb-2">
+                  <CardTitle className="text-base">
+                    Forces telluriques
+                  </CardTitle>
+                </CardHeader>
+                <CardContent className="text-sm">
+                  Courants d&apos;eau souterrains, failles géologiques, réseaux
+                  Hartmann et Curry.
+                </CardContent>
+              </Card>
+              <Card className="bg-muted/50">
+                <CardHeader className="pb-2">
+                  <CardTitle className="text-base">Forces cosmiques</CardTitle>
+                </CardHeader>
+                <CardContent className="text-sm">
+                  Rayonnements célestes du soleil, de la lune et d&apos;autres
+                  corps célestes.
+                </CardContent>
+              </Card>
+              <Card className="bg-muted/50">
+                <CardHeader className="pb-2">
+                  <CardTitle className="text-base">
+                    Influences modernes
+                  </CardTitle>
+                </CardHeader>
+                <CardContent className="text-sm">
+                  Champs électromagnétiques, appareils électriques, antennes
+                  relais.
+                </CardContent>
+              </Card>
+              <Card className="bg-muted/50">
+                <CardHeader className="pb-2">
+                  <CardTitle className="text-base">
+                    Phénomènes subtils
+                  </CardTitle>
+                </CardHeader>
+                <CardContent className="text-sm">
+                  Mémoires des lieux et perturbations énergétiques historiques.
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+
+          {/* Principles of Intervention */}
+          <div>
+            <h2 className="text-xl font-bold mb-4 flex items-center">
+              <Lightbulb className="h-5 w-5 text-primary mr-2" />
+              Principes d&apos;intervention
+            </h2>
+            <div className="grid gap-4 sm:grid-cols-2">
+              <div className="space-y-1">
+                <h3 className="font-medium">Prévention</h3>
+                <p className="text-sm text-muted-foreground">
+                  Identification des risques environnementaux et prévention
+                  primaire des maladies.
+                </p>
+              </div>
+              <div className="space-y-1">
+                <h3 className="font-medium">Épigénétique</h3>
+                <p className="text-sm text-muted-foreground">
+                  Impact de l&apos;environnement sur l&apos;expression
+                  génétique.
+                </p>
+              </div>
+              <div className="space-y-1">
+                <h3 className="font-medium">Exposome</h3>
+                <p className="text-sm text-muted-foreground">
+                  Évaluation des expositions environnementales cumulées.
+                </p>
+              </div>
+              <div className="space-y-1">
+                <h3 className="font-medium">Singularité du lieu</h3>
+                <p className="text-sm text-muted-foreground">
+                  Approches adaptées à l&apos;unicité de chaque lieu.
+                </p>
+              </div>
+              <div className="space-y-1">
+                <h3 className="font-medium">Approche pluridisciplinaire</h3>
+                <p className="text-sm text-muted-foreground">
+                  Collaboration avec d&apos;autres disciplines pour une vision
+                  complète.
+                </p>
+              </div>
+              <div className="space-y-1">
+                <h3 className="font-medium">Dialogue interdisciplinaire</h3>
+                <p className="text-sm text-muted-foreground">
+                  Échanges avec les disciplines académiques pour
+                  l&apos;innovation.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Tabs for Legal and Professional Info */}
+        <Tabs defaultValue="legal" className="mb-10">
+          <TabsList className="grid w-full grid-cols-2">
+            <TabsTrigger value="legal">Fondements juridiques</TabsTrigger>
+            <TabsTrigger value="professional">La profession</TabsTrigger>
+          </TabsList>
+
+          <TabsContent value="legal" className="p-4 border rounded-md mt-2">
+            <div className="space-y-4">
+              <div className="flex items-start">
+                <Scale className="h-5 w-5 text-primary mr-3 mt-1" />
+                <div>
+                  <h3 className="font-medium">
+                    Charte de l&apos;Environnement (2005)
+                  </h3>
+                  <p className="text-sm text-muted-foreground">
+                    L&apos;article 1 garantit le droit de chacun à vivre dans un
+                    environnement équilibré et respectueux de la santé.
+                  </p>
+                </div>
+              </div>
+              <div className="flex items-start">
+                <Scale className="h-5 w-5 text-primary mr-3 mt-1" />
+                <div>
+                  <h3 className="font-medium">
+                    Code de l&apos;environnement et Code de l&apos;urbanisme
+                  </h3>
+                  <p className="text-sm text-muted-foreground">
+                    Ces textes soulignent l&apos;importance de prévenir les
+                    risques environnementaux, sanitaires, et sonores.
+                  </p>
+                </div>
+              </div>
+              <div>
+                <h3 className="font-medium mb-2">La charte du géobiologue</h3>
+                <div className="grid gap-2 sm:grid-cols-2">
+                  <p className="text-sm text-muted-foreground flex items-start">
+                    <div className="mr-2 mt-1.5 h-1.5 w-1.5 rounded-full bg-primary"></div>
+                    <span>Exercer avec humanité et loyauté</span>
+                  </p>
+                  <p className="text-sm text-muted-foreground flex items-start">
+                    <div className="mr-2 mt-1.5 h-1.5 w-1.5 rounded-full bg-primary"></div>
+                    <span>Respecter la personne, l&apos;animal et le lieu</span>
+                  </p>
+                  <p className="text-sm text-muted-foreground flex items-start">
+                    <div className="mr-2 mt-1.5 h-1.5 w-1.5 rounded-full bg-primary"></div>
+                    <span>Respecter le secret professionnel</span>
+                  </p>
+                  <p className="text-sm text-muted-foreground flex items-start">
+                    <div className="mr-2 mt-1.5 h-1.5 w-1.5 rounded-full bg-primary"></div>
+                    <span>Ne pas poser de diagnostic médical</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </TabsContent>
+
+          <TabsContent
+            value="professional"
+            className="p-4 border rounded-md mt-2"
+          >
+            <div className="space-y-4">
+              <div className="flex items-start">
+                <Award className="h-5 w-5 text-primary mr-3 mt-1" />
+                <div>
+                  <h3 className="font-medium">
+                    Évolution et cadre professionnel
+                  </h3>
+                  <p className="text-sm text-muted-foreground">
+                    Registre National des Géobiologues professionnels et
+                    formations rigoureuses.
+                  </p>
+                </div>
+              </div>
+              <div className="flex items-start">
+                <Users className="h-5 w-5 text-primary mr-3 mt-1" />
+                <div>
+                  <h3 className="font-medium">Dynamisme et visibilité</h3>
+                  <p className="text-sm text-muted-foreground">
+                    Congrès annuel et Printemps de la Géobiologie pour renforcer
+                    la notoriété.
+                  </p>
+                </div>
+              </div>
+              <div className="flex items-start">
+                <Globe className="h-5 w-5 text-primary mr-3 mt-1" />
+                <div>
+                  <h3 className="font-medium">Internationalisation</h3>
+                  <p className="text-sm text-muted-foreground">
+                    Collaborations internationales et publications en plusieurs
+                    langues.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </TabsContent>
+        </Tabs>
+
+        {/* Conclusion and CTA */}
+        <div className="space-y-6">
+          <div className="bg-muted p-4 rounded-lg">
+            <h2 className="text-lg font-bold mb-2">Conclusion</h2>
+            <p className="text-sm">
+              La géobiologie, forte de plus de 40 ans d&apos;histoire, occupe
+              une place transversale dans le paysage socioprofessionnel
+              français. Elle offre des solutions uniques aux problématiques
+              environnementales, favorise une meilleure compréhension du vivant
+              et s&apos;affirme comme un acteur essentiel pour la santé et le
+              bien-être.
             </p>
-           
           </div>
-        </section>
 
-        <section className="space-y-6">
-          <h2 className="text-2xl font-bold">
-            Principes de base de la géobiologie
-          </h2>
-          <div className="grid gap-6 md:grid-cols-2">
-            <Card>
-              <CardHeader>
-                <CardTitle>Forces telluriques</CardTitle>
+          <div className="flex justify-center">
+            <Card className="w-full max-w-xs">
+              <CardHeader className="pb-2">
+                <div className="flex items-center">
+                  <Map className="h-6 w-6 text-primary mr-3" />
+                  <div>
+                    <CardTitle className="text-base">Guide pratique</CardTitle>
+                    <CardDescription className="text-xs">
+                      La Confédération nationale de géobiologie
+                    </CardDescription>
+                  </div>
+                </div>
               </CardHeader>
               <CardContent>
-                <p>
-                  Les influences naturelles d&apos;origine tellurique
-                  comprennent les courants d&apos;eau souterrains, les failles
-                  géologiques, les réseaux énergétiques terrestres comme les
-                  lignes Hartmann et Curry.
-                </p>
-              </CardContent>
-            </Card>
-            <Card>
-              <CardHeader>
-                <CardTitle>Forces cosmiques</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p>
-                  Les influences cosmiques proviennent des rayonnements
-                  célestes, notamment du soleil et de la lune, mais aussi
-                  d&apos;autres corps célestes qui interagissent avec notre
-                  environnement.
-                </p>
-              </CardContent>
-            </Card>
-            <Card>
-              <CardHeader>
-                <CardTitle>Influences modernes</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p>
-                  Les influences artificielles du monde moderne incluent les
-                  champs électromagnétiques générés par les appareils
-                  électriques, les antennes relais, les lignes à haute tension,
-                  etc.
-                </p>
-              </CardContent>
-            </Card>
-            <Card>
-              <CardHeader>
-                <CardTitle>Phénomènes subtils</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p>
-                  Les phénomènes &quot;paranormaux&quot; peuvent inclure les
-                  mémoires des lieux, les perturbations énergétiques liées à
-                  l&apos;histoire du lieu, ou d&apos;autres influences subtiles
-                  qui affectent le bien-être.
-                </p>
+                <div className="flex justify-center">
+                  <Link href="/services">
+                    <Button size="sm" className="group">
+                      Lire le guide
+                      <ArrowRight className="ml-2 h-3 w-3 transition-transform group-hover:translate-x-1" />
+                    </Button>
+                  </Link>
+                </div>
               </CardContent>
             </Card>
           </div>
-        </section>
 
-        <section className="space-y-6">
-          <h2 className="text-2xl font-bold">La charte du géobiologue</h2>
-          <div className="space-y-4">
-            <p>
-              En tant que géobiologue professionnelle, je m&apos;engage à
-              respecter la charte du géobiologue qui inclut notamment :
-            </p>
-            <ul className="list-disc pl-6 space-y-2">
-              <li>Exercer avec humanité, probité et loyauté</li>
-              <li>
-                Respecter le principe fondamental du respect de la personne
-                humaine, de l&apos;animal et du lieu
-              </li>
-              <li>
-                Respecter le secret professionnel et la vie privée des clients
-              </li>
-              <li>
-                Ne pas poser de diagnostic médical si je ne suis pas médecin
-              </li>
-              <li>
-                Me tenir régulièrement informée de l&apos;évolution des
-                disciplines que je pratique
-              </li>
-              <li>Ne pas créer de relation de dépendance avec mes clients</li>
-            </ul>
+          <div className="flex flex-col sm:flex-row justify-center gap-3 pt-4">
+            <Link href="/services" className="w-full sm:w-auto">
+              <Button className="w-full group">
+                Découvrir mes services
+                <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+              </Button>
+            </Link>
+            <Link href="/contact" className="w-full sm:w-auto">
+              <Button variant="outline" className="w-full">
+                Me contacter
+              </Button>
+            </Link>
           </div>
-        </section>
-
-        <section className="space-y-6">
-          <h2 className="text-2xl font-bold">Applications pratiques</h2>
-          <div className="space-y-4">
-            <p>
-              La géobiologie trouve des applications dans de nombreux domaines
-              de notre vie quotidienne :
-            </p>
-            <ul className="list-disc pl-6 space-y-2">
-              <li>
-                Optimisation des lieux d&apos;habitation pour améliorer le
-                bien-être et la santé
-              </li>
-              <li>Recherche de sources d&apos;eau souterraines</li>
-              <li>
-                Harmonisation des espaces de travail pour une meilleure
-                productivité
-              </li>
-              <li>
-                Amélioration du bien-être des animaux dans les fermes et
-                élevages
-              </li>
-              <li>
-                Protection contre les pollutions électromagnétiques modernes
-              </li>
-              <li>Résolution de problèmes récurrents dans certains lieux</li>
-            </ul>
-          </div>
-        </section>
-
-        <div className="flex justify-center pt-8">
-          <Link href="/services">
-            <Button>
-              Découvrir mes services
-              <ArrowRight className="ml-2 h-4 w-4" />
-            </Button>
-          </Link>
         </div>
       </div>
     </div>
