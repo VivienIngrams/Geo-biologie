@@ -1,4 +1,6 @@
+import { Mail, MapPin, Phone } from 'lucide-react'
 import Link from 'next/link'
+
 import ContactForm from '../components/ContactForm'
 import {
   Card,
@@ -7,7 +9,6 @@ import {
   CardHeader,
   CardTitle,
 } from '../components/ui/card'
-import { Mail, MapPin, Phone } from 'lucide-react'
 export default function ContactPage() {
   return (
     <div className="container py-12 md:py-16 lg:py-20">
@@ -74,7 +75,7 @@ export default function ContactPage() {
         </div>
 
         <div className="grid gap-8  md:grid-cols-2">
-          <div className="space-y-6 md:min-h-screen ">
+          <div className="space-y-6 md:min-h-screen  ">
             <h2 className="text-2xl font-bold">Envoyez-moi un message</h2>
             <p>
               Utilisez ce formulaire pour me contacter. Je vous répondrai dans
