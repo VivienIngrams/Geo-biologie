@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import ContactForm from '../components/ContactForm'
 import {
   Card,
@@ -72,8 +73,8 @@ export default function ContactPage() {
           </Card>
         </div>
 
-        <div className="grid gap-8 min-h-screen md:grid-cols-2">
-          <div className="space-y-6">
+        <div className="grid gap-8  md:grid-cols-2">
+          <div className="space-y-6 md:min-h-screen ">
             <h2 className="text-2xl font-bold">Envoyez-moi un message</h2>
             <p>
               Utilisez ce formulaire pour me contacter. Je vous répondrai dans
@@ -90,6 +91,17 @@ export default function ContactPage() {
             </div>
           </div>{' '}
         </div>
+      </div>
+      {/* Website Link */}
+      <div className=" z-60">
+        <Link
+          href="https://vivieningrams.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          className={` font-arsenal text-gray-500 hover:text-black tracking-normal leading-loose text-[12px] ml-12 md:ml-2 mb-1`}
+        >
+          Site web par Vivien Ingrams
+        </Link>
       </div>
     </div>
   )

@@ -70,7 +70,7 @@ const ContactForm: React.FC = () => {
       action="/api"
       encType="multipart/form-data"
       onSubmit={handleSubmit}
-      className="font-cinzel w-full"
+      className=" w-full"
     >
       <div className="flex flex-col">
         <label htmlFor="name" className=" text-sm py-1">

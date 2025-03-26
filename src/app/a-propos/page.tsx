@@ -1,244 +1,134 @@
+
+import { ArrowRight } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
-import { ArrowRight, Leaf, Map, Shield } from "lucide-react"
 
-import { Button } from "../components/ui/button"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "../components/ui/card"
-
-export default function Home() {
+export default function AboutPage() {
   return (
-    <div className="flex flex-col items-center">
-      <section className="w-full py-12 md:py-16 lg:py-20 xl:py-24">
-        <div className="container px-4 md:px-6">
-          <div className="grid gap-6 lg:grid-cols-2 lg:gap-12">
-            <div className="flex flex-col justify-center space-y-4">
-              <div className="space-y-2">
-                <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
-                  Joëlle Villegas, Géobiologue
-                </h1>
-                <p className="max-w-[700px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
-                  Harmonisez votre environnement de vie pour améliorer votre bien-être, votre santé et votre équilibre
-                  énergétique
-                </p>
-              </div>
-              <div className="flex flex-col gap-2 min-[400px]:flex-row">
-                <Link href="/contact">
-                  <Button className="w-full">Prendre rendez-vous</Button>
-                </Link>
-                <Link href="/services">
-                  <Button variant="outline" className="w-full">
-                    Découvrir mes services
-                  </Button>
-                </Link>
-              </div>
-            </div>
-            <div className="flex items-center justify-center">
-              <Image
-                src="/placeholder.svg?height=500&width=500"
-                width={500}
-                height={500}
-                alt="Joëlle Villegas, géobiologue"
-                className="aspect-square overflow-hidden rounded-xl object-cover"
-              />
-            </div>
-          </div>
+    <div className="container py-12 md:py-16 lg:py-20">
+      <div className="mx-auto max-w-4xl space-y-12">
+        <div className="space-y-4">
+          <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">À Propos de Moi</h1>
+          <p className="text-lg text-muted-foreground">Joëlle Villegas, géobiologue certifiée par Bioterres</p>
+          <div className="h-px w-full bg-border my-4"></div>
         </div>
-      </section>
 
-      <section className="w-full py-12 md:py-16 lg:py-20 bg-muted/50">
-        <div className="container px-4 md:px-6">
-          <div className="flex flex-col items-center justify-center space-y-4 text-center">
-            <div className="space-y-2">
-              <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
-                Qu&apos;est-ce que la Géobiologie ?
-              </h2>
-              <p className="max-w-[900px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
-                La géobiologie étudie l&apos;influence de la Terre sur tout ce qui vit. Elle prend en compte les forces
-                telluriques propres à la Terre et les forces cosmiques qui viennent du ciel.
-              </p>
-            </div>
-            <div className="mx-auto grid max-w-5xl grid-cols-1 gap-6 py-6 md:grid-cols-2 lg:grid-cols-3">
-              <Card>
-                <CardHeader>
-                  <Leaf className="h-10 w-10 text-primary mb-2" />
-                  <CardTitle>Harmonisation</CardTitle>
-                  <CardDescription>Rétablir l&apos;équilibre énergétique dans votre espace de vie</CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <p>Retrouvez un équilibre et une harmonie énergétique dans votre maison ou lieu de travail.</p>
-                </CardContent>
-              </Card>
-              <Card>
-                <CardHeader>
-                  <Shield className="h-10 w-10 text-primary mb-2" />
-                  <CardTitle>Protection</CardTitle>
-                  <CardDescription>Identifier et neutraliser les influences négatives</CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <p>Protection contre les sources de pollution électromagnétique, tellurique et paranormale.</p>
-                </CardContent>
-              </Card>
-              <Card>
-                <CardHeader>
-                  <Map className="h-10 w-10 text-primary mb-2" />
-                  <CardTitle>Expertise</CardTitle>
-                  <CardDescription>Analyse complète et solutions adaptées</CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <p>Expertise professionnelle pour identifier les problèmes et proposer des solutions sur mesure.</p>
-                </CardContent>
-              </Card>
-            </div>
-            <div className="flex flex-col gap-2 min-[400px]:flex-row">
-              <Link href="/geobiologie">
-                <Button variant="outline" className="w-full">
-                  En savoir plus
-                  <ArrowRight className="ml-2 h-4 w-4" />
-                </Button>
-              </Link>
-            </div>
+        <div className="grid gap-8 md:grid-cols-2 items-center">
+          <div>
+            <Image
+              src="/oliviers.jpeg"
+              width={500}
+              height={500}
+              alt="Joëlle Villegas"
+              className="rounded-xl"
+            />
+          </div>
+          <div className="space-y-4">
+            <h2 className="text-2xl font-bold">Mon Parcours</h2>
+            <p>
+              Passionnée par les relations entre l&apos;être humain et son environnement, j&apos;ai suivi une formation rigoureuse
+              auprès de Bioterres pour devenir géobiologue certifiée.
+            </p>
+            <p>
+              Ma démarche s&apos;inscrit dans une approche holistique, considérant l&apos;être humain dans sa globalité et dans
+              son interaction avec le monde qui l&apos;entoure.
+            </p>
+            <p>
+              Je mets aujourd&apos;hui mes compétences à votre service pour vous aider à retrouver l&apos;harmonie dans votre
+              environnement et améliorer votre bien-être au quotidien.
+            </p>
           </div>
         </div>
-      </section>
 
-      <section className="w-full py-12 md:py-16 lg:py-20">
-        <div className="container px-4 md:px-6">
-          <div className="flex flex-col items-center justify-center space-y-4 text-center">
-            <div className="space-y-2">
-              <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">Mes Services</h2>
-              <p className="max-w-[700px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
-                Découvrez comment je peux vous aider à améliorer votre environnement et votre bien-être
-              </p>
-            </div>
-            <div className="grid w-full grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
-              <Card>
-                <CardHeader>
-                  <CardTitle>Analyse d&apos;environnement</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p>
-                    Identification des sources d&apos;influence, positives ou négatives, pour harmoniser une maison, un lieu,
-                    des animaux de ferme, des ruches...
-                  </p>
-                </CardContent>
-              </Card>
-              <Card>
-                <CardHeader>
-                  <CardTitle>Détection de pollution</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p>
-                    Identification des sources de pollution électro-magnétiques, telluriques (courants souterrains),
-                    voire paranormales.
-                  </p>
-                </CardContent>
-              </Card>
-              <Card>
-                <CardHeader>
-                  <CardTitle>Radiesthésie</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p>
-                    Recherche d&apos;eau et autres services de radiesthésie pour vous aider à comprendre votre environnement.
-                  </p>
-                </CardContent>
-              </Card>
-              <Card>
-                <CardHeader>
-                  <CardTitle>Nettoyage aurique</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p>Nettoyage des entités et des mémoires pour purifier votre espace de vie et votre bien-être.</p>
-                </CardContent>
-              </Card>
-              <Card>
-                <CardHeader>
-                  <CardTitle>Géométrie sacrée</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p>
-                    Utilisation de la géométrie adaptée du lieu, tracés régulateurs et géométrie sacrée pour harmoniser
-                    votre espace.
-                  </p>
-                </CardContent>
-              </Card>
-              <Card>
-                <CardHeader>
-                  <CardTitle>Conseil et accompagnement</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p>Conseils personnalisés pour améliorer votre environnement et votre bien-être au quotidien.</p>
-                </CardContent>
-              </Card>
-            </div>
-            <div className="flex flex-col gap-2 min-[400px]:flex-row">
-              <Link href="/services">
-                <Button className="w-full">
-                  Tous mes services
-                  <ArrowRight className="ml-2 h-4 w-4" />
-                </Button>
-              </Link>
-            </div>
+        <div className="space-y-6">
+          <h2 className="text-2xl font-bold">Mes domaines de compétences et formations</h2>
+          <div className="space-y-4">
+            <ul className="list-disc pl-6 space-y-2">
+              <li>Géobiologie certifiée par Bioterres</li>
+              <li>Tarot initiatique de Wirth, avec Régine Brzesc-Colonges</li>
+              <li>Thérapie avec la trame de Jérémie Guerry</li>
+              <li>Le langage des oiseaux avec Jérémie Guerry</li>
+              <li>La Kabbale avec Jean Haab</li>
+              <li>L&apos;alchimie avec Jean Haab</li>
+              <li>
+                Les plantes, les huiles essentielles, gemmothérapie, alcoolature... Christian Escriva d&apos;après l&apos;approche
+                des plantes selon Goethe
+              </li>
+              <li>L&apos;alchimie, les maladies... Thérapie au diapason... de Tony Ceron</li>
+              <li>Homéopathie avec Alain Launay</li>
+            </ul>
           </div>
         </div>
-      </section>
 
-      <section className="w-full py-12 md:py-16 lg:py-20 bg-muted/50">
-        <div className="container px-4 md:px-6">
-          <div className="grid gap-6 lg:grid-cols-2 lg:gap-12 items-center">
-            <div>
-              <Image
-                src="/placeholder.svg?height=400&width=400"
-                width={400}
-                height={400}
-                alt="Joëlle Villegas"
-                className="mx-auto aspect-square overflow-hidden rounded-xl object-cover"
-              />
-            </div>
-            <div className="flex flex-col justify-center space-y-4">
-              <div className="space-y-2">
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">À Propos de Moi</h2>
-                <p className="max-w-[600px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
-                  Joëlle Villegas, géobiologue certifiée par Bioterres
-                </p>
-              </div>
-              <p className="text-gray-500 dark:text-gray-400">
-                Je mets mes compétences et mon expérience à votre service pour vous aider à retrouver l&apos;harmonie dans
-                votre environnement.
-              </p>
-              <div className="flex flex-col gap-2 min-[400px]:flex-row">
-                <Link href="/a-propos">
-                  <Button variant="outline" className="w-full">
-                    En savoir plus sur mon parcours
-                    <ArrowRight className="ml-2 h-4 w-4" />
-                  </Button>
-                </Link>
-              </div>
-            </div>
+        <div className="space-y-6">
+          <h2 className="text-2xl font-bold">Mon engagement : la charte du géobiologue</h2>
+          <div className="space-y-4">
+            <p>
+              En tant que géobiologue professionnelle, je m&apos;engage à respecter la charte du géobiologue qui comprend
+              notamment :
+            </p>
+            <ol className="list-decimal pl-6 space-y-4">
+              <li>
+                <strong>Article 1:</strong> La géobiologie implique la conception holistique de l&apos;homme et du monde. La
+                maison, l&apos;entreprise, ou la collectivité, n&apos;étant pas séparés de cet ensemble, il s&apos;en suit que
+                l&apos;équilibre, ou l&apos;harmonie énergétique, est une clé essentielle du bien-être et de la bonne entente
+                entre les êtres. Une pratique saine de la géobiologie permet de rétablir l&apos;équilibre ou l&apos;harmonie
+                énergétique du vivant.
+              </li>
+              <li>
+                <strong>Article 2:</strong> Le géobiologue s&apos;engage à exercer joyeusement son activité avec humanité,
+                probité et loyauté, cela dans la limite de ses aptitudes et de ses compétences, il n&apos;entreprend pas de
+                prestations pour lesquelles il n&apos;est pas suffisamment préparé.
+              </li>
+              <li>
+                <strong>Article 3:</strong> Le géobiologue s&apos;engage à ne présenter que les titres et les compétences
+                réelles qu&apos;il possède, et s&apos;interdit toute publicité mensongère sur son activité, à exposer clairement
+                aux usagers la nature, les prix et les modalités des services qui leur seront dispensés, à pratiquer des
+                honoraires raisonnables conformes à l&apos;éthique du secteur en tenant compte de ses compétences, de
+                l&apos;ampleur du travail demandé, et, dans la mesure du possible, des ressources de l&apos;usager.
+              </li>
+              <li>
+                <strong>Article 4:</strong> Le géobiologue s&apos;engage à toujours observer le principe fondamental du
+                respect de la personne humaine, celui de l&apos;animal et celui du lieu; il respecte au mieux le secret
+                professionnel afin de protéger la vie privée, l&apos;honneur et la réputation du client.
+              </li>
+              <li>
+                <strong>Article 5:</strong> Le géobiologue, s&apos;il n&apos;est pas médecin, s&apos;abstient de poser des diagnostics
+                d&apos;ordre médical, ou de conseiller à un usager de suspendre un traitement ou un suivi médical en cours,
+                il laisse à l&apos;usager sa totale liberté de choix thérapeutique et cherche toujours à respecter au maximum
+                son autonomie.
+              </li>
+            </ol>
           </div>
         </div>
-      </section>
 
-      <section className="w-full py-12 md:py-16 lg:py-20">
-        <div className="container px-4 md:px-6">
-          <div className="flex flex-col items-center justify-center space-y-4 text-center">
-            <div className="space-y-2">
-              <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">Contactez-moi</h2>
-              <p className="max-w-[700px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
-                Vous avez des questions ou souhaitez prendre rendez-vous ? N&apos;hésitez pas à me contacter.
-              </p>
-            </div>
-            <div className="flex flex-col gap-2 min-[400px]:flex-row">
-              <Link href="/contact">
-                <Button className="w-full">
-                  Prendre contact
-                  <ArrowRight className="ml-2 h-4 w-4" />
-                </Button>
-              </Link>
-            </div>
+        <div className="space-y-6">
+          <h2 className="text-2xl font-bold">Ma philosophie</h2>
+          <div className="space-y-4">
+            <p>
+              Je crois profondément que notre bien-être est intimement lié à notre environnement. Nos lieux de vie et de
+              travail ont une influence considérable sur notre santé physique et mentale.
+            </p>
+            <p>
+              Mon approche vise à rétablir l&apos;harmonie entre l&apos;être humain et son environnement, en identifiant et en
+              neutralisant les influences négatives, tout en favorisant les énergies positives.
+            </p>
+            <p>
+              Chaque lieu, chaque personne est unique, c&apos;est pourquoi j&apos;adapte mes interventions à vos besoins
+              spécifiques, en tenant compte de votre sensibilité et de votre contexte particulier.
+            </p>
           </div>
         </div>
-      </section>
+
+        <div className="flex justify-center pt-8">
+          <Link href="/contact">
+            <button className="inline-flex items-center justify-center rounded-md bg-primary px-8 py-3 text-base font-medium text-primary-foreground ring-offset-background transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50">
+              Me contacter
+              <ArrowRight className="ml-2 h-4 w-4" />
+            </button>
+          </Link>
+        </div>
+      </div>
     </div>
   )
 }

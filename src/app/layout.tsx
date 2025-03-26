@@ -1,16 +1,14 @@
-// app/layout.tsx (or similar file)
-
 import './globals.css'
 
 import { Analytics } from '@vercel/analytics/react'
 import type { Metadata } from 'next'
-import { Arsenal} from 'next/font/google'
+import { Spectral} from 'next/font/google'
 
 import Container from './components/Container'
 
-const arsenal = Arsenal({
-  variable: '--font-family-arsenal',
-  weight: ['400', '700'],
+const spectral = Spectral({
+  variable: '--font-family-spectral',
+  weight: ['400'],
   style: ['normal', 'italic'],
   subsets: ['latin'],
 })
@@ -26,8 +24,8 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html className={` ${arsenal.variable} `}>
-      <body className="h-full mx-2">
+    <html className={` ${spectral.variable} `}>
+      <body className="h-full mx-2 font-spectral">
         <Container>
           {children}
           <Analytics />

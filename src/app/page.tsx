@@ -22,42 +22,44 @@ export default async function HomePage() {
 
   return (
     <div className="flex flex-col items-center">
-      <section className="w-full py-12 md:py-16 lg:py-20 xl:py-24">
-        <div className="container px-4 md:px-6">
-          <div className="grid gap-6 lg:grid-cols-2 lg:gap-12">
-            <div className="flex flex-col justify-center space-y-4">
-              <div className="space-y-2">
-                <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
-                  Joëlle Villegas, Géobiologue
-                </h1>
-                <p className="max-w-[700px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
-                  Harmonisez votre environnement de vie pour améliorer votre bien-être, votre santé et votre équilibre
-                  énergétique
-                </p>
-              </div>
-              <div className="flex flex-col gap-2 min-[400px]:flex-row">
-                <Link href="/contact">
-                  <Button className="w-full">Prendre rendez-vous</Button>
-                </Link>
-                <Link href="/services">
-                  <Button variant="outline" className="w-full">
-                    Découvrir mes services
-                  </Button>
-                </Link>
-              </div>
+    <section className="w-full py-12 md:py-16 lg:py-20 xl:py-24">
+      <div className="container mx-auto px-4 md:px-6">
+        <div className="grid gap-6 lg:grid-cols-2 lg:gap-12">
+          <div className="flex flex-col justify-center space-y-4">
+            <div className="space-y-2">
+              <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
+                Joëlle Villegas, Géobiologue
+              </h1>
+              <p className="max-w-[700px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
+                Harmonisez votre environnement de vie pour améliorer votre bien-être, votre santé et votre équilibre
+                énergétique
+              </p>
             </div>
-            <div className="flex items-center justify-center">
-              <Image
-                src="/placeholder.svg?height=500&width=500"
-                width={500}
-                height={500}
-                alt="Joëlle Villegas, géobiologue"
-                className="aspect-square overflow-hidden rounded-xl object-cover"
-              />
+            <div className="flex flex-col gap-2 min-[400px]:flex-row">
+              <Link href="/contact">
+                <Button className="w-full">Prendre rendez-vous</Button>
+              </Link>
+              <Link href="/services">
+                <Button variant="outline" className="w-full">
+                  Découvrir mes services
+                </Button>
+              </Link>
             </div>
           </div>
+          <div className="flex items-center justify-center">
+            <Image
+              src="/icon.png"
+              width={300}
+              height={300}
+              alt="Joëlle Villegas, géobiologue"
+              className=" overflow-hidden rounded-lg object-cover max-w-full"
+            />
+          </div>
         </div>
-      </section>
+      </div>
+    </section>
+  
+  
 
       <section className="w-full py-12 md:py-16 lg:py-20 bg-muted/50">
         <div className="container px-4 md:px-6">
@@ -202,11 +204,11 @@ export default async function HomePage() {
           <div className="grid gap-6 lg:grid-cols-2 lg:gap-12 items-center">
             <div>
               <Image
-                src="/placeholder.svg?height=400&width=400"
-                width={400}
+                src="/oliviers.jpeg"
+                width={500}
                 height={400}
                 alt="Joëlle Villegas"
-                className="mx-auto aspect-square overflow-hidden rounded-xl object-cover"
+                className="mx-auto  overflow-hidden rounded-lg object-cover"
               />
             </div>
             <div className="flex flex-col justify-center space-y-4">
