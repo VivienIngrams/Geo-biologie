@@ -2,14 +2,14 @@ import './globals.css'
 
 import { Analytics } from '@vercel/analytics/react'
 import type { Metadata } from 'next'
-import { Quicksand} from 'next/font/google'
+import { Spectral} from 'next/font/google'
 
 import Container from './components/Container'
 
-const quicksand = Quicksand({
-  variable: '--font-family-quicksand',
+const spectral = Spectral({
+  variable: '--font-family-spectral',
   weight: ['400'],
-  style: ['normal'],
+  style: ['normal', 'italic'],
   subsets: ['latin'],
 })
 
@@ -24,8 +24,8 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html className={` ${quicksand.variable} `}>
-      <body className="h-full mx-2 font-quicksand">
+    <html className={` ${spectral.variable} `}>
+      <body className="h-full mx-2 font-spectral">
         <Container>
           {children}
           <Analytics />
