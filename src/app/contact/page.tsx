@@ -34,10 +34,8 @@ export default function ContactPage() {
               <CardDescription>Appelez-moi directement</CardDescription>
             </CardHeader>
             <CardContent>
-              <p>+33 6 XX XX XX XX</p>
-              <p className="text-sm text-muted-foreground mt-2">
-                Du lundi au vendredi, de 9h à 18h
-              </p>
+              <p>+33 6 03 91 57 34</p>
+              
             </CardContent>
           </Card>
 
@@ -51,9 +49,7 @@ export default function ContactPage() {
             </CardHeader>
             <CardContent>
               <p>contact@lecheminduvivant.fr</p>
-              <p className="text-sm text-muted-foreground mt-2">
-                Je vous répondrai dans les 24 à 48 heures
-              </p>
+             
             </CardContent>
           </Card>
 
@@ -63,12 +59,12 @@ export default function ContactPage() {
                 <MapPin className="h-5 w-5 text-primary" />
                 Localisation
               </CardTitle>
-              <CardDescription>Zone d&aps;intervention</CardDescription>
+              <CardDescription>Région/Ville/département</CardDescription>
             </CardHeader>
             <CardContent>
-              <p>Région PACA et ses environs</p>
+              <p>  Déplacements possibles dans toute la France et le monde</p>
               <p className="text-sm text-muted-foreground mt-2">
-                Déplacements possibles dans toute la France
+              
               </p>
             </CardContent>
           </Card>
@@ -94,12 +90,12 @@ export default function ContactPage() {
         </div>
       </div>
       {/* Website Link */}
-      <div className=" z-60">
+      <div className=" py-6 z-60">
         <Link
           href="https://vivieningrams.com"
           target="_blank"
           rel="noopener noreferrer"
-          className={` font-arsenal text-gray-500 hover:text-black tracking-normal leading-loose text-[12px] ml-12 md:ml-2 mb-1`}
+          className={` text-gray-500 hover:text-black tracking-normal leading-loose text-[12px] `}
         >
           Site web par Vivien Ingrams
         </Link>

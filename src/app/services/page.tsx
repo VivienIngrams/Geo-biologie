@@ -14,7 +14,7 @@ import {
   Tractor,
   Building2,
 } from 'lucide-react'
-
+import { Separator } from '../components/ui/separator'
 // Define the service data type
 interface ServiceItem {
   title: string
@@ -132,12 +132,12 @@ export default function ServicesPage() {
     bien-être, harmoniser vos espaces de vie, et analyser les déséquilibres
     environnementaux
           </p>
-          <div className="h-px w-[100px] bg-border mx-auto my-4"></div>
+          <Separator className="my-6" />
         </div>
 
         {/* Introduction */}
         <div className="space-y-4">
-        <h2 className="text-xl font-bold ">
+        <h2 className="md:text-xl font-bold ">
         Découvrez mes services conçus pour vous aider à créer un environnement sain et harmonieux
           </h2>
         </div>
@@ -175,11 +175,11 @@ export default function ServicesPage() {
         </div>
 
         {/* Application Domains Section */}
-        <div className="space-y-8 pt-12">
+        <div className="space-y-8 p-4 md:p-12 bg-muted/80 rounded-md">
           <h2 className="text-2xl font-bold text-center">
             Champs d&apos;application : Dans quels domaines je peux vous aider
           </h2>
-          <p className="text-center mx-auto max-w-[800px] text-muted-foreground">
+          <p className="text-center pb-6 mx-auto max-w-[800px] text-muted-foreground">
             Lorsqu&apos;on ne peut pas changer un lieu, on peut néanmoins le
             transformer et développer l&apos;art d&apos;habiter. Réussir une
             harmonisation, c&apos;est alléger les corps subtils qui polluent
@@ -195,7 +195,7 @@ export default function ServicesPage() {
                   <div className="rounded-full bg-primary text-primary-foreground p-4 my-4">
                     {domain.icon}
                   </div>
-                  <CardTitle className="mt-2">{domain.title}</CardTitle>
+                  <CardTitle className="my-2">{domain.title}</CardTitle>
                   <CardDescription>{domain.description}</CardDescription>
                 </CardContent>
               </Card>

@@ -22,7 +22,7 @@ export default async function HomePage() {
 
   return (
     <div className="flex flex-col items-center">
-    <section className="w-full py-12 md:py-16 lg:py-20 xl:py-24">
+    <section className="w-full py-12 md:p-16  xl:p-20">
       <div className="container mx-auto">
         <div className="grid gap-6 lg:grid-cols-2 lg:gap-12">
         <div className="flex items-center justify-center">
@@ -35,9 +35,12 @@ export default async function HomePage() {
             />
           </div>
           <div className="flex flex-col justify-center space-y-4">
-            <div className="space-y-2">
+            <div className="">
               <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
-                Joëlle Villegas, Géobiologue
+                Joëlle Villegas
+              </h1>
+              <h1 className="text-2xl tracking-tighter leading-tight sm:text-3xl md:text-4xl pb-4">
+                Géobiologue
               </h1>
               <p className="max-w-[700px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
                 Harmonisez votre environnement de vie pour améliorer votre bien-être, votre santé et votre équilibre
@@ -62,7 +65,7 @@ export default async function HomePage() {
   
   
 
-      <section className="w-full py-12 md:py-16 lg:py-20 bg-muted/50">
+      <section className="w-full py-12 md:py-16 lg:py-20 bg-muted/50 rounded-md">
         <div className="container px-4 md:px-6">
           <div className="flex flex-col items-center justify-center space-y-4 text-center">
             <div className="space-y-2">
@@ -200,7 +203,7 @@ export default async function HomePage() {
         </div>
       </section>
 
-      <section className="w-full py-12 md:py-16 lg:py-20 bg-muted/50">
+      <section className="w-full py-12 md:py-16 lg:py-20 bg-muted/50 rounded-md">
         <div className="container px-4 md:px-6">
           <div className="grid gap-6 lg:grid-cols-2 lg:gap-12 items-center">
             <div>
