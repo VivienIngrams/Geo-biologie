@@ -6,12 +6,32 @@ html {
 
   font-weight: 400;
   color: #6b7280;
-
+ font-family: 'Quicksand', sans-serif;
 }
 
 body {
   margin: 0;
 
+}
+
+h1 {
+  @apply font-bold text-primary font-spectral;
+  @apply text-3xl sm:text-4xl md:text-5xl tracking-tighter;
+}
+
+h2 {
+  @apply font-bold text-primary font-spectral;
+  @apply text-2xl sm:text-3xl md:text-4xl tracking-tight;
+}
+
+h3 {
+  @apply font-semibold font-spectral;
+  @apply text-xl md:text-2xl tracking-tight;
+}
+
+p {
+ 
+  @apply text-base  md:text-[16px] ;
 }
 
 /* 

@@ -124,22 +124,18 @@ export default function ServicesPage() {
       <div className="mx-auto max-w-5xl space-y-12">
         {/* Header Section */}
         <div className="space-y-4 text-center">
-          <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
-            Mes Services
-          </h1>
-          <p className="text-lg text-muted-foreground mx-auto max-w-[700px]">
-          Des consultations personnalisées en géobiologie pour améliorer votre
-    bien-être, harmoniser vos espaces de vie, et analyser les déséquilibres
-    environnementaux
+          <h1>Mes Services</h1>
+          <p>
+            Des consultations personnalisées en géobiologie pour améliorer votre
+            bien-être, harmoniser vos espaces de vie, et analyser les déséquilibres
+            environnementaux
           </p>
           <Separator className="my-6" />
         </div>
 
         {/* Introduction */}
         <div className="space-y-4">
-        <h2 className="md:text-xl font-bold ">
-        Découvrez mes services conçus pour vous aider à créer un environnement sain et harmonieux
-          </h2>
+          <h3>Découvrez mes services conçus pour vous aider à créer un environnement sain et harmonieux</h3>
         </div>
 
         {/* Services Grid */}
@@ -176,10 +172,9 @@ export default function ServicesPage() {
 
         {/* Application Domains Section */}
         <div className="space-y-8 p-4 md:p-12 bg-muted/80 rounded-md">
-          <h2 className="text-2xl font-bold text-center">
-            Champs d&apos;application : Dans quels domaines je peux vous aider
-          </h2>
-          <p className="text-center pb-6 mx-auto max-w-[800px] text-muted-foreground">
+          <h2>Champs d&apos;application </h2>
+          <h3>Dans quels domaines je peux vous aider</h3>
+          <p>
             Lorsqu&apos;on ne peut pas changer un lieu, on peut néanmoins le
             transformer et développer l&apos;art d&apos;habiter. Réussir une
             harmonisation, c&apos;est alléger les corps subtils qui polluent
@@ -205,9 +200,7 @@ export default function ServicesPage() {
 
         {/* Intervention Process Section */}
         <div className="pt-8 space-y-6 md:max-w-[35vw] mx-auto">
-          <h2 className="text-2xl font-bold text-center ">
-            Comment se déroule une intervention ?
-          </h2>
+          <h2>Comment se déroule une intervention ?</h2>
           <div className="grid gap-6">
             {[
               {

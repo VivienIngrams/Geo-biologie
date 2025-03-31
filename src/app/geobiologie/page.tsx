@@ -34,14 +34,9 @@ export default function GeobiologiePage() {
       <div className="container relative z-10 py-16 md:py-24 ">
         <div className="mx-auto max-w-5xl text-center">
           <div className="space-y-4">
-            <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
-              {' '}
-              La Géobiologie
-            </h1>
-            <p className="md:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-              L&apos;art d&apos;harmoniser les énergies entre
-              l&apos;environnement et le vivant pour créer des espaces
-              équilibrés et favorables au bien-être.
+            <h1>La Géobiologie</h1>
+            <p>
+              L&apos;art d&apos;harmoniser les énergies entre l&apos;environnement et le vivant pour créer des espaces équilibrés et favorables au bien-être.
             </p>
           </div>
           <Separator className="mt-6" />
@@ -97,7 +92,7 @@ export default function GeobiologiePage() {
           <div className="my-16 bg-muted/50 rounded-md p-8 md:p-16">
             <div className="flex items-center mb-8">
               <Leaf className="h-7 w-7 text-primary mr-3" />
-              <h2 className="text-2xl font-bold">Les principes fondamentaux</h2>
+              <h2>Les principes fondamentaux</h2>
             </div>
 
             <div className="grid gap-8 sm:grid-cols-2">
@@ -173,14 +168,14 @@ export default function GeobiologiePage() {
           <div className="my-16">
             <div className="flex items-center mb-8">
               <Info className="h-7 w-7 text-primary mr-3" />
-              <h2 className="text-2xl font-bold">Applications pratiques</h2>
+              <h2>Applications pratiques</h2>
             </div>
 
-            <p className="md:text-xl text-muted-foreground mt-2  text-center">
+            <p>
               La géobiologie analyse les influences énergétiques de notre
               environnement sur la santé et le bien-être.
             </p>
-            <p className="md:text-xl text-muted-foreground mt-2 max-w-4xl mx-auto text-center">
+            <p>
               Ses applications touchent plusieurs domaines clés :
             </p>
 
@@ -194,11 +189,8 @@ export default function GeobiologiePage() {
                   height={250}
                   className="aspect-square overflow-hidden object-cover  rounded-xl shadow-md mx-auto"
                 />
-                <h3 className="text-xl font-semibold text-primary">
-                  Commerces, entreprises et industries ou établissements
-                  d&apos;accueil collectif
-                </h3>
-                <p className="text-lg">
+                <h3>Commerces, entreprises et industries ou établissements d&apos;accueil collectif</h3>
+                <p>
                   Un espace harmonisé favorise la concentration et réduit le
                   stress des équipes.
                 </p>
@@ -213,10 +205,8 @@ export default function GeobiologiePage() {
                   height={250}
                   className="aspect-square overflow-hidden object-cover rounded-xl shadow-md mx-auto"
                 />
-                <h3 className="text-xl font-semibold text-primary">
-                  Espaces verts, domaines agricoles et élevages
-                </h3>
-                <p className="text-lg">
+                <h3>Espaces verts, domaines agricoles et élevages</h3>
+                <p>
                   L&apos;influence énergétique du sol joue un rôle clé dans la
                   croissance des cultures et la santé animale.
                 </p>
@@ -231,10 +221,8 @@ export default function GeobiologiePage() {
                   height={250}
                   className="aspect-square overflow-hidden object-cover rounded-xl shadow-md mx-auto"
                 />
-                <h3 className="text-xl font-semibold text-primary">
-                  Particuliers (maison, appartements...)
-                </h3>
-                <p className="text-lg">
+                <h3>Particuliers (maison, appartements...)</h3>
+                <p>
                   Une exposition excessive aux ondes electromagnétiques peut
                   perturber l&apos;équilibre naturel du corps et du mental.
                   L&apos;équilibre énergétique d&apos;un lieu influe sur la
@@ -247,10 +235,8 @@ export default function GeobiologiePage() {
           <div className="my-16 bg-muted/50 rounded-md ">
         
               <div className="p-6 md:p-24 ">
-                <h2 className="text-2xl font-bold mb-4 text-primary">
-                  Pourquoi faire appel à un géobiologue ?
-                </h2>
-                <p className="md:text-lg leading-relaxed mb-4">
+                <h2>Pourquoi faire appel à un géobiologue ?</h2>
+                <p>
                   Faire appel à un géobiologue permet de créer un environnement
                   équilibré et harmonieux, en identifiant et en corrigeant les
                   influences négatives naturelles ou artificielles qui peuvent

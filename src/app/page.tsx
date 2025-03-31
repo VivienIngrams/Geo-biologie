@@ -36,15 +36,10 @@ export default async function HomePage() {
           </div>
           <div className="flex flex-col justify-center space-y-4">
             <div className="">
-              <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
-                Joëlle Villegas
-              </h1>
-              <h1 className="text-2xl tracking-tighter leading-tight sm:text-3xl md:text-4xl pb-4">
-                Géobiologue
-              </h1>
-              <p className="max-w-[700px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
-                Harmonisez votre environnement de vie pour améliorer votre bien-être, votre santé et votre équilibre
-                énergétique
+              <h1>Joëlle Villegas</h1>
+              <h2>Géobiologue</h2>
+              <p>
+                Harmonisez votre environnement de vie pour améliorer votre bien-être, votre santé et votre équilibre énergétique
               </p>
             </div>
             <div className="flex flex-col gap-2 min-[400px]:flex-row">
@@ -69,10 +64,8 @@ export default async function HomePage() {
         <div className="container px-4 md:px-6">
           <div className="flex flex-col items-center justify-center space-y-4 text-center">
             <div className="space-y-2">
-              <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
-                Qu&apos;est-ce que la Géobiologie ?
-              </h2>
-              <p className="max-w-[900px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
+              <h2>Qu&apos;est-ce que la Géobiologie ?</h2>
+              <p>
                 La géobiologie étudie l&apos;influence de la Terre sur tout ce qui vit. Elle prend en compte les forces
                 telluriques propres à la Terre et les forces cosmiques qui viennent du ciel.
               </p>
@@ -125,8 +118,8 @@ export default async function HomePage() {
         <div className="container px-4 md:px-6">
           <div className="flex flex-col items-center justify-center space-y-4 text-center">
             <div className="space-y-2">
-              <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">Mes Services</h2>
-              <p className="max-w-[700px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
+              <h2>Mes Services</h2>
+              <p>
                 Découvrez comment je peux vous aider à améliorer votre environnement et votre bien-être
               </p>
             </div>
@@ -217,12 +210,12 @@ export default async function HomePage() {
             </div>
             <div className="flex flex-col justify-center space-y-4">
               <div className="space-y-2">
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">À Propos de Moi</h2>
-                <p className="max-w-[600px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
+                <h2>À Propos de Moi</h2>
+                <p>
                   Joëlle Villegas, géobiologue certifiée par Bioterres
                 </p>
               </div>
-              <p className="text-gray-500 dark:text-gray-400">
+              <p>
                 Je mets mes compétences et mon expérience à votre service pour vous aider à retrouver l&apos;harmonie dans
                 votre environnement.
               </p>
@@ -243,8 +236,8 @@ export default async function HomePage() {
         <div className="container px-4 md:px-6">
           <div className="flex flex-col items-center justify-center space-y-4 text-center">
             <div className="space-y-2">
-              <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">Contactez-moi</h2>
-              <p className="max-w-[700px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
+              <h2>Contactez-moi</h2>
+              <p>
                 Vous avez des questions ou souhaitez prendre rendez-vous ? N&apos;hésitez pas à me contacter.
               </p>
             </div>

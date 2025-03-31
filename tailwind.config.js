@@ -12,7 +12,10 @@ module.exports = {
   		fontFamily: {
   			spectral: [
   				'var(--font-family-spectral)'
-  			]
+  			],
+			quicksand: [
+				'var(--font-family-quicksand)'
+			],
   		},
   		backgroundImage: {
   			'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))'

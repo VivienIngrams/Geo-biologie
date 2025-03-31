@@ -32,7 +32,7 @@ export default function NavMenu() {
               alt="Géobiologie"
               className="px-1 md:px-0 overflow-hidden rounded-lg object-cover max-w-full"
             />
-            <span className="text-green-800 font-bold text-xl">Le Chemin du Vivant</span>
+            <span className="text-green-800 font-spectral font-bold text-xl">Le Chemin du Vivant</span>
           </Link>
         </div>
 

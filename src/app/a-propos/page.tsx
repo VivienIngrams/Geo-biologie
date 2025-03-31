@@ -58,12 +58,8 @@ export default function AboutPage() {
       <div className="mx-auto max-w-5xl space-y-12">
         {/* Hero Section */}
         <div className="text-center space-y-4">
-          <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl ">
-            Joëlle Villegas
-          </h1>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Géobiologue certifiée par Bioterres
-          </p>
+          <h1>Joëlle Villegas</h1>
+          <p>Géobiologue certifiée par Bioterres</p>
           <Separator className="my-6" />
         </div>
 
@@ -81,19 +77,19 @@ export default function AboutPage() {
               />
             </div>
             <CardContent className="p-6 md:p-8 space-y-4">
-              <CardTitle className="text-2xl font-bold">Mon Parcours</CardTitle>
+              <h2>Mon Parcours</h2>
               <Separator className="my-2" />
-              <p className="text-muted-foreground">
+              <p>
                 Passionnée par les relations entre l&apos;être humain et son
                 environnement, j&apos;ai suivi une formation rigoureuse auprès
                 de Bioterres pour devenir géobiologue certifiée.
               </p>
-              <p className="text-muted-foreground">
+              <p>
                 Ma démarche s&apos;inscrit dans une approche holistique,
                 considérant l&apos;être humain dans sa globalité et dans son
                 interaction avec le monde qui l&apos;entoure.
               </p>
-              <p className="text-muted-foreground">
+              <p>
                 Je mets aujourd&apos;hui mes compétences à votre service pour
                 vous aider à retrouver l&apos;harmonie dans votre environnement
                 et améliorer votre bien-être au quotidien.
@@ -105,12 +101,8 @@ export default function AboutPage() {
         {/* Competences Section */}
         <Card className="shadow-none bg-muted/50 border-none">
           <CardHeader>
-            <CardTitle className="text-2xl font-bold">
-              Mes domaines de compétences et formations
-            </CardTitle>
-            <CardDescription>
-              Une approche holistique nourrie par diverses disciplines
-            </CardDescription>
+            <h2>Mes domaines de compétences et formations</h2>
+            <p>Une approche holistique nourrie par diverses disciplines</p>
           </CardHeader>
           <CardContent>
             <div className="grid grid-cols-1 md:mx-24 gap-2">
@@ -130,13 +122,11 @@ export default function AboutPage() {
         {/* Charter Section */}
         <div>
           <CardHeader>
-            <CardTitle className="text-2xl font-bold text-primary">
-              Mon engagement : la charte du géobiologue
-            </CardTitle>
-            <CardDescription className='text-lg'>
-            En tant que géobiologue professionnelle, je m&apos;engage à
-            respecter la charte du géobiologue qui comprend notamment :
-            </CardDescription>
+            <h2>Mon engagement : la charte du géobiologue</h2>
+            <p>
+              En tant que géobiologue professionnelle, je m&apos;engage à
+              respecter la charte du géobiologue qui comprend notamment :
+            </p>
           </CardHeader>
           <CardContent className="space-y-6">
            
@@ -160,22 +150,20 @@ export default function AboutPage() {
         {/* Philosophy Section */}
         <Card className="shadow-none border-none md:p-16 bg-muted/50">
           <CardHeader>
-            <CardTitle className="text-2xl font-bold text-primary">
-              Ma philosophie
-            </CardTitle>
+            <h2>Ma philosophie</h2>
           </CardHeader>
           <CardContent className="space-y-4">
-            <p className="text-lg">
+            <p>
               Je crois profondément que notre bien-être est intimement lié à
               notre environnement. Nos lieux de vie et de travail ont une
               influence considérable sur notre santé physique et mentale.
             </p>
-            <p className="text-lg">
+            <p>
               Mon approche vise à rétablir l&apos;harmonie entre l&apos;être
               humain et son environnement, en identifiant et en neutralisant les
               influences négatives, tout en favorisant les énergies positives.
             </p>
-            <p className="text-lg">
+            <p>
               Chaque lieu, chaque personne est unique, c&apos;est pourquoi
               j&apos;adapte mes interventions à vos besoins spécifiques, en
               tenant compte de votre sensibilité et de votre contexte

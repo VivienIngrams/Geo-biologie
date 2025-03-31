@@ -14,10 +14,8 @@ export default function ContactPage() {
     <div className="container py-12 md:py-16 lg:py-20">
       <div className="mx-auto max-w-5xl space-y-12">
         <div className="space-y-4 text-center">
-          <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
-            Contactez-moi
-          </h1>
-          <p className="text-lg text-muted-foreground mx-auto max-w-[700px]">
+          <h1>Contactez-moi</h1>
+          <p>
             N&apos;hésitez pas à me contacter pour toute question ou pour
             prendre rendez-vous
           </p>
@@ -72,7 +70,7 @@ export default function ContactPage() {
 
         <div className="grid gap-8  md:grid-cols-2">
           <div className="space-y-6 md:min-h-screen  ">
-            <h2 className="text-2xl font-bold">Envoyez-moi un message</h2>
+            <h2>Envoyez-moi un message</h2>
             <p>
               Utilisez ce formulaire pour me contacter. Je vous répondrai dans
               les plus brefs délais.
