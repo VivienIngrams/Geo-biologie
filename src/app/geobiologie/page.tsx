@@ -232,17 +232,17 @@ export default function GeobiologiePage() {
             </div>
           </div>
 
-          <div className="my-16 bg-muted/50 rounded-md ">
+          <div className="my-16 bg-primary rounded-md ">
         
-              <div className="p-6 md:p-24 ">
-                <h2>Pourquoi faire appel à un géobiologue ?</h2>
+              <div className="p-6 text-secondary md:p-24 space-y-4">
+                <h2 className=''>Pourquoi faire appel à un géobiologue ?</h2>
                 <p>
                   Faire appel à un géobiologue permet de créer un environnement
                   équilibré et harmonieux, en identifiant et en corrigeant les
                   influences négatives naturelles ou artificielles qui peuvent
                   affecter votre bien-être quotidien.
                 </p>
-                <p className="md:text-lg font-semibold leading-relaxed">
+                <p className="md:text-lg font-medium leading-relaxed">
                   Que ce soit pour une maison, un lieu de travail ou un projet
                   d&apos;aménagement, la géobiologie offre une approche globale
                   et personnalisée pour améliorer votre qualité de vie et votre
@@ -273,7 +273,7 @@ export default function GeobiologiePage() {
                     </Button>
                   </Link>
                   <Link href="/contact" className="w-full">
-                    <Button variant="outline" size="lg" className="w-full">
+                    <Button variant="accent" size="lg" className="w-full">
                       Me contacter
                     </Button>
                   </Link>

@@ -21,18 +21,18 @@ export default function NavMenu() {
   const [isOpen, setIsOpen] = useState(false)
 
   return (
-    <header className="sticky top-0 z-40 w-full border-b bg-white">
+    <header className="sticky top-0 z-40 w-full border-b border-primary/30 bg-secondary">
       <div className="container flex h-16 items-center justify-between md:max-w-[90vw] mx-auto">
         <div className="flex items-center gap-2">
           <Link href="/" className="flex items-center space-x-2">
             <Image
               src="/icon.png"
-              width={40}
-              height={40}
+              width={60}
+              height={60}
               alt="Géobiologie"
-              className="px-1 md:px-0 overflow-hidden rounded-lg object-cover max-w-full"
+              className="overflow-hidden h-10 w-10 border-primary/30 border-[1px] rounded-md object-cover max-w-full"
             />
-            <span className="text-green-800 font-spectral font-bold text-xl">Le Chemin du Vivant</span>
+            <span className="text-primary font-spectral font-bold text-xl">Le Chemin du Vivant</span>
           </Link>
         </div>
 
@@ -54,7 +54,7 @@ export default function NavMenu() {
           onClick={() => setIsOpen(!isOpen)}
         >
           <span className="sr-only">Menu</span>
-          {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+          {isOpen ? <X className="h-6 w-6" /> : <Menu className="text-primary h-10 w-10" />}
         </Button>
       </div>
 

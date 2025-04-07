@@ -1,19 +1,21 @@
-import Link from 'next/link'
-import {
-  Card,
-  CardHeader,
-  CardTitle,
-  CardDescription,
-  CardContent,
-} from '../components/ui/card'
 import {
   ArrowRight,
+  Building2,
   Check,
   Home,
   Server,
   Tractor,
-  Building2,
 } from 'lucide-react'
+import Link from 'next/link'
+
+import { Button } from '../components/ui/button'
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from '../components/ui/card'
 import { Separator } from '../components/ui/separator'
 // Define the service data type
 interface ServiceItem {
@@ -120,61 +122,66 @@ export default function ServicesPage() {
   ]
 
   return (
-    <div className="container py-12 md:py-16 lg:py-20">
-      <div className="mx-auto max-w-5xl space-y-12">
+    <div className=" py-12 md:py-16 lg:py-20">
+      <div className=" space-y-12">
         {/* Header Section */}
-        <div className="space-y-4 text-center">
+        <section className="space-y-4 max-w-6xl text-center">
           <h1>Mes Services</h1>
           <p>
             Des consultations personnalisées en géobiologie pour améliorer votre
-            bien-être, harmoniser vos espaces de vie, et analyser les déséquilibres
-            environnementaux
+            bien-être, harmoniser vos espaces de vie, et analyser les
+            déséquilibres environnementaux
           </p>
-          <Separator className="my-6" />
-        </div>
+          <Separator className="mt-4" />
+        </section>
 
         {/* Introduction */}
-        <div className="space-y-4">
-          <h3>Découvrez mes services conçus pour vous aider à créer un environnement sain et harmonieux</h3>
-        </div>
+        <section>
+          <div className="pb-8 text-primary">
+            <h3>
+              Découvrez mes services conçus pour vous aider à créer un
+              environnement sain et harmonieux
+            </h3>
+          </div>
 
-        {/* Services Grid */}
-        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-          {services.map((service, index) => (
-            <Card key={index}>
-              <CardHeader>
-                <CardTitle>{service.title}</CardTitle>
-                <CardDescription>{service.subtitle}</CardDescription>
-              </CardHeader>
-              <CardContent>
-                <ul className="space-y-2">
-                  {service.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-start gap-2">
-                      <Check className="h-5 w-5 text-primary shrink-0 mt-0.5" />
-                      <span>{feature}</span>
-                    </li>
-                  ))}
-                </ul>
-              </CardContent>
-            </Card>
-          ))}
-        </div>
-        <div className="flex items-center justify-center w-full text-xl font-bold text-primary">
-          <h3>Prenez soin de vous et de votre environnement !</h3>
-        </div>
-        <div className="flex items-center justify-center w-full ">
-          <Link href="/contact" className="">
-            <button className="inline-flex items-center justify-center rounded-md bg-primary px-8 py-3 text-base font-medium text-primary-foreground ring-offset-background transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50">
-              Prendre rendez-vous
-            </button>
-          </Link>
-        </div>
+          {/* Services Grid */}
+          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+            {services.map((service, index) => (
+              <Card key={index}>
+                <CardHeader>
+                  <CardTitle>{service.title}</CardTitle>
+                  <CardDescription>{service.subtitle}</CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <ul className="space-y-2">
+                    {service.features.map((feature, featureIndex) => (
+                      <li key={featureIndex} className="flex items-start gap-2">
+                        <Check className="h-5 w-5 text-primary shrink-0 mt-0.5" />
+                        <span>{feature}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+          <div className="my-4 md:my-12 flex items-center justify-center w-full text-xl  font-bold text-primary">
+            <h3>Prenez soin de vous et de votre environnement !</h3>
+          </div>
+          <div className="flex items-center justify-center w-full ">
+            <Link href="/contact" className="">
+              <Button variant="accent" className="inline-flex items-center justify-center rounded-md bg-primary px-8 py-3 text-base font-medium text-primary-foreground ring-offset-background transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50">
+                Prendre rendez-vous
+              </Button>
+            </Link>
+          </div>
+        </section>
 
         {/* Application Domains Section */}
-        <div className="space-y-8 p-4 md:p-12 bg-muted/80 rounded-md">
-          <h2>Champs d&apos;application </h2>
-          <h3>Dans quels domaines je peux vous aider</h3>
-          <p>
+        <section className="space-y-8 py-8 md:py-16  bg-primary rounded-md">
+          <h2 className='text-secondary'>Champs d&apos;application </h2>
+          <h3 className='text-secondary'>Dans quels domaines je peux vous aider</h3>
+          <p className='text-secondary'>
             Lorsqu&apos;on ne peut pas changer un lieu, on peut néanmoins le
             transformer et développer l&apos;art d&apos;habiter. Réussir une
             harmonisation, c&apos;est alléger les corps subtils qui polluent
@@ -196,10 +203,10 @@ export default function ServicesPage() {
               </Card>
             ))}
           </div>
-        </div>
+        </section>
 
         {/* Intervention Process Section */}
-        <div className="pt-8 space-y-6 md:max-w-[35vw] mx-auto">
+        <section className="pt-8 space-y-6 md:max-w-5xl mx-auto">
           <h2>Comment se déroule une intervention ?</h2>
           <div className="grid gap-6">
             {[
@@ -229,7 +236,7 @@ export default function ServicesPage() {
               </Card>
             ))}
           </div>
-        </div>
+        </section>
 
         {/* Contact Button */}
         <div className="flex justify-center pt-8">
