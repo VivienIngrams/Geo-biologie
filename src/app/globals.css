@@ -13,22 +13,29 @@ body {
 }
 
 h1 {
-  @apply font-medium text-primary font-spectral;
-  @apply text-5xl xl:text-6xl tracking-[-0.08em];
+  @apply font-normal text-primary font-spectral;
+  @apply text-5xl md:text-6xl xl:text-7xl tracking-[-0.08em];
 }
 
 h2 {
-  @apply font-bold text-primary font-spectral;
-  @apply text-3xl md:text-4xl xl:text-5xl tracking-tight;
+  @apply font-normal text-primary font-spectral;
+  @apply text-3xl md:text-4xl xl:text-5xl tracking-tighter;
 }
 
 h3 {
-  @apply font-semibold font-spectral;
-  @apply text-xl md:text-2xl tracking-tight;
+  @apply font-normal  text-muted-foreground;
+  @apply text-xl md:text-2xl tracking-tighter;
+
+}
+
+
+h4 {
+  @apply text-base  md:text-[16px] xl:text-lg;
+ 
 }
 
 p {
-  @apply text-base  md:text-[16px];
+  @apply text-sm  xl:text-[16px] ;
 }
 
 section {
@@ -51,7 +58,7 @@ section {
     --secondary-foreground: 0 0% 9%;
     --muted: 0 0% 96.1%;
     --muted-foreground: 0 0% 45.1%;
-    --accent:  197 52% 52%;
+    --accent:  210 42% 56%;
     --accent-foreground: 0 0% 9%;
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
@@ -77,4 +84,23 @@ section {
   body {
     @apply bg-background text-foreground;
   }
+}
+
+.blur-mask {
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  mask-image: radial-gradient(
+    ellipse at 50% 65%, /* 50% across (centered), 65% down (lower) */
+    rgba(0, 0, 0, 1) 0%,
+    rgba(0, 0, 0, 0.7) 60%,
+    rgba(0, 0, 0, 0.3) 80%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  -webkit-mask-image: radial-gradient(
+    ellipse at 50% 65%,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(0, 0, 0, 0.7) 60%,
+    rgba(0, 0, 0, 0.3) 80%,
+    rgba(0, 0, 0, 0) 100%
+  );
 }

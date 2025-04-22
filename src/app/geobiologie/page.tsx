@@ -28,30 +28,45 @@ import {
 
 export default function GeobiologiePage() {
   return (
-    <div className=" mb-24">
+    <div className="flex flex-col items-center mb-24">
       {/* Hero Section */}
-
-      <div className="container relative z-10 py-16 md:py-24 ">
-        <div className="mx-auto max-w-5xl text-center">
-          <div className="space-y-4">
-            <h1>La Géobiologie</h1>
-            <p>
-              L&apos;art d&apos;harmoniser les énergies entre l&apos;environnement et le vivant pour créer des espaces équilibrés et favorables au bien-être.
-            </p>
-          </div>
-          <Separator className="mt-6" />
+      <section className="relative w-full md:min-h-[85vh] flex items-center justify-center  ">
+        {/* Background image */}
+        <div className="absolute  inset-0 z-0">
+          <Image
+            src="/pierre.jpg"
+            alt="Joëlle Villegas, géobiologue"
+            layout="fill"
+            objectFit="cover"
+            className=""
+          />
         </div>
-      </div>
+        <div className="container relative z-10 py-16 md:my-24 ">
+          {/* Blurred background layer */}
+          <div className="absolute inset-0 z-0 blur-mask rounded-lg" />
+          <div className="relative mx-auto z-10 max-w-2xl text-center">
+            <div className="  space-y-4">
+              <h1 className="text-white">La Géobiologie</h1>
+              <h3 className="text-white">
+                L&apos;art d&apos;harmoniser les énergies entre
+                l&apos;environnement et le vivant pour créer des espaces
+                équilibrés et favorables au bien-être.
+              </h3>
+            </div>
+          </div>
+        </div>
+      </section>
 
-      <div className="">
-        <div className="mx-auto max-w-5xl">
+
+      <div className="py-8 md:py-16 px-4 md:px-0 w-full">
+      <section>
           {/* Introduction - What is Geobiology */}
           <div className="mb-16">
             <div className="grid md:grid-cols-2 gap-8 items-center">
-              <div className="relative h-[300px] md:h-[400px] rounded-lg overflow-hidden shadow-lg">
+              <div className="relative h-[300px] md:h-[400px]  overflow-hidden shadow-lg">
                 <Image
                   src="/oliv.jpg"
-                  alt="Géobiologue au travail"
+                  alt="Géobiologie"
                   width={600}
                   height={400}
                   className="object-cover w-full h-full"
@@ -84,12 +99,13 @@ export default function GeobiologiePage() {
                   </CardContent>
                 </div>
               </div>
-              
             </div>
           </div>
-
+          </section>
+         
+<section>
           {/* Principles */}
-          <div className="my-16 bg-muted/50 rounded-md p-8 md:p-16">
+          <div className="my-16 bg-muted/50  p-8 md:p-16">
             <div className="flex items-center mb-8">
               <Leaf className="h-7 w-7 text-primary mr-3" />
               <h2>Les principes fondamentaux</h2>
@@ -163,9 +179,10 @@ export default function GeobiologiePage() {
               </Card>
             </div>
           </div>
+          </section>
 
           {/* Applications pratiques with improved layout */}
-          <div className="my-16">
+          <section className="my-16">
             <div className="flex items-center mb-8">
               <Info className="h-7 w-7 text-primary mr-3" />
               <h2>Applications pratiques</h2>
@@ -175,9 +192,7 @@ export default function GeobiologiePage() {
               La géobiologie analyse les influences énergétiques de notre
               environnement sur la santé et le bien-être.
             </p>
-            <p>
-              Ses applications touchent plusieurs domaines clés :
-            </p>
+            <p>Ses applications touchent plusieurs domaines clés :</p>
 
             <div className="mt-16 grid gap-16  max-w-6xl mx-auto">
               {/* Entreprises */}
@@ -186,10 +201,13 @@ export default function GeobiologiePage() {
                   src="/oliv.jpg"
                   alt="Géobiologie en entreprise"
                   width={250}
-                  height={250}
-                  className="aspect-square overflow-hidden object-cover  rounded-xl shadow-md mx-auto"
+                  height={100}
+                  className="aspect-square overflow-hidden object-cover   shadow-md mx-auto"
                 />
-                <h3>Commerces, entreprises et industries ou établissements d&apos;accueil collectif</h3>
+                <h3>
+                  Commerces, entreprises et industries ou établissements
+                  d&apos;accueil collectif
+                </h3>
                 <p>
                   Un espace harmonisé favorise la concentration et réduit le
                   stress des équipes.
@@ -203,7 +221,7 @@ export default function GeobiologiePage() {
                   alt="Géobiologie en agriculture"
                   width={250}
                   height={250}
-                  className="aspect-square overflow-hidden object-cover rounded-xl shadow-md mx-auto"
+                  className="aspect-square overflow-hidden object-cover  shadow-md mx-auto"
                 />
                 <h3>Espaces verts, domaines agricoles et élevages</h3>
                 <p>
@@ -219,7 +237,7 @@ export default function GeobiologiePage() {
                   alt="Géobiologie pour particuliers"
                   width={250}
                   height={250}
-                  className="aspect-square overflow-hidden object-cover rounded-xl shadow-md mx-auto"
+                  className="aspect-square overflow-hidden object-cover  shadow-md mx-auto"
                 />
                 <h3>Particuliers (maison, appartements...)</h3>
                 <p>
@@ -230,29 +248,30 @@ export default function GeobiologiePage() {
                 </p>
               </div>
             </div>
-          </div>
+          </section>
 
-          <div className="my-16 bg-primary rounded-md ">
-        
-              <div className="p-6 text-secondary md:p-24 space-y-4">
-                <h2 className=''>Pourquoi faire appel à un géobiologue ?</h2>
+          <section className="my-16 bg-primary  ">
+            <div className="my-16  ">
+              <div className="p-6 text-secondary  space-y-4">
+                <h2 className="">Pourquoi faire appel à un géobiologue ?</h2>
                 <p>
                   Faire appel à un géobiologue permet de créer un environnement
                   équilibré et harmonieux, en identifiant et en corrigeant les
                   influences négatives naturelles ou artificielles qui peuvent
                   affecter votre bien-être quotidien.
                 </p>
-                <p className="md:text-lg font-medium leading-relaxed">
+                <p >
                   Que ce soit pour une maison, un lieu de travail ou un projet
                   d&apos;aménagement, la géobiologie offre une approche globale
                   et personnalisée pour améliorer votre qualité de vie et votre
                   relation à l&apos;espace.
                 </p>
               </div>
-           
             </div>
+          </section>
 
-            <Card className="shadow-sm hover:shadow-md transition-all bg-white/70 md:p-6 rounded-xl  border  duration-300 h-full border-primary/10 md:w-1/2 mx-auto">
+          <section>
+            <Card className="shadow-sm hover:shadow-md transition-all bg-white/70 md:p-6   border  duration-300 h-full border-primary/10 mx-auto">
               <CardHeader className="flex flex-col items-center">
                 <div className="flex flex-col gap-4 w-full max-w-md">
                   <h3 className="text-xl font-bold text-center text-primary md:text-left">
@@ -280,9 +299,9 @@ export default function GeobiologiePage() {
                 </div>
               </CardContent>
             </Card>
-          </div>
+          </section>
         </div>
-    
-    </div>
+      </div>
+   
   )
 }

@@ -109,7 +109,7 @@ export default function AboutPage() {
               {competences.map((competence, index) => (
                 <div
                   key={index}
-                  className="flex items-start space-x-2 p-2 rounded-md hover:bg-muted transition-colors"
+                  className="flex items-start space-x-2 p-2  hover:bg-muted transition-colors"
                 >
                   <div className="h-2 w-2 mt-2 rounded-full bg-primary flex-shrink-0" />
                   <p>{competence}</p>

@@ -21,7 +21,7 @@ export default function NavMenu() {
   const [isOpen, setIsOpen] = useState(false)
 
   return (
-    <header className="sticky top-0 z-40 w-full border-b border-primary/30 bg-secondary">
+    <header className="sticky top-0 z-40 w-full  bg-secondary">
       <div className="container flex h-16 items-center justify-between md:max-w-[90vw] mx-auto">
         <div className="flex items-center gap-2">
           <Link href="/" className="flex items-center space-x-2">
@@ -30,9 +30,9 @@ export default function NavMenu() {
               width={60}
               height={60}
               alt="Géobiologie"
-              className="overflow-hidden h-10 w-10 border-primary/30 border-[1px] rounded-md object-cover max-w-full"
+              className="overflow-hidden h-10 w-10 border-primary/30 border-[1px]  object-cover max-w-full"
             />
-            <span className="text-primary font-spectral font-bold text-xl">Le Chemin du Vivant</span>
+            <span className="text-primary font-spectral font-medium text-xl">Le Chemin du Vivant</span>
           </Link>
         </div>
 
@@ -41,7 +41,7 @@ export default function NavMenu() {
             <Link
               key={index}
               href={item.href}
-              className="text-sm font-medium transition-colors hover:text-primary"
+              className="text-base tracking-wide font-medium transition-colors text-primary hover:text-black"
             >
               {item.label}
             </Link>

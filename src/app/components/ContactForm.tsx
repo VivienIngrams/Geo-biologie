@@ -84,7 +84,7 @@ const ContactForm: React.FC = () => {
           required
           minLength={3}
           maxLength={150}
-          className="p-2 rounded-lg border bg-card text-card-foreground shadow"
+          className="p-2  border bg-card text-card-foreground shadow"
           type="text"
         />
       </div>
@@ -100,7 +100,7 @@ const ContactForm: React.FC = () => {
           required
           minLength={8}
           maxLength={150}
-          className="p-2 rounded-lg border bg-card text-card-foreground shadow"
+          className="p-2  border bg-card text-card-foreground shadow"
           type="email"
         />
       </div>
@@ -113,7 +113,7 @@ const ContactForm: React.FC = () => {
           id="subject"
           name="subject"
           autoComplete="off"
-          className="p-2 rounded-lg border bg-card text-card-foreground shadow"
+          className="p-2  border bg-card text-card-foreground shadow"
           type="text"
         />
       </div>
@@ -129,7 +129,7 @@ const ContactForm: React.FC = () => {
           required
           minLength={20}
           maxLength={600}
-          className="p-2 rounded-lg border bg-card text-card-foreground shadow"
+          className="p-2  border bg-card text-card-foreground shadow"
           rows={6}
         />
       </div>

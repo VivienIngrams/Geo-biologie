@@ -27,38 +27,51 @@ export default async function HomePage() {
 
   return (
     <div className="flex flex-col items-center">
-      <section className="w-full my-8 xl:mx-20">
-        <div className="container   mx-auto ">
-          <div className="grid gap-6 lg:grid-cols-2 lg:gap-x-10">
-            <div className="flex bg-white border-primary/30 border-2 rounded-lg md:m-24 aspect-square items-center justify-center">
-              <Image
-                src="/icon.png"
-                width={300}
-                height={300}
-                alt="Joëlle Villegas, géobiologue"
-                className="max-w-[60vw] overflow-hidden rounded-lg object-cover md:max-w-full"
-              />
-            </div>
-            <div className="flex flex-col justify-center space-y-4 lg:mx-4">
-              <div className="">
-                <h1>Joëlle Villegas</h1>
-                <h2 className='font-quicksand  font-light mb-1 md:my-2 text-xl lg:text-3xl uppercase'>Géobiologue</h2>
-                <p>
+      <section className="relative w-full min-h-screen flex items-center justify-center  xl:mx-20">
+        {/* Background image */}
+        <div className="absolute -top-20 inset-0 z-0">
+          <Image
+            src="/vignes.jpeg"
+            alt="Joëlle Villegas, géobiologue"
+            layout="fill"
+            objectFit="cover"
+            className="rounded-lg"
+          />
+        </div>
+
+        {/* Foreground content */}
+        <div className="relative z-10 container mx-auto px-4 text-secondary">
+          <div className="grid gap-6 lg:grid-cols-2  items-center">
+            <div className="relative flex flex-col justify-center p-4 space-y-6  ">
+              {/* Blurred background layer */}
+              <div className="absolute inset-0 z-0 blur-mask rounded-lg" />
+
+              {/* Foreground text content */}
+              <div className="relative z-10 ">
+                <h1 className='text-secondary'>Joëlle Villegas</h1>
+                <h2 className="text-secondary tracking-wide font-quicksand font-light mb-1 md:-mt-1 md:mb-4 text-xl lg:text-3xl uppercase">
+                  Géobiologue
+                </h2>
+                <h4>
                   Harmonisez votre environnement de vie pour améliorer votre
                   bien-être, votre santé et votre équilibre énergétique
-                </p>
+                </h4>
               </div>
-              <div className="flex flex-col gap-2 min-[400px]:flex-row">
+
+              {/* Buttons */}
+              <div className="relative z-10 flex flex-col gap-4  min-[400px]:flex-row ">
                 <Link href="/contact">
-                  <Button className="w-full">Prendre rendez-vous</Button>
+                  <Button className="w-full tracking-wide text-[16px]">Prendre rendez-vous</Button>
                 </Link>
                 <Link href="/services">
-                  <Button variant="accent" className="w-full">
+                  <Button variant="accent" className="w-full tracking-wide text-[16px]">
                     Découvrir mes services
                   </Button>
                 </Link>
               </div>
             </div>
+
+            <div />
           </div>
         </div>
       </section>
@@ -66,13 +79,13 @@ export default async function HomePage() {
       <section className="w-full py-12 md:py-16 lg:py-20 bg-primary rounded-md">
         <div className="container px-4 md:px-6">
           <div className="flex flex-col items-center justify-center space-y-4 text-center">
-            <div className="space-y-2 text-secondary">
-              <h2 className='text-secondary'>Qu&apos;est-ce que la Géobiologie ?</h2>
-              <p>
-                La géobiologie étudie l&apos;influence de la Terre sur tout ce
-                qui vit. Elle prend en compte les forces telluriques propres à
-                la Terre et les forces cosmiques qui viennent du ciel.
-              </p>
+            <div className="space-y-2 text-secondary md:max-w-3xl">
+              <h2 className="text-secondary">
+                Qu&apos;est-ce que la Géobiologie ?
+              </h2>
+              <h4>
+              La géobiologie est l&apos;étude de l&apos;influence de l&apos;environnement, des ondes et des énergies terrestres sur la santé et le bien-être des êtres vivants.
+              </h4>
             </div>
             <div className="mx-auto grid max-w-5xl grid-cols-1 gap-6 py-6 md:grid-cols-2 lg:grid-cols-3">
               <Card>
@@ -124,7 +137,7 @@ export default async function HomePage() {
             </div>
             <div className="flex flex-col gap-2 min-[400px]:flex-row">
               <Link href="/geobiologie">
-                <Button variant="accent" className="w-full">
+                <Button variant="accent" className="w-full hover:bg-secondary hover:text-primary">
                   En savoir plus
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Button>
@@ -135,118 +148,100 @@ export default async function HomePage() {
       </section>
 
       <section className="w-full py-12 md:py-16 lg:py-20">
-        <div className="container px-4 md:px-6">
-          <div className="flex flex-col items-center justify-center space-y-4 text-center">
-            <div className="space-y-2">
-              <h2>Mes Services</h2>
-              <p>
-                Découvrez comment je peux vous aider à améliorer votre
-                environnement et votre bien-être
-              </p>
-            </div>
-            <div className="grid w-full grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
-              <Card className='bg-white/50'>
+      <div className="container px-4 md:px-6">
+        <div className="flex flex-col items-center justify-center space-y-4 text-center">
+          <div className="space-y-2">
+            <h2>Mes Services</h2>
+            <h4 className="text-primary md:max-w-5xl font-medium">
+              Découvrez comment je peux vous aider à améliorer votre environnement et votre bien-être
+            </h4>
+          </div>
+          <div className="grid w-full grid-cols-1 gap-6 xl:gap-12 py-6 md:grid-cols-2 lg:grid-cols-3">
+            {[
+              {
+                title: "Analyse d'environnement",
+                description: "Identification des sources d'influence, positives ou négatives, pour harmoniser une maison, un lieu, des animaux de ferme, des ruches, des vignes...",
+                image: "/thailande (1).jpg",
+              },
+              {
+                title: "Détection de pollution",
+                description: "Identification des sources de pollution électro-magnétiques, telluriques (courants souterrains), voire paranormales.",
+                image: "/thailande (2).jpg",
+              },
+              {
+                title: "Radiesthésie",
+                description: "Recherche d'eau et autres services de radiesthésie pour vous aider à comprendre votre environnement.",
+                image: "/thailande (3).jpg",
+              },
+              {
+                title: "Nettoyage aurique",
+                description: "Nettoyage des entités et des mémoires pour purifier votre espace de vie et votre bien-être.",
+                image: "/house.jpg",
+              },
+              {
+                title: "Géométrie sacrée",
+                description: "Utilisation de la géométrie adaptée du lieu, tracés régulateurs et géométrie sacrée pour harmoniser votre espace.",
+                image: "/cottage.jpg",
+              },
+              {
+                title: "Conseil et accompagnement",
+                description: "Conseils personnalisés pour améliorer votre environnement et votre bien-être au quotidien.",
+                image: "/oliv.jpg",
+              },
+            ].map((service, index) => (
+              <Card key={index} className="border-none shadow-none">
+                <div className='px-6'>
+                <div className="relative w-full aspect-square p-4 overflow-hidden ">
+                  <Image
+                    src={service.image}
+                    alt={service.title}
+                    layout='fill'
+                    sizes="(max-width: 768px) 80vw, (max-width: 1200px)  30vw, 20vw"
+                    className="object-cover p-4"
+                  />
+                </div></div>
                 <CardHeader>
-                  <CardTitle>Analyse d&apos;environnement</CardTitle>
+                  <CardTitle>{service.title}</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p>
-                    Identification des sources d&apos;influence, positives ou
-                    négatives, pour harmoniser une maison, un lieu, des animaux
-                    de ferme, des ruches, des vignes...
-                  </p>
+                  <p>{service.description}</p>
                 </CardContent>
               </Card>
-              <Card className='bg-white/50'>
-                <CardHeader>
-                  <CardTitle>Détection de pollution</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p>
-                    Identification des sources de pollution électro-magnétiques,
-                    telluriques (courants souterrains), voire paranormales.
-                  </p>
-                </CardContent>
-              </Card>
-              <Card className='bg-white/50'>
-                <CardHeader>
-                  <CardTitle>Radiesthésie</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p>
-                    Recherche d&apos;eau et autres services de radiesthésie pour
-                    vous aider à comprendre votre environnement.
-                  </p>
-                </CardContent>
-              </Card>
-              <Card className='bg-white/50'>
-                <CardHeader>
-                  <CardTitle>Nettoyage aurique</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p>
-                    Nettoyage des entités et des mémoires pour purifier votre
-                    espace de vie et votre bien-être.
-                  </p>
-                </CardContent>
-              </Card>
-              <Card className='bg-white/50'>
-                <CardHeader>
-                  <CardTitle>Géométrie sacrée</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p>
-                    Utilisation de la géométrie adaptée du lieu, tracés
-                    régulateurs et géométrie sacrée pour harmoniser votre
-                    espace.
-                  </p>
-                </CardContent>
-              </Card>
-              <Card className='bg-white/50'>
-                <CardHeader>
-                  <CardTitle>Conseil et accompagnement</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p>
-                    Conseils personnalisés pour améliorer votre environnement et
-                    votre bien-être au quotidien.
-                  </p>
-                </CardContent>
-              </Card>
-            </div>
-            <div className="flex flex-col gap-2 min-[400px]:flex-row">
-              <Link href="/services">
-                <Button className="w-full">
-                  Tous mes services
-                  <ArrowRight className="ml-2 h-4 w-4" />
-                </Button>
-              </Link>
-            </div>
+            ))}
+          </div>
+          <div className="flex flex-col gap-2 min-[400px]:flex-row">
+            <Link href="/services">
+              <Button className="w-full">
+                Tous mes services
+                <ArrowRight className="ml-2 h-4 w-4" />
+              </Button>
+            </Link>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
       <section className="w-full py-12 md:py-16 lg:py-20  rounded-md">
         <div className="container px-4 md:px-6">
           <div className="grid gap-6 lg:grid-cols-2  lg:gap-12 items-center">
-            <div className=''>
+            <div className="">
               <Image
-                src="/oliviers.jpeg"
+                src="/photo3.jpg"
                 width={500}
                 height={400}
                 alt="Joëlle Villegas"
-                className="mx-auto  overflow-hidden  rounded-lg object-cover"
+                className="mx-auto  overflow-hidden   object-cover"
               />
             </div>
             <div className="flex flex-col justify-center space-y-4">
               <div className="space-y-2">
                 <h2>À Propos de Moi</h2>
-                <p>Joëlle Villegas, géobiologue certifiée par Bioterres</p>
+                <h3>Joëlle Villegas, géobiologue certifiée Bioterres</h3>
               </div>
-              <p>
+              <h4>
                 Je mets mes compétences et mon expérience à votre service pour
                 vous aider à retrouver l&apos;harmonie dans votre environnement.
-              </p>
+              </h4>
               <div className="flex flex-col gap-2 min-[400px]:flex-row">
                 <Link href="/a-propos">
                   <Button variant="accent" className="w-full">

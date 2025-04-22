@@ -2,13 +2,13 @@ import './globals.css'
 
 import { Analytics } from '@vercel/analytics/react'
 import type { Metadata } from 'next'
-import { Spectral, Quicksand} from 'next/font/google'
+import { Quicksand,Spectral} from 'next/font/google'
 
 import Container from './components/Container'
 
 const spectral = Spectral({
   variable: '--font-family-spectral',
-  weight: ['400'],
+  weight: ['400', '500', '600',  '700'],
   style: ['normal', 'italic'],
   subsets: ['latin'],
 })

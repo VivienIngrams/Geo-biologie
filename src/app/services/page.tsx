@@ -170,7 +170,7 @@ export default function ServicesPage() {
           </div>
           <div className="flex items-center justify-center w-full ">
             <Link href="/contact" className="">
-              <Button variant="accent" className="inline-flex items-center justify-center rounded-md bg-primary px-8 py-3 text-base font-medium text-primary-foreground ring-offset-background transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50">
+              <Button variant="accent" className="inline-flex items-center justify-center  bg-primary px-8 py-3 text-base font-medium text-primary-foreground ring-offset-background transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50">
                 Prendre rendez-vous
               </Button>
             </Link>
@@ -241,7 +241,7 @@ export default function ServicesPage() {
         {/* Contact Button */}
         <div className="flex justify-center pt-8">
           <Link href="/contact">
-            <button className="inline-flex items-center justify-center rounded-md bg-primary px-8 py-3 text-base font-medium text-primary-foreground ring-offset-background transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50">
+            <button className="inline-flex items-center justify-center  bg-primary px-8 py-3 text-base font-medium text-primary-foreground ring-offset-background transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50">
               Me contacter pour plus d&apos;informations
               <ArrowRight className="ml-2 h-4 w-4" />
             </button>
