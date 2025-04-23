@@ -4,7 +4,7 @@
 
 html {
   font-weight: 400;
-  color: #6b7280;
+  color: #90994B;
   font-family: 'Quicksand', sans-serif;
 }
 
@@ -13,17 +13,17 @@ body {
 }
 
 h1 {
-  @apply font-normal text-primary font-spectral;
+  @apply font-normal text-secondary font-spectral;
   @apply text-5xl md:text-6xl xl:text-7xl tracking-[-0.08em];
 }
 
 h2 {
-  @apply font-normal text-primary font-spectral;
-  @apply text-3xl md:text-4xl xl:text-5xl tracking-tighter;
+  @apply font-normal  text-secondary font-spectral;
+  @apply text-3xl md:text-4xl xl:text-6xl tracking-tighter;
 }
 
 h3 {
-  @apply font-normal  text-muted-foreground;
+  @apply font-normal text-secondary ;
   @apply text-xl md:text-2xl tracking-tighter;
 
 }

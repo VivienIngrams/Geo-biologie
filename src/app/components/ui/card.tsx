@@ -41,7 +41,7 @@ const CardTitle = React.forwardRef<
 >(({ className, bgColor, ...props }, ref) => (
   <div
     ref={ref}
-    className={cn("font-semibold text-xl xl:text-2xl leading-none font-spectral tracking-tighter", getTextColorForBg(bgColor), className)}
+    className={cn("font-semibold text-xl md:text-2xl xl:text-3xl leading-[0.9] font-spectral tracking-tight", getTextColorForBg(bgColor), className)}
     {...props}
   />
 ))

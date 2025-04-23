@@ -83,8 +83,8 @@ export default async function HomePage() {
 
       <section className="w-full py-12 md:py-16 lg:py-20 bg-primary">
         <div className="container px-4 md:px-6">
-          <div className="flex flex-col text-secondary items-center justify-center space-y-4 text-center">
-            <div className="space-y-2 ">
+          <div className="flex flex-col text-secondary items-center justify-center  space-y-4 text-center">
+            <div className="space-y-4 max-w-3xl mx-auto py-12 ">
               <h2 className='text-secondary'>Qu&apos;est-ce que la Géobiologie ?</h2>
               <h4>
                 La géobiologie est l&apos;étude de l&apos;influence de
@@ -95,7 +95,8 @@ export default async function HomePage() {
             <div className="mx-auto grid text-secondary max-w-5xl grid-cols-1 gap-6 md:gap-12 xl:gap-20 py-6 md:grid-cols-2 lg:grid-cols-3">
               <Card bgColor="bg-primary">
                 <CardHeader>
-                  <Leaf className="h-10 w-10 -mb-4" />
+                  <div className="flex justify-center items-center">
+                  <Leaf className="h-10 w-10 mb-4" /></div>
                   <CardTitle>Harmonisation</CardTitle>
                   <CardDescription>
                     Rétablir l&apos;équilibre énergétique dans votre espace de
@@ -109,7 +110,9 @@ export default async function HomePage() {
               </Card>
               <Card bgColor="bg-primary">
                 <CardHeader>
-                  <Shield className="h-10 w-10 -mb-4" />
+                  <div className="flex justify-center items-center">
+                  <Shield className="h-10 w-10 mb-4" />
+                  </div>
                   <CardTitle>Protection</CardTitle>
                   <CardDescription>
                     Identifier et neutraliser les influences négatives
@@ -122,7 +125,9 @@ export default async function HomePage() {
               </Card>
               <Card bgColor="bg-primary">
                 <CardHeader>
-                  <Map className="h-10 w-10 -mb-4" />
+                  <div className="flex justify-center items-center">
+                  <Map className="h-10 w-10 mb-4" />
+                  </div>
                   <CardTitle>Expertise</CardTitle>
                   <CardDescription>
                     Analyse complète et solutions adaptées
@@ -141,12 +146,12 @@ export default async function HomePage() {
       <section className="w-full py-12 md:py-16 lg:py-20">
         <div className="container px-4 md:px-6">
           <div className="flex flex-col items-center justify-center space-y-4 text-center">
-            <div className="space-y-2">
-              <h2>Mes Services</h2>
-              <h4 className="text-primary md:max-w-5xl font-medium">
+            <div className="space-y-2 py-12">
+              <h2 className='text-primary'>Mes Services</h2>
+              <h3 className="text-primary md:max-w-5xl font-medium">
                 Découvrez comment je peux vous aider à améliorer votre
                 environnement et votre bien-être
-              </h4>
+              </h3>
             </div>
             <div className="grid w-full grid-cols-1 gap-6 xl:gap-12 py-6 md:grid-cols-2 lg:grid-cols-3">
               {[
@@ -161,6 +166,12 @@ export default async function HomePage() {
                   description:
                     'Identification des sources de pollution électro-magnétiques, telluriques (courants souterrains), voire paranormales.',
                   image: '/thailande (2).jpg',
+                },
+                {
+                  title: 'Conseil et accompagnement',
+                  description:
+                    'Conseils personnalisés pour améliorer votre environnement et votre bien-être au quotidien.',
+                  image: '/oliv.jpg',
                 },
                 {
                   title: 'Radiesthésie',
@@ -180,14 +191,9 @@ export default async function HomePage() {
                     'Utilisation de la géométrie adaptée du lieu, tracés régulateurs et géométrie sacrée pour harmoniser votre espace.',
                   image: '/cottage.jpg',
                 },
-                {
-                  title: 'Conseil et accompagnement',
-                  description:
-                    'Conseils personnalisés pour améliorer votre environnement et votre bien-être au quotidien.',
-                  image: '/oliv.jpg',
-                },
+                
               ].map((service, index) => (
-                <Card key={index} className="border-none shadow-none">
+                <Card key={index} bgColor='bg-secondary' className="border-none shadow-none">
                   <div className="px-6">
                     <div className="relative w-full aspect-square p-4 overflow-hidden ">
                       <Image
@@ -210,7 +216,7 @@ export default async function HomePage() {
             </div>
             <div className="flex flex-col gap-2 min-[400px]:flex-row">
               <Link href="/services">
-                <Button className="w-full">
+                <Button variant='accent' className="w-full">
                   Tous mes services
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Button>
@@ -234,10 +240,10 @@ export default async function HomePage() {
             </div>
             <div className="flex flex-col justify-center space-y-4">
               <div className="space-y-2">
-                <h2>À Propos de Moi</h2>
-                <h3>Joëlle Villegas, géobiologue certifiée Bioterres</h3>
+                <h2 className='text-primary'>À Propos de Moi</h2>
+                <h3 className='text-primary'>Joëlle Villegas, géobiologue certifiée Bioterres</h3>
               </div>
-              <h4>
+              <h4 className="text-primary md:max-w-5xl font-medium">
                 Je mets mes compétences et mon expérience à votre service pour
                 vous aider à retrouver l&apos;harmonie dans votre environnement.
               </h4>

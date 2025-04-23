@@ -15,7 +15,7 @@ export default function GeobiologiePage() {
   return (
     <div className="flex flex-col items-center ">
       {/* Hero Section */}
-      <section className="relative w-full md:min-h-[85vh] flex items-center justify-center  ">
+      <section className="relative w-full md:min-h-[90vh] flex items-center justify-center  ">
         {/* Background image */}
         <div className="absolute  inset-0 z-0">
           <Image
@@ -56,7 +56,7 @@ export default function GeobiologiePage() {
               />
             </div>
             <div>
-              <div className="md:text-lg">
+              <Card bgColor="bg-secondary" className="md:text-lg">
                 <CardContent className="space-y-4">
                   <p className=" leading-relaxed">
                     La géobiologie étudie les influences de l&apos;environnement
@@ -78,7 +78,7 @@ export default function GeobiologiePage() {
                     lieux pour développer l&apos;art d&apos;habiter sainement.
                   </p>
                 </CardContent>
-              </div>
+              </Card>
             </div>
           </div>
         </div>
@@ -87,7 +87,7 @@ export default function GeobiologiePage() {
       <section className="bg-primary">
         {/* Les principes fondamentaux */}
         <div className="container text-center py-12 md:p-16 xl:p-24">
-          <div className="text-center mb-8">
+          <div className="text-center mb-12">
             <div className="flex justify-center items-center mb-4">
               <h2 className="text-secondary">Les principes fondamentaux</h2>
             </div>
@@ -98,9 +98,9 @@ export default function GeobiologiePage() {
           </div>
 
           <div className="grid gap-8 xl:gap-16 md:grid-cols-2">
-            <Card>
-              <CardHeader>
-                <Globe className="h-10 w-10 text-primary -mb-4 " />
+            <Card bgColor="bg-primary">
+              <CardHeader className="flex flex-col items-center">
+                <Globe className="h-10 w-10 mb-4 " />
                 <CardTitle>Forces telluriques</CardTitle>
                 <CardDescription>
                   La Terre génère des énergies naturelles qui influencent les
@@ -117,9 +117,9 @@ export default function GeobiologiePage() {
               </CardContent>
             </Card>
 
-            <Card>
-              <CardHeader>
-                <Zap className="h-10 w-10 text-primary -mb-4" />
+            <Card bgColor="bg-primary">
+              <CardHeader className="flex flex-col items-center">
+                <Zap className="h-10 w-10 mb-4" />
                 <CardTitle>Influences modernes</CardTitle>
                 <CardDescription>
                   Le développement technologique a introduit de nouvelles
@@ -135,9 +135,9 @@ export default function GeobiologiePage() {
               </CardContent>
             </Card>
 
-            <Card>
-              <CardHeader>
-                <SunMoon className="h-10 w-10 text-primary -mb-4" />
+            <Card bgColor="bg-primary">
+              <CardHeader className="flex flex-col items-center">
+                <SunMoon className="h-10 w-10 mb-4" />
                 <CardTitle>Forces cosmiques</CardTitle>
                 <CardDescription>
                   Les rayonnements célestes du soleil, de la lune et des astres.
@@ -151,9 +151,9 @@ export default function GeobiologiePage() {
               </CardContent>
             </Card>
 
-            <Card>
-              <CardHeader>
-                <Sparkles className="h-10 w-10 text-primary -mb-4" />
+            <Card bgColor="bg-primary">
+              <CardHeader className="flex flex-col items-center">
+                <Sparkles className="h-10 w-10 mb-4" />
                 <CardTitle>Phénomènes subtils</CardTitle>
                 <CardDescription>
                   Certains lieux gardent l&apos;empreinte des émotions et
@@ -163,8 +163,7 @@ export default function GeobiologiePage() {
               <CardContent>
                 <p>
                   Pouvant affecter le bien-être des habitants, on parle alors de
-                  mémoires des lieux ou d&apos;énergies résiduelles qui peuvent
-                  être harmonisées par un géobiologue expérimenté.
+                  mémoires des lieux ou d&apos;énergies résiduelles.
                 </p>
               </CardContent>
             </Card>
@@ -174,36 +173,43 @@ export default function GeobiologiePage() {
 
       <section className="my-16  ">
         <div className="my-16  ">
-          <div className="p-6 text-center max-w-2xl mx-auto space-y-4">
-            <h2 className="">Pourquoi faire appel à un géobiologue ?</h2>
-            <p>
+          <Card
+            bgColor="bg-secondary"
+            className="p-6 text-center space-y-4"
+          >
+            <CardTitle className="text-primary">
+              Pourquoi faire appel à un géobiologue ?
+            </CardTitle>
+            <CardContent className="max-w-2xl space-y-4 mx-auto ">
+            <h4>
               Faire appel à un géobiologue permet de créer un environnement
               équilibré et harmonieux, en identifiant et en corrigeant les
               influences négatives naturelles ou artificielles qui peuvent
               affecter votre bien-être quotidien.
-            </p>
-            <p>
+            </h4>
+            <h4>
               Que ce soit pour une maison, un lieu de travail ou un projet
               d&apos;aménagement, la géobiologie offre une approche globale et
               personnalisée pour améliorer votre qualité de vie et votre
               relation à l&apos;espace.
-            </p>
-          </div>
+            </h4>
+            </CardContent>
+          </Card>
         </div>
       </section>
 
       {/* Applications pratiques with improved layout */}
       <section className="">
         <div className="flex items-center mb-8">
-          <h2>Domaines clés d&apos;application</h2>
+          <h3 className='text-primary'>Quels sont les domaines clés d&apos;application de la géobiologie ?</h3>
         </div>
 
         <div className="mt-16 grid gap-16  max-w-3xl mx-auto">
           {/* Entreprises */}
-          <div className="space-y-2 text-center">
-            <h3>
+          <Card bgColor='bg-secondary' className="space-y-2 text-center">
+            <CardTitle className=" max-w-xl mx-auto ">
               Commerces, entreprises et établissements d&apos;accueil collectif
-            </h3>
+            </CardTitle>
             <p>
               Un espace harmonisé favorise la concentration et réduit le stress
               des équipes.
@@ -215,11 +221,11 @@ export default function GeobiologiePage() {
               height={350}
               className="aspect-[4/3] overflow-hidden object-cover pt-2  shadow-md mx-auto"
             />
-          </div>
+          </Card>
 
           {/* Agriculture */}
-          <div className="space-y-2 text-center">
-            <h3>Espaces verts, domaines agricoles et élevages</h3>
+          <Card bgColor='bg-secondary' className="space-y-2 text-center">
+            <CardTitle>Espaces verts, domaines agricoles et élevages</CardTitle>
             <p>
               L&apos;influence énergétique du sol joue un rôle clé dans la
               croissance des cultures et la santé animale.
@@ -231,11 +237,11 @@ export default function GeobiologiePage() {
               height={350}
               className="aspect-[4/3] overflow-hidden object-cover  shadow-md mx-auto pt-2"
             />
-          </div>
+          </Card>
 
           {/* Particuliers */}
-          <div className="space-y-2 text-center">
-            <h3>Particuliers (maison, appartements...)</h3>
+          <Card bgColor='bg-secondary' className="space-y-2 text-center">
+            <CardTitle>Particuliers (maison, appartements...)</CardTitle>
             <p>
               L&apos;équilibre énergétique d&apos;un lieu influe sur la qualité
               du sommeil et le bien-être quotidien.
@@ -247,20 +253,20 @@ export default function GeobiologiePage() {
               height={350}
               className="aspect-[4/3] overflow-hidden object-cover  shadow-md mx-auto pt-2"
             />
-          </div>
+          </Card>
         </div>
       </section>
 
       <section className="bg-primary ">
-        <Card className="shadow-sm md:max-w-xl hover:shadow-md transition-all  md:p-6  duration-300 h-full  mx-auto">
+        <Card bgColor="bg-secondary" className=" bg-secondary shadow-sm md:max-w-xl hover:shadow-md transition-all  md:p-6  duration-300 h-full  mx-auto">
           <CardHeader className="">
-            <h3 className="">Prêt à transformer votre espace ?</h3>
+            <h3 className="text-primary">Prêt à transformer votre espace ?</h3>
           </CardHeader>
           <CardContent className="text-base">
-            <p className="text-muted-foreground text-center md:text-left">
+          
               Découvrez comment la géobiologie peut améliorer votre qualité de
               vie et créer un environnement plus harmonieux.
-            </p>
+           
             <div className="flex flex-col sm:flex-row gap-4 mt-8">
               <Link href="/services" className="w-full">
                 <Button size="lg" className="w-full group">
