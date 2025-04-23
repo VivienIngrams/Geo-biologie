@@ -20,7 +20,7 @@ export default function Container({ children }: { children: React.ReactNode }) {
       <main className="w-full ">{children}</main>
 
       {/* Footer */}
-      <Footer />
+     
     </div>
   )
 }

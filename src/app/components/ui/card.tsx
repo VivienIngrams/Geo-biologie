@@ -1,17 +1,23 @@
 import * as React from "react"
-
 import { cn } from "~/lib/utils"
+
+// Helper function to determine the text color based on bgColor
+const getTextColorForBg = (bgColor: string) => {
+  if (bgColor === "bg-primary") {
+    return "text-secondary"; // if background is primary, text will be secondary
+  } else if (bgColor === "bg-secondary") {
+    return "text-primary"; // if background is secondary, text will be primary
+  }
+  return ""; // default text color
+};
 
 const Card = React.forwardRef<
   HTMLDivElement,
-  React.HTMLAttributes<HTMLDivElement>
->(({ className, ...props }, ref) => (
+  React.HTMLAttributes<HTMLDivElement> & { bgColor?: string }
+>(({ className, bgColor, ...props }, ref) => (
   <div
     ref={ref}
-    className={cn(
-      " border border-primary/30 bg-secondary text-card-foreground shadow",
-      className
-    )}
+    className={cn("text-card-foreground", getTextColorForBg(bgColor), className)}
     {...props}
   />
 ))
@@ -19,11 +25,11 @@ Card.displayName = "Card"
 
 const CardHeader = React.forwardRef<
   HTMLDivElement,
-  React.HTMLAttributes<HTMLDivElement>
->(({ className, ...props }, ref) => (
+  React.HTMLAttributes<HTMLDivElement> & { bgColor?: string }
+>(({ className, bgColor, ...props }, ref) => (
   <div
     ref={ref}
-    className={cn("flex flex-col space-y-1.5 p-4", className)}
+    className={cn("flex flex-col space-y-1.5 p-6", getTextColorForBg(bgColor), className)}
     {...props}
   />
 ))
@@ -31,11 +37,11 @@ CardHeader.displayName = "CardHeader"
 
 const CardTitle = React.forwardRef<
   HTMLDivElement,
-  React.HTMLAttributes<HTMLDivElement>
->(({ className, ...props }, ref) => (
+  React.HTMLAttributes<HTMLDivElement> & { bgColor?: string }
+>(({ className, bgColor, ...props }, ref) => (
   <div
     ref={ref}
-    className={cn("font-semibold text-primary text-xl xl:text-2xl leading-none font-spectral tracking-tighter", className)}
+    className={cn("font-semibold text-xl xl:text-2xl leading-none font-spectral tracking-tighter", getTextColorForBg(bgColor), className)}
     {...props}
   />
 ))
@@ -43,11 +49,11 @@ CardTitle.displayName = "CardTitle"
 
 const CardDescription = React.forwardRef<
   HTMLDivElement,
-  React.HTMLAttributes<HTMLDivElement>
->(({ className, ...props }, ref) => (
+  React.HTMLAttributes<HTMLDivElement> & { bgColor?: string }
+>(({ className, bgColor, ...props }, ref) => (
   <div
     ref={ref}
-    className={cn("text-sm text-muted-foreground", className)}
+    className={cn("text-sm", getTextColorForBg(bgColor), className)}
     {...props}
   />
 ))
@@ -55,19 +61,19 @@ CardDescription.displayName = "CardDescription"
 
 const CardContent = React.forwardRef<
   HTMLDivElement,
-  React.HTMLAttributes<HTMLDivElement>
->(({ className, ...props }, ref) => (
-  <div ref={ref} className={cn("p-6 pt-0", className)} {...props} />
+  React.HTMLAttributes<HTMLDivElement> & { bgColor?: string }
+>(({ className, bgColor, ...props }, ref) => (
+  <div ref={ref} className={cn("p-6 pt-0", getTextColorForBg(bgColor), className)} {...props} />
 ))
 CardContent.displayName = "CardContent"
 
 const CardFooter = React.forwardRef<
   HTMLDivElement,
-  React.HTMLAttributes<HTMLDivElement>
->(({ className, ...props }, ref) => (
+  React.HTMLAttributes<HTMLDivElement> & { bgColor?: string }
+>(({ className, bgColor, ...props }, ref) => (
   <div
     ref={ref}
-    className={cn("flex items-center p-6 pt-0", className)}
+    className={cn("flex items-center p-6 pt-0", getTextColorForBg(bgColor), className)}
     {...props}
   />
 ))

@@ -39,7 +39,7 @@ p {
 }
 
 section {
-  @apply  mx-auto p-4 md:px-12 lg:px-16 xl:px-40 2xl:px-56;
+  @apply  mx-auto w-full py-16  p-4 md:px-12 lg:px-16 xl:px-40 2xl:px-56;
 }
 /* 
   ---break--- */
