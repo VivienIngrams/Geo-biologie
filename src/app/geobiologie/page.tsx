@@ -15,22 +15,26 @@ export default function GeobiologiePage() {
   return (
     <div className="flex flex-col items-center ">
       {/* Hero Section */}
-      <section className="relative w-full md:min-h-[90vh] flex items-center justify-center  ">
+      <section className="relative w-full min-h-screen flex items-center justify-center xl:mx-20">
         {/* Background image */}
-        <div className="absolute  inset-0 z-0">
+        <div className="absolute inset-0 z-0">
           <Image
             src="/pierre.jpg"
             alt="Joëlle Villegas, géobiologue"
             layout="fill"
             objectFit="cover"
-            className=""
+            className="rounded-lg"
           />
         </div>
-        <div className="container relative z-10 py-16 md:my-24 ">
-          {/* Blurred background layer */}
-          <div className="absolute inset-0 z-0 blur-mask rounded-lg" />
-          <div className="relative mx-auto z-10 max-w-2xl text-center">
-            <div className="  space-y-4">
+
+        {/* Foreground content */}
+        <div className="relative z-10 container mx-auto px-4 grid gap-6 lg:grid-cols-2 items-center">
+          <div className="relative flex flex-col justify-center p-4 space-y-6">
+            {/* Blurred background layer */}
+            <div className="absolute inset-0 z-0 blur-mask rounded-lg" />
+
+            {/* Foreground text content */}
+            <div className="relative z-10">
               <h1 className="text-white">La Géobiologie</h1>
               <h3 className="text-white">
                 L&apos;art d&apos;harmoniser les énergies entre
@@ -171,102 +175,52 @@ export default function GeobiologiePage() {
         </div>
       </section>
 
-      <section className="my-16  ">
-        <div className="my-16  ">
-          <Card
-            bgColor="bg-secondary"
-            className="p-6 text-center space-y-4"
-          >
-            <CardTitle className="text-primary">
-              Pourquoi faire appel à un géobiologue ?
-            </CardTitle>
-            <CardContent className="max-w-2xl space-y-4 mx-auto ">
-            <h4>
-              Faire appel à un géobiologue permet de créer un environnement
-              équilibré et harmonieux, en identifiant et en corrigeant les
-              influences négatives naturelles ou artificielles qui peuvent
-              affecter votre bien-être quotidien.
-            </h4>
-            <h4>
-              Que ce soit pour une maison, un lieu de travail ou un projet
-              d&apos;aménagement, la géobiologie offre une approche globale et
-              personnalisée pour améliorer votre qualité de vie et votre
-              relation à l&apos;espace.
-            </h4>
-            </CardContent>
-          </Card>
-        </div>
-      </section>
-
-      {/* Applications pratiques with improved layout */}
-      <section className="">
-        <div className="flex items-center mb-8">
-          <h3 className='text-primary'>Quels sont les domaines clés d&apos;application de la géobiologie ?</h3>
-        </div>
-
-        <div className="mt-16 grid gap-16  max-w-3xl mx-auto">
-          {/* Entreprises */}
-          <Card bgColor='bg-secondary' className="space-y-2 text-center">
-            <CardTitle className=" max-w-xl mx-auto ">
-              Commerces, entreprises et établissements d&apos;accueil collectif
-            </CardTitle>
-            <p>
-              Un espace harmonisé favorise la concentration et réduit le stress
-              des équipes.
-            </p>
-            <Image
-              src="/travail.jpg"
-              alt="Géobiologie en entreprise"
-              width={350}
-              height={350}
-              className="aspect-[4/3] overflow-hidden object-cover pt-2  shadow-md mx-auto"
-            />
-          </Card>
-
-          {/* Agriculture */}
-          <Card bgColor='bg-secondary' className="space-y-2 text-center">
-            <CardTitle>Espaces verts, domaines agricoles et élevages</CardTitle>
-            <p>
-              L&apos;influence énergétique du sol joue un rôle clé dans la
-              croissance des cultures et la santé animale.
-            </p>
-            <Image
-              src="/oliv.jpg"
-              alt="Géobiologie en agriculture"
-              width={350}
-              height={350}
-              className="aspect-[4/3] overflow-hidden object-cover  shadow-md mx-auto pt-2"
-            />
-          </Card>
-
-          {/* Particuliers */}
-          <Card bgColor='bg-secondary' className="space-y-2 text-center">
-            <CardTitle>Particuliers (maison, appartements...)</CardTitle>
-            <p>
-              L&apos;équilibre énergétique d&apos;un lieu influe sur la qualité
-              du sommeil et le bien-être quotidien.
-            </p>
-            <Image
-              src="/house.jpg"
-              alt="Géobiologie pour particuliers"
-              width={350}
-              height={350}
-              className="aspect-[4/3] overflow-hidden object-cover  shadow-md mx-auto pt-2"
-            />
-          </Card>
-        </div>
+      <section className="w-full py-12 md:py-16 lg:py-24 xl:py-32  rounded-md">
+        <Card bgColor="bg-secondary" className="container px-4 md:px-6">
+          <div className="grid gap-6 lg:grid-cols-2  lg:gap-12 items-center">
+            <div className="">
+              <Image
+                src="/oliv.jpg"
+                width={500}
+                height={400}
+                alt="Joëlle Villegas"
+                className="mx-auto aspect-[4/3] overflow-hidden   object-cover"
+              />
+            </div>
+            <div className=" flex flex-col justify-center space-y-4">
+              <div className="space-y-2">
+                <CardTitle className="text-primary">
+                  Pourquoi faire appel à un géobiologue ?
+                </CardTitle>
+              </div>
+              <h4 className="text-primary  font-medium">
+                Faire appel à un géobiologue permet de créer un environnement
+                équilibré et harmonieux, en identifiant et en corrigeant les
+                influences négatives naturelles ou artificielles qui peuvent
+                affecter votre bien-être quotidien.
+              </h4>
+              <h4 className="text-primary md:max-w-5xl font-medium">
+                Que ce soit pour une maison, un lieu de travail ou un projet
+                d&apos;aménagement, la géobiologie offre une approche globale et
+                personnalisée pour améliorer votre qualité de vie et votre
+                relation à l&apos;espace.
+              </h4>
+            </div>
+          </div>
+        </Card>
       </section>
 
       <section className="bg-primary ">
-        <Card bgColor="bg-secondary" className=" bg-secondary shadow-sm md:max-w-xl hover:shadow-md transition-all  md:p-6  duration-300 h-full  mx-auto">
+        <Card
+          bgColor="bg-secondary"
+          className=" bg-secondary shadow-sm md:max-w-xl hover:shadow-md transition-all  md:p-6  duration-300 h-full  mx-auto"
+        >
           <CardHeader className="">
             <h3 className="text-primary">Prêt à transformer votre espace ?</h3>
           </CardHeader>
           <CardContent className="text-base">
-          
-              Découvrez comment la géobiologie peut améliorer votre qualité de
-              vie et créer un environnement plus harmonieux.
-           
+            Découvrez comment la géobiologie peut améliorer votre qualité de vie
+            et créer un environnement plus harmonieux.
             <div className="flex flex-col sm:flex-row gap-4 mt-8">
               <Link href="/services" className="w-full">
                 <Button size="lg" className="w-full group">

@@ -64,7 +64,7 @@ const ContactForm: React.FC = () => {
   }
 
   return (
-    <Card className='p-4'>
+    <Card bgColor='bg-secondary' className='p-4'>
     <form
       method="post"
       action="/api"

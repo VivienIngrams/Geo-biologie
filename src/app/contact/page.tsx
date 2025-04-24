@@ -11,84 +11,77 @@ import {
 } from '../components/ui/card'
 export default function ContactPage() {
   return (
-    <div className="container py-12 md:py-16 lg:py-20">
+    <div className="container py-12 ">
       <div className="mx-auto max-w-5xl space-y-12">
-        <div className="space-y-4 text-center">
-          <h1>Contactez-moi</h1>
-          <p>
+        <div className="space-y-4 text-center md:py-8">
+          <h1 className="text-primary">Contactez-moi</h1>
+          <h3 className="text-primary">
             N&apos;hésitez pas à me contacter pour toute question ou pour
             prendre rendez-vous
-          </p>
-          <div className="my-4 mx-auto max-w-[100px]" />
+          </h3>
+          <div className="my-4 mx-auto max-w-[100px] border-b border-primary" />
         </div>
 
-        <div className="grid gap-8 md:grid-cols-3">
-          <Card>
-            <CardHeader>
-              <CardTitle className="flex items-center gap-2">
-                <Phone className="h-5 w-5 text-primary" />
-                Téléphone
-              </CardTitle>
-              <CardDescription>Appelez-moi directement</CardDescription>
-            </CardHeader>
-            <CardContent>
-              <p>+33 6 03 91 57 34</p>
-              
-            </CardContent>
-          </Card>
-
-          <Card>
-            <CardHeader>
-              <CardTitle className="flex items-center gap-2">
-                <Mail className="h-5 w-5 text-primary" />
-                Email
-              </CardTitle>
-              <CardDescription>Écrivez-moi</CardDescription>
-            </CardHeader>
-            <CardContent>
-              <p>contact@lecheminduvivant.fr</p>
-             
-            </CardContent>
-          </Card>
-
-          <Card>
-            <CardHeader>
-              <CardTitle className="flex items-center gap-2">
-                <MapPin className="h-5 w-5 text-primary" />
-                Localisation
-              </CardTitle>
-              <CardDescription>Région/Ville/département</CardDescription>
-            </CardHeader>
-            <CardContent>
-              <p>  Déplacements possibles dans toute la France et le monde</p>
-              <p className="text-sm text-muted-foreground mt-2">
-              
-              </p>
-            </CardContent>
-          </Card>
+        <div className="mx-auto text-center grid text-secondary max-w-5xl grid-cols-1 gap-6 md:gap-12 xl:gap-20 py-6 md:grid-cols-2 lg:grid-cols-3">
+        <Card bgColor="bg-secondary">
+          <CardHeader>
+            <div className="flex justify-center items-center">
+              <Phone className="h-10 w-10 mb-4" />
+            </div>
+            <CardTitle>Téléphone</CardTitle>
+            <CardDescription>Appelez-moi directement</CardDescription>
+          </CardHeader>
+          <CardContent>
+            <p>+33 6 03 91 57 34</p>
+          </CardContent>
+        </Card>
+        <Card bgColor="bg-secondary">
+          <CardHeader>
+            <div className="flex justify-center items-center">
+              <Mail className="h-10 w-10 mb-4" />
+            </div>
+            <CardTitle>Email</CardTitle>
+            <CardDescription>Écrivez-moi</CardDescription>
+          </CardHeader>
+          <CardContent>
+            <p>contact@lecheminduvivant.fr</p>
+          </CardContent>
+        </Card>
+        <Card bgColor="bg-secondary">
+          <CardHeader>
+            <div className="flex justify-center items-center">
+              <MapPin className="h-10 w-10 mb-4" />
+            </div>
+            <CardTitle>Localisation</CardTitle>
+            <CardDescription>Région/Ville/département</CardDescription>
+          </CardHeader>
+          <CardContent>
+            <p>Déplacements possibles dans toute la France et le monde</p>
+          </CardContent>
+        </Card>
         </div>
 
         <div className="grid gap-8  md:grid-cols-2">
-          <div className="space-y-6 md:min-h-screen  ">
-            <h2>Envoyez-moi un message</h2>
-            <p>
+          <Card bgColor="bg-secondary" className="space-y-6  pt-4 ">
+            <CardTitle className="text-primary">
+              Envoyez-moi un message
+            </CardTitle>
+            <p className="text-primary">
               Utilisez ce formulaire pour me contacter. Je vous répondrai dans
               les plus brefs délais.
             </p>
-            <p>
+            <p className="text-primary">
               N&apos;hésitez pas à préciser votre demande, ainsi que vos
               disponibilités si vous souhaitez prendre rendez-vous.
             </p>
-          </div>
-          <div className="grid gap-8 ">
-            <div className="space-y-6">
-              <ContactForm />
-            </div>
+          </Card>
+          <div className="">
+            <ContactForm />
           </div>{' '}
         </div>
       </div>
       {/* Website Link */}
-      <div className=" py-6 z-60">
+      <div className="w-full flex justify-center p-6 z-60">
         <Link
           href="https://vivieningrams.com"
           target="_blank"

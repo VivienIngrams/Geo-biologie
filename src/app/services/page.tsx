@@ -7,7 +7,7 @@ import {
   Tractor,
 } from 'lucide-react'
 import Link from 'next/link'
-
+import Image from 'next/image'
 import { Button } from '../components/ui/button'
 import {
   Card,
@@ -122,132 +122,160 @@ export default function ServicesPage() {
   ]
 
   return (
-    <div className=" py-12 md:py-16 lg:py-20">
-      <div className=" space-y-12">
-        {/* Header Section */}
-        <section className="space-y-4 max-w-6xl text-center">
-          <h1>Mes Services</h1>
-          <p>
-            Des consultations personnalisées en géobiologie pour améliorer votre
-            bien-être, harmoniser vos espaces de vie, et analyser les
-            déséquilibres environnementaux
-          </p>
-          <Separator className="mt-4" />
-        </section>
+    <div className="flex flex-col items-center ">
+      {/* Hero Section */}
+      <section className="relative w-full md:min-h-[90vh] flex items-center justify-center  ">
+        {/* Background image */}
+        <div className="absolute  inset-0 z-0">
+          <Image
+            src="/water.jpg"
+            alt="Joëlle Villegas, géobiologue"
+            layout="fill"
+            objectFit="cover"
+            className=""
+          />
+        </div>
 
-        {/* Introduction */}
-        <section>
-          <div className="pb-8 text-primary">
-            <h3>
-              Découvrez mes services conçus pour vous aider à créer un
-              environnement sain et harmonieux
-            </h3>
+        <div className="relative z-10 container mx-auto px-4 grid gap-6 lg:grid-cols-2 items-center">
+          <div className="relative flex flex-col justify-center p-4 space-y-6">
+            {/* Blurred background layer */}
+            <div className="absolute inset-0 z-0 blur-mask rounded-lg" />
+            <div className="relative z-10 ">
+              <div className="  space-y-4">
+                <h1 className="text-white">Mes Services</h1>
+                <h3 className="text-white">
+                  Des consultations personnalisées en géobiologie pour améliorer
+                  votre bien-être, harmoniser vos espaces de vie, et analyser
+                  les déséquilibres environnementaux
+                </h3>
+              </div>
+            </div>
           </div>
+        </div>
+      </section>
 
-          {/* Services Grid */}
-          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-            {services.map((service, index) => (
-              <Card key={index}>
-                <CardHeader>
-                  <CardTitle>{service.title}</CardTitle>
-                  <CardDescription>{service.subtitle}</CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <ul className="space-y-2">
-                    {service.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-start gap-2">
-                        <Check className="h-5 w-5 text-primary shrink-0 mt-0.5" />
-                        <span>{feature}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-          <div className="my-4 md:my-12 flex items-center justify-center w-full text-xl  font-bold text-primary">
-            <h3>Prenez soin de vous et de votre environnement !</h3>
-          </div>
-          <div className="flex items-center justify-center w-full ">
-            <Link href="/contact" className="">
-              <Button variant="accent" className="inline-flex items-center justify-center  bg-primary px-8 py-3 text-base font-medium text-primary-foreground ring-offset-background transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50">
-                Prendre rendez-vous
-              </Button>
-            </Link>
-          </div>
-        </section>
+      {/* Introduction */}
+      <section>
+        <Card bgColor="bg-secondary" className="pb-8">
+          <CardHeader className="text-center">
+            <CardTitle className="text-2xl font-bold">
+              Découvrez mes services
+            </CardTitle>
+            Conçus pour vous aider à créer un environnement sain et harmonieux
+          </CardHeader>
+        </Card>
 
-        {/* Application Domains Section */}
-        <section className="space-y-8 py-8 md:py-16  bg-primary rounded-md">
-          <h2 className='text-secondary'>Champs d&apos;application </h2>
-          <h3 className='text-secondary'>Dans quels domaines je peux vous aider</h3>
-          <p className='text-secondary'>
-            Lorsqu&apos;on ne peut pas changer un lieu, on peut néanmoins le
-            transformer et développer l&apos;art d&apos;habiter. Réussir une
-            harmonisation, c&apos;est alléger les corps subtils qui polluent
-            l&apos;état d&apos;esprit et la santé globale de l&apos;occupant.
-          </p>
-          <div className="grid gap-6 md:grid-cols-2">
-            {applicationDomains.map((domain, index) => (
-              <Card
-                key={index}
-                className="flex flex-col items-center text-center"
-              >
-                <CardContent className="flex flex-col items-center">
-                  <div className="rounded-full bg-primary text-primary-foreground p-4 my-4">
-                    {domain.icon}
-                  </div>
-                  <CardTitle className="my-2">{domain.title}</CardTitle>
-                  <CardDescription>{domain.description}</CardDescription>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </section>
-
-        {/* Intervention Process Section */}
-        <section className="pt-8 space-y-6 md:max-w-5xl mx-auto">
-          <h2>Comment se déroule une intervention ?</h2>
-          <div className="grid gap-6">
-            {[
-              {
-                title: '1. Premier contact',
-                description:
-                  'Un échange téléphonique ou par email pour comprendre vos besoins et définir l’intervention.',
-              },
-              {
-                title: '2. Visite et analyse',
-                description:
-                  'Une analyse approfondie sur place pour identifier les problématiques spécifiques.',
-              },
-              {
-                title: '3. Solutions et suivi',
-                description:
-                  'Des solutions adaptées suivies d’un accompagnement pour garantir leur efficacité.',
-              },
-            ].map((step, index) => (
-              <Card key={index}>
-                <CardHeader>
-                  <CardTitle>{step.title}</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p>{step.description}</p>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </section>
-
-        {/* Contact Button */}
-        <div className="flex justify-center pt-8">
-          <Link href="/contact">
-            <button className="inline-flex items-center justify-center  bg-primary px-8 py-3 text-base font-medium text-primary-foreground ring-offset-background transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50">
-              Me contacter pour plus d&apos;informations
-              <ArrowRight className="ml-2 h-4 w-4" />
-            </button>
+        {/* Services Grid */}
+        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+          {services.map((service, index) => (
+            <Card bgColor='bg-secondary' key={index}>
+              <CardHeader>
+                <CardTitle>{service.title}</CardTitle>
+                <CardDescription>{service.subtitle}</CardDescription>
+              </CardHeader>
+              <CardContent>
+                <ul className="space-y-2">
+                  {service.features.map((feature, featureIndex) => (
+                    <li key={featureIndex} className="flex items-start gap-2">
+                      <Check className="h-5 w-5 text-primary shrink-0 mt-0.5" />
+                      <span>{feature}</span>
+                    </li>
+                  ))}
+                </ul>
+              </CardContent>
+            </Card>
+          ))}
+        </div>
+        <div className="my-4 md:my-12 flex items-center justify-center w-full text-xl  font-bold text-primary">
+          <h3>Prenez soin de vous et de votre environnement !</h3>
+        </div>
+        <div className="flex items-center justify-center w-full ">
+          <Link href="/contact" className="">
+            <Button
+              variant="accent"
+              className="inline-flex items-center justify-center  bg-primary px-8 py-3 text-base font-medium text-primary-foreground ring-offset-background transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50"
+            >
+              Prendre rendez-vous
+            </Button>
           </Link>
         </div>
-      </div>
+      </section>
+
+      {/* Application Domains Section */}
+      <section className="space-y-8 py-8 md:py-16  bg-primary rounded-md">
+        <h2 className="text-secondary">Champs d&apos;application </h2>
+        <h3 className="text-secondary">
+          Dans quels domaines je peux vous aider
+        </h3>
+        <p className="text-secondary">
+          Lorsqu&apos;on ne peut pas changer un lieu, on peut néanmoins le
+          transformer et développer l&apos;art d&apos;habiter. Réussir une
+          harmonisation, c&apos;est alléger les corps subtils qui polluent
+          l&apos;état d&apos;esprit et la santé globale de l&apos;occupant.
+        </p>
+        <div className="grid gap-6 md:grid-cols-2">
+          {applicationDomains.map((domain, index) => (
+            <Card bgColor='bg-primary'
+              key={index}
+              className="flex flex-col items-center text-center"
+            >
+              <CardContent className="flex flex-col items-center">
+                <div className="rounded-full bg-primary text-primary-foreground p-4 my-4">
+                  {domain.icon}
+                </div>
+                <CardTitle className="my-2">{domain.title}</CardTitle>
+                <CardDescription>{domain.description}</CardDescription>
+              </CardContent>
+            </Card>
+          ))}
+        </div>
+      </section>
+
+      {/* Intervention Process Section */}
+      <section className="pt-8 space-y-6 md:max-w-5xl mx-auto">
+        <h2>Comment se déroule une intervention ?</h2>
+        <div className="grid gap-6">
+          {[
+            {
+              title: '1. Premier contact',
+              description:
+                'Un échange téléphonique ou par email pour comprendre vos besoins et définir l’intervention.',
+            },
+            {
+              title: '2. Visite et analyse',
+              description:
+                'Une analyse approfondie sur place pour identifier les problématiques spécifiques.',
+            },
+            {
+              title: '3. Solutions et suivi',
+              description:
+                'Des solutions adaptées suivies d’un accompagnement pour garantir leur efficacité.',
+            },
+          ].map((step, index) => (
+            <Card bgColor='bg-secondary' key={index}>
+              <CardHeader>
+                <CardTitle>{step.title}</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p>{step.description}</p>
+              </CardContent>
+            </Card>
+          ))}
+        </div>
+      </section>
+
+      {/* Contact Button */}
+      <section className="flex justify-center bg-primary pt-8">
+        <Link href="/contact">
+          <Button
+            variant="accent"
+            className="inline-flex items-center justify-center   px-8 py-3 text-base font-medium text-primary-foreground ring-offset-background transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50"
+          >
+            Me contacter pour plus d&apos;informations
+            <ArrowRight className="ml-2 h-4 w-4" />
+          </Button>
+        </Link>
+      </section>
     </div>
   )
 }
