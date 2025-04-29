@@ -1,4 +1,4 @@
-import { ArrowRight, Globe, Info, Sparkles, SunMoon, Zap } from 'lucide-react'
+import { ArrowRight, Globe, Check, Sparkles, SunMoon, Zap } from 'lucide-react'
 import Image from 'next/image'
 import Link from 'next/link'
 
@@ -28,8 +28,8 @@ export default function GeobiologiePage() {
         </div>
 
         {/* Foreground content */}
-        <div className="relative z-10 container mx-auto px-4 grid gap-6 lg:grid-cols-2 items-center">
-          <div className="relative flex flex-col justify-center p-4 space-y-6">
+        <div className="relative z-10 container mx-auto px-4 grid gap-6 md:grid-cols-2 lg:grid-cols-3 items-center">
+          <div className="relative flex flex-col justify-center p-4 space-y-6 lg:col-span-2">
             {/* Blurred background layer */}
             <div className="absolute inset-0 z-0 blur-mask rounded-lg" />
 
@@ -46,47 +46,75 @@ export default function GeobiologiePage() {
         </div>
       </section>
 
-      <section>
-        {/* Introduction - What is Geobiology */}
-        <div className="mb-16">
-          <div className="grid md:grid-cols-2 gap-8 items-center">
-            <div className="relative h-[300px] md:h-[400px]  overflow-hidden shadow-lg">
-              <Image
-                src="/oliv.jpg"
-                alt="Géobiologie"
-                width={600}
-                height={400}
-                className="object-cover w-full h-full"
-              />
-            </div>
-            <div>
-              <Card bgColor="bg-secondary" className="md:text-lg">
-                <CardContent className="space-y-4">
-                  <p className=" leading-relaxed">
-                    La géobiologie étudie les influences de l&apos;environnement
-                    sur les êtres vivants, analysant les interactions entre les
-                    phénomènes naturels et le bien-être des individus.
-                  </p>
+      {/* Introduction - What is Geobiology */}
+      <div className="w-full">
+        <Card
+          bgColor="bg-secondary"
+          className="flex flex-col md:flex-row min-h-[90vh]"
+        >
+          {/* Image */}
+          <div className="relative w-full md:w-1/2 aspect-square md:aspect-auto h-64 md:h-auto">
+            <Image
+              src="/oliv.jpg"
+              alt="Joëlle Villegas"
+              layout="fill"
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw"
+              className="object-cover"
+            />
+          </div>
+          <div className="w-full md:w-1/2 flex items-center justify-center p-6">
+            <div className="w-full md:max-w-xl space-y-4 text-center md:text-left">
+              <CardHeader className="space-y-2 p-0">
+                <CardTitle className="text-xl md:text-2xl text-primary">
+                  Qu’est-ce que la géobiologie ?
+                </CardTitle>
+                <CardDescription className="text-primary text-lg">
+                  La géobiologie est l’étude des interactions entre notre
+                  environnement et notre bien-être, dans une approche à la fois
+                  scientifique et énergétique.
+                </CardDescription>
+              </CardHeader>
 
-                  <p className="leading-relaxed">
-                    D&apos;un point de vue étymologique, &apos;géobiologie&apos;
-                    se compose de &apos;gé&apos; (la Terre), &apos;bios&apos;
-                    (la vie) et &apos;logos&apos; (l&apos;étude). Elle
-                    s&apos;intéresse à l&apos;équilibre entre les forces
-                    terrestres et cosmiques qui nous entourent.
-                  </p>
-
-                  <p className="leading-relaxed">
-                    Le géobiologue optimise ces interactions pour créer un
-                    environnement harmonieux et équilibré, transformant les
-                    lieux pour développer l&apos;art d&apos;habiter sainement.
-                  </p>
-                </CardContent>
-              </Card>
+              <CardContent className="p-0 space-y-4">
+                <ul className="space-y-2 mb-6">
+                  <li className="flex items-start gap-2">
+                    <Check className="h-5 w-5 text-primary shrink-0 mt-0.5" />
+                    <span>
+                      Le terme provient du grec : <strong>géo</strong> (Terre),{' '}
+                      <strong>bios</strong> (vie), <strong>logos</strong>{' '}
+                      (étude).
+                    </span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <Check className="h-5 w-5 text-primary shrink-0 mt-0.5" />
+                    <span>
+                      Elle vise à équilibrer les{' '}
+                      <strong>forces naturelles et artificielles</strong> qui
+                      influencent notre santé.
+                    </span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <Check className="h-5 w-5 text-primary shrink-0 mt-0.5" />
+                    <span>
+                      Le géobiologue intervient pour{' '}
+                      <strong>harmoniser les lieux</strong> et favoriser une vie
+                      plus saine.
+                    </span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <Check className="h-5 w-5 text-primary shrink-0 mt-0.5" />
+                    <span>
+                      Une démarche qui permet de{' '}
+                      <strong>transformer son habitat</strong> en un espace
+                      ressourçant.
+                    </span>
+                  </li>
+                </ul>
+              </CardContent>
             </div>
           </div>
-        </div>
-      </section>
+        </Card>
+      </div>
 
       <section className="bg-primary">
         {/* Les principes fondamentaux */}
@@ -175,55 +203,91 @@ export default function GeobiologiePage() {
         </div>
       </section>
 
-      <section className="w-full py-12 md:py-16 lg:py-24 xl:py-32  rounded-md">
-        <Card bgColor="bg-secondary" className="container px-4 md:px-6">
-          <div className="grid gap-6 lg:grid-cols-2  lg:gap-12 items-center">
-            <div className="">
-              <Image
-                src="/oliv.jpg"
-                width={500}
-                height={400}
-                alt="Joëlle Villegas"
-                className="mx-auto aspect-[4/3] overflow-hidden   object-cover"
-              />
-            </div>
-            <div className=" flex flex-col justify-center space-y-4">
-              <div className="space-y-2">
-                <CardTitle className="text-primary">
+      <div className="w-full">
+        <Card
+          bgColor="bg-secondary"
+          className="flex flex-col md:flex-row min-h-[90vh]"
+        >
+          {/* Image */}
+          <div className="relative w-full md:w-1/2 aspect-square md:aspect-auto h-64 md:h-auto">
+            <Image
+              src="/oliv.jpg"
+              alt="Joëlle Villegas"
+              layout="fill"
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw"
+              className="object-cover"
+            />
+          </div>
+
+          {/* Text */}
+          <div className="w-full md:w-1/2 flex items-center justify-center p-6">
+            <div className="w-full space-y-4 text-center md:text-left">
+              <CardHeader className="space-y-2 p-0">
+                <CardTitle className="text-xl md:text-2xl text-primary">
                   Pourquoi faire appel à un géobiologue ?
                 </CardTitle>
-              </div>
-              <h4 className="text-primary  font-medium">
-                Faire appel à un géobiologue permet de créer un environnement
-                équilibré et harmonieux, en identifiant et en corrigeant les
-                influences négatives naturelles ou artificielles qui peuvent
-                affecter votre bien-être quotidien.
-              </h4>
-              <h4 className="text-primary md:max-w-5xl font-medium">
-                Que ce soit pour une maison, un lieu de travail ou un projet
-                d&apos;aménagement, la géobiologie offre une approche globale et
-                personnalisée pour améliorer votre qualité de vie et votre
-                relation à l&apos;espace.
-              </h4>
+                <CardDescription className="text-primary text-lg">
+                  Que ce soit pour une maison, un lieu de travail ou un projet
+                  d&apos;aménagement, la géobiologie offre une approche globale
+                  et personnalisée pour :
+                </CardDescription>
+              </CardHeader>
+              <CardContent className="p-0 space-y-4">
+                <ul className="space-y-2 mb-6">
+                  <li className="flex items-start gap-2">
+                    <Check className="h-5 w-5 text-primary shrink-0 mt-0.5" />
+                    <span> Créer un environnement équilibré et harmonieux</span>
+                  </li>
+
+                  <li className="flex items-start gap-2">
+                    <Check className="h-5 w-5 text-primary shrink-0 mt-0.5" />
+                    <span>
+                      {' '}
+                      Améliorer votre qualité de vie et votre relation à
+                      l&apos;espace.
+                    </span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <Check className="h-5 w-5 text-primary shrink-0 mt-0.5" />
+                    <span>
+                      {' '}
+                      Identifier et corriger les influences négatives naturelles
+                      ou artificielles qui peuvent affecter votre bien-être
+                      quotidien.
+                    </span>
+                  </li>
+                </ul>
+
+                <Link href="/contact">
+                  <Button
+                    variant="accent"
+                    className="w-full md:w-fit px-6 py-3 text-base font-medium"
+                  >
+                    Discutons de votre espace
+                  </Button>
+                </Link>
+              </CardContent>
             </div>
           </div>
         </Card>
-      </section>
+      </div>
 
       <section className="bg-primary ">
         <Card
-          bgColor="bg-secondary"
-          className=" bg-secondary shadow-sm md:max-w-xl hover:shadow-md transition-all  md:p-6  duration-300 h-full  mx-auto"
+          bgColor="bg-primary"
+          className=" bg- shadow-sm md:max-w-xl hover:shadow-md transition-all  md:p-6  duration-300 h-full  mx-auto"
         >
           <CardHeader className="">
-            <h3 className="text-primary">Prêt à transformer votre espace ?</h3>
+            <CardTitle className="text-secondary text-center">
+              Prêt à transformer votre espace ?
+            </CardTitle>
           </CardHeader>
-          <CardContent className="text-base">
+          <CardContent className="text-base text-center">
             Découvrez comment la géobiologie peut améliorer votre qualité de vie
             et créer un environnement plus harmonieux.
             <div className="flex flex-col sm:flex-row gap-4 mt-8">
               <Link href="/services" className="w-full">
-                <Button size="lg" className="w-full group">
+                <Button size="lg" variant="secondary" className="w-full group">
                   Mes services
                   <ArrowRight className="ml-3 h-5 w-5 transition-transform group-hover:translate-x-1" />
                 </Button>
