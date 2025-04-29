@@ -91,7 +91,6 @@ export default function GeobiologiePage() {
                       plus saine.
                     </span>
                   </li>
-                  
                 </ul>
               </CardContent>
             </div>

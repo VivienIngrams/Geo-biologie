@@ -40,11 +40,7 @@ export default function AboutPage() {
       content:
         'Il ne revendique que ses compétences réelles, évite toute publicité mensongère, et pratique des honoraires justes en fonction du travail et des ressources du client.',
     },
-    {
-      title: 'Un respect de la confidentialité',
-      content:
-        'Il respecte la personne, l’animal et le lieu, ainsi que la confidentialité des informations pour protéger la vie privée du client.',
-    },
+   
     {
       title: 'Un respect de la législation',
       content:
@@ -55,24 +51,25 @@ export default function AboutPage() {
   return (
     <div className="flex flex-col items-center">
       {/* Hero Section */}
-      <section className="relative w-full min-h-screen flex items-center justify-center xl:mx-20">
+      <section className="relative w-full min-h-[90vh] flex items-center justify-center xl:mx-20">
         {/* Background image */}
         <div className="absolute inset-0 z-0">
           <Image
-            src="/interieure (3).jpg"
+            src="/source.jpg"
             alt="Joëlle Villegas"
             layout="fill"
             objectFit="cover"
-            className="rounded-lg"
+            className=""
           />
         </div>
+        <div className="absolute inset-0 z-0 bg-black opacity-20" />
 
         {/* Foreground content */}
         <div className="relative z-10 container mx-auto px-4 text-secondary">
           <div className="grid gap-6 lg:grid-cols-2 items-center">
             <div className="relative flex flex-col justify-center p-4 space-y-6">
               {/* Blurred background layer */}
-              <div className="absolute inset-0 z-0 blur-mask rounded-lg" />
+              <div className="absolute inset-0 z-0 blur-mask" />
 
               {/* Foreground text content */}
               <div className="relative z-10">
@@ -87,39 +84,62 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Biography Section */}
-      <div className="w-full">
-        <div className="container px-4 md:px-6 grid gap-6 lg:grid-cols-2 items-center">
-          <div className="relative w-full aspect-square overflow-hidden ">
-            <Image
-              src="/JoelleDebout.jpg"
-              alt="Joëlle Villegas"
-              layout="fill"
-              objectFit="cover"
-            />
-          </div>
-          <Card bgColor="bg-secondary" className="space-y-2">
-            <CardHeader>
-              <CardTitle className="text-primary">Mon Parcours</CardTitle>
-            </CardHeader>
-            <CardContent>
-              Passionnée par les relations entre l&apos;être humain et son
-              environnement, j&apos;ai suivi une formation rigoureuse auprès de
-              Bioterres pour devenir géobiologue certifiée.
-            </CardContent>
-            <CardContent>
-              Ma démarche s&apos;inscrit dans une approche holistique,
-              considérant l&apos;être humain dans sa globalité et dans son
-              interaction avec le monde qui l&apos;entoure.
-            </CardContent>{' '}
-            <CardContent>
-              Je mets aujourd&apos;hui mes compétences à votre service pour vous
-              aider à retrouver l&apos;harmonie dans votre environnement et
-              améliorer votre bien-être au quotidien.
-            </CardContent>
-          </Card>
-        </div>
+   {/* Biography Section */}
+<div className="w-full">
+  <Card
+    bgColor="bg-secondary"
+    className="flex flex-col md:flex-row min-h-[85vh]"
+  >
+    
+    {/* Image Column */}
+    <div className="relative w-full md:w-1/2 aspect-square md:aspect-auto h-64 md:h-auto">
+      <Image
+        src="/JoelleDebout.jpg"
+        alt="Joëlle Villegas"
+        layout="fill"
+        className="object-cover"
+      />
+    </div>
+    {/* Text Column */}
+    <div className="w-full md:w-1/2 flex items-center justify-center p-6">
+      <div className="w-full md:max-w-xl space-y-4 text-center md:text-left">
+        <CardHeader className="space-y-2 p-0">
+          <CardTitle className="text-xl md:text-2xl text-primary">
+            Mon Parcours
+          </CardTitle>
+        </CardHeader>
+
+        <CardContent className="p-0 space-y-4">
+          <ul className="space-y-2 mb-6">
+            <li className="flex items-start gap-2">
+              <span>
+                Passionnée par les liens entre l’être humain et son
+                environnement, j’ai suivi une formation rigoureuse auprès de{' '}
+                <strong>Bioterres</strong> pour devenir géobiologue certifiée.
+              </span>
+            </li>
+            <li className="flex items-start gap-2">
+              <span>
+                Ma démarche repose sur une approche <strong>holistique</strong>,
+                tenant compte de l’individu dans sa globalité et dans son
+                interaction avec le monde qui l’entoure.
+              </span>
+            </li>
+            <li className="flex items-start gap-2">
+              <span>
+                Aujourd’hui, je mets mes compétences à votre service pour{' '}
+                <strong>favoriser l’harmonie</strong> dans votre environnement
+                et améliorer votre bien-être au quotidien.
+              </span>
+            </li>
+          </ul>
+        </CardContent>
       </div>
+    </div>
+
+  </Card>
+</div>
+
 
       {/* Competence Section */}
       <section className="w-full bg-primary py-12 md:py-16 lg:py-20">
@@ -157,14 +177,14 @@ export default function AboutPage() {
               respecter la charte du géobiologue qui comprend notamment :
             </h4>
           </div>
-          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+          <div className="grid gap-3 md:grid-cols-2 ">
             {charterArticles.map((article, index) => (
               <Card key={index} bgColor="bg-secondary">
-                <CardHeader>
-                  <CardTitle> {article.title}</CardTitle>
-                </CardHeader>
+               
+                  <CardTitle className='px-6'> {article.title}</CardTitle>
+              
                 <CardContent>
-                  <p>{article.content}</p>
+                  {article.content}
                 </CardContent>
               </Card>
             ))}

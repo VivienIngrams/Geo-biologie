@@ -58,7 +58,7 @@ export default function ServicesPage() {
         "Recherche de sources d'eau et estimation de leur potentiel",
         'Détection de réseaux et influences énergétiques subtiles',
       ],
-      image: '/thailande (3).jpg',
+      image: '/source (1).jpg',
       cta: 'Ecrivez-moi',
     },
     {
@@ -100,7 +100,7 @@ export default function ServicesPage() {
         'Solutions adaptées à vos besoins spécifiques',
         'Suivi personnalisé pour un bien-être durable',
       ],
-      image: '/mains (1).jpg',
+      image: '/mains (2).jpg',
       cta: 'Demandez une consultation',
     },
   ]
