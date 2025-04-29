@@ -37,7 +37,7 @@ export default function ServicesPage() {
         'Détection des courants souterrains et failles géologiques',
         'Analyse des perturbations énergétiques',
       ],
-      image: '/thailande (2).jpg',
+      image: '/fils.jpg',
       cta: 'Prenez contact',
     },
     {
@@ -48,7 +48,7 @@ export default function ServicesPage() {
         'Harmonisation de l’espace avec des solutions adaptées',
         'Utilisation de géométrie et tracés régulateurs',
       ],
-      image: '/thailande (1).jpg',
+      image: '/interieure (1).jpg',
       cta: 'En savoir plus',
     },
     {
@@ -78,7 +78,7 @@ export default function ServicesPage() {
         'Analyse et optimisation des espaces pour animaux',
         'Harmonisation des lieux de vie et élevages pour améliorer leur bien-être',
       ],
-      image: '/oliv.jpg',
+      image: '/brebis.jpg',
       cta: 'En savoir plus',
     },
     {
@@ -89,7 +89,7 @@ export default function ServicesPage() {
         'Amélioration de la vitalité et de la qualité des cultures',
         'Création de conditions propices à la croissance et à l’équilibre écologique',
       ],
-      image: '/cottage.jpg',
+      image: '/mais.jpg',
       cta: 'Contactez-moi',
     },
     {
@@ -100,7 +100,7 @@ export default function ServicesPage() {
         'Solutions adaptées à vos besoins spécifiques',
         'Suivi personnalisé pour un bien-être durable',
       ],
-      image: '/cottage.jpg',
+      image: '/mains (1).jpg',
       cta: 'Demandez une consultation',
     },
   ]
@@ -108,23 +108,23 @@ export default function ServicesPage() {
   return (
     <div className="flex flex-col items-center ">
       {/* Hero Section */}
-      <section className="relative w-full md:min-h-[90vh] flex items-center justify-center  ">
+      <section className="relative w-full md:min-h-[85vh] flex items-center justify-center  ">
         {/* Background image */}
         <div className="absolute  inset-0 z-0">
           <Image
-            src="/water.jpg"
+            src="/interieure (3).jpg"
             alt="Joëlle Villegas, géobiologue"
             layout="fill"
             objectFit="cover"
             className=""
           />
         </div>
-
+        <div className="absolute inset-0 z-5 bg-black/25" />
         <div className="relative z-10 container mx-auto px-4 grid gap-6 lg:grid-cols-3 items-center">
           <div className="relative flex flex-col justify-center p-4 space-y-6 col-span-2">
             {/* Blurred background layer */}
             <div className="absolute inset-0 z-0 blur-mask rounded-lg" />
-            <div className="relative z-10 ">
+            <div className="relative z-10 md:pt-12">
               <div className="  space-y-4">
                 <h1 className="text-white">Mes Services</h1>
                 <h3 className="text-white">
@@ -138,67 +138,69 @@ export default function ServicesPage() {
       </section>
 
       {/*Section Services List */}
-      <div className="w-full pt-12 md:pt-16 lg:pt-20">
-        <div className="container  space-y-12">
-          <h3 className="text-primary lg:py-12 max-w-4xl font-medium text-center mx-auto text-2xl md:text-3xl xl:text-4xl">
-            Découvrez comment je peux vous aider à créer un environnement sain
-            et harmonieux
+      <div className="w-full ">
+        <div className="bg-primary py-12 md:py-16 lg:py-20 flex flex-col text-primary items-center justify-center  space-y-4 text-center  ">
+          <h2 className="text-secondary">
+            Découvrez mes domaines d’intervention
+          </h2>
+          <h3 className="text-secondary">
+            Pour vous aider à créer un environnement sain et harmonieux
           </h3>
-          <div className="">
-            {services.map((service, index) => (
-              <Card
-                bgColor="bg-secondary"
-                className={`flex flex-col md:flex-row ${
-                  index % 2 === 1 ? 'md:flex-row-reverse' : ''
-                } min-h-[90vh]`}
-                key={index}
-              >
-                {/* Image */}
-                <div className="relative w-full md:w-1/2 aspect-square md:aspect-auto h-64 md:h-auto">
-                  <Image
-                    src={service.image}
-                    alt={service.title}
-                    layout="fill"
-                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw"
-                    className="object-cover"
-                  />
-                </div>
+        </div>
+        <div className="">
+          {services.map((service, index) => (
+            <Card
+              bgColor="bg-secondary"
+              className={`flex flex-col md:flex-row ${
+                index % 2 === 1 ? 'md:flex-row-reverse' : ''
+              } min-h-[70vh]`}
+              key={index}
+            >
+              {/* Image */}
+              <div className="relative w-full md:w-1/2 aspect-square md:aspect-auto h-64 md:h-auto">
+                <Image
+                  src={service.image}
+                  alt={service.title}
+                  layout="fill"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw"
+                  className="object-cover"
+                />
+              </div>
 
-                {/* Text */}
-                <div className="w-full md:w-1/2 flex items-center justify-center p-6">
-                  <div className="w-full max-w-[450px] space-y-4 text-center md:text-left">
-                    <CardHeader className="space-y-2 p-0">
-                      <CardTitle className="text-xl md:text-2xl">
-                        {service.title}
-                      </CardTitle>
-                      <CardDescription>{service.subtitle}</CardDescription>
-                    </CardHeader>
-                    <CardContent className="p-0">
-                      <ul className="space-y-2 mb-6">
-                        {service.features.map((feature, featureIndex) => (
-                          <li
-                            key={featureIndex}
-                            className="flex items-start gap-2"
-                          >
-                            <Check className="h-5 w-5 text-primary shrink-0 mt-0.5" />
-                            <span>{feature}</span>
-                          </li>
-                        ))}
-                      </ul>
-                      <Link href="/contact">
-                        <Button
-                          variant="accent"
-                          className="w-full md:w-fit px-6 py-3 text-base font-medium"
+              {/* Text */}
+              <div className="w-full md:w-1/2 flex items-center justify-center p-6">
+                <div className="w-full max-w-[450px] space-y-4 text-center md:text-left">
+                  <CardHeader className="space-y-2 p-0">
+                    <CardTitle className="text-xl md:text-2xl">
+                      {service.title}
+                    </CardTitle>
+                    <CardDescription>{service.subtitle}</CardDescription>
+                  </CardHeader>
+                  <CardContent className="p-0">
+                    <ul className="space-y-2 mb-6">
+                      {service.features.map((feature, featureIndex) => (
+                        <li
+                          key={featureIndex}
+                          className="flex items-start gap-2"
                         >
-                          {service.cta}
-                        </Button>
-                      </Link>
-                    </CardContent>
-                  </div>
+                          <Check className="h-5 w-5 text-primary shrink-0 mt-0.5" />
+                          <span>{feature}</span>
+                        </li>
+                      ))}
+                    </ul>
+                    <Link href="/contact">
+                      <Button
+                        variant="accent"
+                        className="w-full md:w-fit px-6 py-3 text-base font-medium"
+                      >
+                        {service.cta}
+                      </Button>
+                    </Link>
+                  </CardContent>
                 </div>
-              </Card>
-            ))}
-          </div>
+              </div>
+            </Card>
+          ))}
         </div>
       </div>
 
@@ -260,18 +262,30 @@ export default function ServicesPage() {
             </div>
           </div>
         </div>
-        {/* Contact Button */}
-        <div className="w-full items-center justify-center py-8 flex">
-          <Link href="/contact">
-            <Button
-              variant="accent"
-              className="inline-flex items-center justify-center   px-8 py-3 text-base font-medium text-primary-foreground ring-offset-background transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50"
-            >
-              Me contacter pour plus d&apos;informations
-              <ArrowRight className="ml-2 h-4 w-4" />
-            </Button>
-          </Link>
-        </div>
+      </section>
+
+      <section className=" ">
+        <Card
+          bgColor="bg-secondary"
+          className="  md:max-w-xl md:p-6  h-full  mx-auto"
+        >
+          <CardHeader className="">
+            <CardTitle className="text-primary text-center">
+              Vous avez des questions ?
+            </CardTitle>
+          </CardHeader>
+          <CardContent className="text-base text-center">
+            N&apos;hésitez pas à me contacter pour toute question ou demande
+            d&apos;information sur mes services. 
+            <div className="flex mt-8">
+              <Link href="/contact" className="w-full">
+                <Button variant="accent" size="lg" className="w-full">
+                  Me contacter pour plus d&apos;informations
+                </Button>
+              </Link>
+            </div>
+          </CardContent>
+        </Card>
       </section>
     </div>
   )

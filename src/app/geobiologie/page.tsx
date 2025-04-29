@@ -15,7 +15,7 @@ export default function GeobiologiePage() {
   return (
     <div className="flex flex-col items-center ">
       {/* Hero Section */}
-      <section className="relative w-full min-h-screen flex items-center justify-center xl:mx-20">
+      <section className="relative w-full min-h-[90vh] flex items-center justify-center xl:mx-20">
         {/* Background image */}
         <div className="absolute inset-0 z-0">
           <Image
@@ -23,7 +23,7 @@ export default function GeobiologiePage() {
             alt="Joëlle Villegas, géobiologue"
             layout="fill"
             objectFit="cover"
-            className="rounded-lg"
+            className=""
           />
         </div>
 
@@ -50,18 +50,8 @@ export default function GeobiologiePage() {
       <div className="w-full">
         <Card
           bgColor="bg-secondary"
-          className="flex flex-col md:flex-row min-h-[90vh]"
+          className="flex flex-col md:flex-row min-h-[85vh]"
         >
-          {/* Image */}
-          <div className="relative w-full md:w-1/2 aspect-square md:aspect-auto h-64 md:h-auto">
-            <Image
-              src="/oliv.jpg"
-              alt="Joëlle Villegas"
-              layout="fill"
-              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw"
-              className="object-cover"
-            />
-          </div>
           <div className="w-full md:w-1/2 flex items-center justify-center p-6">
             <div className="w-full md:max-w-xl space-y-4 text-center md:text-left">
               <CardHeader className="space-y-2 p-0">
@@ -101,17 +91,20 @@ export default function GeobiologiePage() {
                       plus saine.
                     </span>
                   </li>
-                  <li className="flex items-start gap-2">
-                    <Check className="h-5 w-5 text-primary shrink-0 mt-0.5" />
-                    <span>
-                      Une démarche qui permet de{' '}
-                      <strong>transformer son habitat</strong> en un espace
-                      ressourçant.
-                    </span>
-                  </li>
+                  
                 </ul>
               </CardContent>
             </div>
+          </div>
+          {/* Image */}
+          <div className="relative w-full md:w-1/2 aspect-square md:aspect-auto h-64 md:h-auto">
+            <Image
+              src="/oliviers.jpg"
+              alt="Joëlle Villegas"
+              layout="fill"
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw"
+              className="object-cover"
+            />
           </div>
         </Card>
       </div>
@@ -211,7 +204,7 @@ export default function GeobiologiePage() {
           {/* Image */}
           <div className="relative w-full md:w-1/2 aspect-square md:aspect-auto h-64 md:h-auto">
             <Image
-              src="/oliv.jpg"
+              src="/interieure (2).jpg"
               alt="Joëlle Villegas"
               layout="fill"
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw"
@@ -275,7 +268,7 @@ export default function GeobiologiePage() {
       <section className="bg-primary ">
         <Card
           bgColor="bg-primary"
-          className=" bg- shadow-sm md:max-w-xl hover:shadow-md transition-all  md:p-6  duration-300 h-full  mx-auto"
+          className="  md:max-w-xl md:p-6  h-full  mx-auto"
         >
           <CardHeader className="">
             <CardTitle className="text-secondary text-center">

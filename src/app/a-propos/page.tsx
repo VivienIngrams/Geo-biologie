@@ -1,4 +1,4 @@
-import { ArrowRight } from 'lucide-react'
+import { ArrowRight, Check } from 'lucide-react'
 import Image from 'next/legacy/image'
 import Link from 'next/link'
 import {
@@ -26,27 +26,27 @@ export default function AboutPage() {
 
   const charterArticles = [
     {
-      number: 1,
+      title: 'Une approche holistique',
       content:
         "La géobiologie adopte une approche holistique du vivant et de son environnement. Son objectif est de restaurer l'équilibre énergétique pour favoriser bien-être et harmonie.",
     },
     {
-      number: 2,
+      title: 'Un respect de la vie privée',
       content:
         'Le géobiologue exerce avec humanité, intégrité et compétence, en respectant ses limites et en évitant toute prestation non maîtrisée.',
     },
     {
-      number: 3,
+      title: 'Un engagement éthique',
       content:
         'Il ne revendique que ses compétences réelles, évite toute publicité mensongère, et pratique des honoraires justes en fonction du travail et des ressources du client.',
     },
     {
-      number: 4,
+      title: 'Un respect de la confidentialité',
       content:
         'Il respecte la personne, l’animal et le lieu, ainsi que la confidentialité des informations pour protéger la vie privée du client.',
     },
     {
-      number: 5,
+      title: 'Un respect de la législation',
       content:
         "Sans être médecin, il s'abstient de tout diagnostic médical et ne conseille jamais l'arrêt d'un traitement, laissant à chacun sa liberté thérapeutique.",
     },
@@ -59,7 +59,7 @@ export default function AboutPage() {
         {/* Background image */}
         <div className="absolute inset-0 z-0">
           <Image
-            src="/oliv.jpg"
+            src="/interieure (3).jpg"
             alt="Joëlle Villegas"
             layout="fill"
             objectFit="cover"
@@ -78,7 +78,7 @@ export default function AboutPage() {
               <div className="relative z-10">
                 <h1 className="text-secondary">Joëlle Villegas</h1>
                 <h3 className="text-white">
-                Géobiologue certifiée par Bioterres
+                  Géobiologue certifiée par Bioterres
                 </h3>
               </div>
             </div>
@@ -88,57 +88,57 @@ export default function AboutPage() {
       </section>
 
       {/* Biography Section */}
-      <section className="w-full py-12 md:py-16 lg:py-20">
+      <div className="w-full">
         <div className="container px-4 md:px-6 grid gap-6 lg:grid-cols-2 items-center">
           <div className="relative w-full aspect-square overflow-hidden ">
             <Image
-              src="/photo3.jpg"
+              src="/JoelleDebout.jpg"
               alt="Joëlle Villegas"
               layout="fill"
               objectFit="cover"
             />
           </div>
-          <Card bgColor='bg-secondary' className="space-y-2">
-            <CardHeader >
+          <Card bgColor="bg-secondary" className="space-y-2">
+            <CardHeader>
               <CardTitle className="text-primary">Mon Parcours</CardTitle>
             </CardHeader>
-           <CardContent>
-           
+            <CardContent>
               Passionnée par les relations entre l&apos;être humain et son
               environnement, j&apos;ai suivi une formation rigoureuse auprès de
               Bioterres pour devenir géobiologue certifiée.
-              </CardContent>
-              <CardContent>
+            </CardContent>
+            <CardContent>
               Ma démarche s&apos;inscrit dans une approche holistique,
               considérant l&apos;être humain dans sa globalité et dans son
               interaction avec le monde qui l&apos;entoure.
-             </CardContent> <CardContent>
-              
+            </CardContent>{' '}
+            <CardContent>
               Je mets aujourd&apos;hui mes compétences à votre service pour vous
               aider à retrouver l&apos;harmonie dans votre environnement et
-              améliorer votre bien-être au quotidien.</CardContent>
-              
+              améliorer votre bien-être au quotidien.
+            </CardContent>
           </Card>
         </div>
-      </section>
+      </div>
 
       {/* Competence Section */}
       <section className="w-full bg-primary py-12 md:py-16 lg:py-20">
         <div className="container px-4 md:px-6 space-y-8">
           <div className="text-center space-y-2 text-secondary">
-            <h2 className="text-secondary">
-              Mes domaines de compétences et formations
-            </h2>
-            <p>Une approche holistique nourrie par diverses disciplines</p>
+            <h2 className="text-secondary">Mes Formations</h2>
+            <h3>Une approche holistique nourrie par diverses disciplines</h3>
           </div>
-          <Card bgColor="bg-primary" className="shadow-none border-none">
-            <CardContent className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <Card
+            bgColor="bg-primary"
+            className="shadow-none border-none md:max-w-xl mx-auto"
+          >
+            <CardContent className="grid  gap-3">
               {competences.map((item, index) => (
                 <div
                   key={index}
                   className="flex items-start space-x-3 hover:bg-muted/10 p-2 rounded-md transition"
                 >
-                  <div className="h-2 w-2 mt-2 rounded-full bg-secondary flex-shrink-0" />
+                 <Check className="h-6 w-6 text-secondary" />
                   <p className="text-secondary">{item}</p>
                 </div>
               ))}
@@ -151,19 +151,17 @@ export default function AboutPage() {
       <section className="w-full py-12 md:py-16 lg:py-20">
         <div className="container px-4 md:px-6 space-y-8">
           <div className="text-center space-y-2">
-            <h2 className="text-primary">
-              Mon engagement
-            </h2>
-            <h4 className='text-primary'>
+            <h2 className="text-primary">Mon engagement</h2>
+            <h4 className="text-primary">
               En tant que géobiologue professionnelle, je m&apos;engage à
               respecter la charte du géobiologue qui comprend notamment :
             </h4>
           </div>
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-            {charterArticles.map((article) => (
-              <Card key={article.number} bgColor="bg-secondary">
+            {charterArticles.map((article, index) => (
+              <Card key={index} bgColor="bg-secondary">
                 <CardHeader>
-                  <CardTitle>Article {article.number}</CardTitle>
+                  <CardTitle> {article.title}</CardTitle>
                 </CardHeader>
                 <CardContent>
                   <p>{article.content}</p>
@@ -187,7 +185,10 @@ export default function AboutPage() {
             </div>
             <div className="flex flex-col gap-2 min-[400px]:flex-row">
               <Link href="/contact">
-                <Button variant="accent" className="w-full tracking-wide text-[16px]">
+                <Button
+                  variant="accent"
+                  className="w-full tracking-wide text-[16px]"
+                >
                   Me contacter
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Button>

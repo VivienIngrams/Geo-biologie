@@ -44,7 +44,7 @@ export default function ContactPage() {
             <CardDescription>Écrivez-moi</CardDescription>
           </CardHeader>
           <CardContent>
-            <p>contact@lecheminduvivant.fr</p>
+            <p>jo.villegas2a@gmail.com</p>
           </CardContent>
         </Card>
         <Card bgColor="bg-secondary">

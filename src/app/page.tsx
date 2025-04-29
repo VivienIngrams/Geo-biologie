@@ -239,7 +239,7 @@ export default async function HomePage() {
           <div className="grid gap-6 lg:grid-cols-2  lg:gap-12 items-center">
             <div className="">
               <Image
-                src="/photo3.jpg"
+                src="/Joelle.jpg"
                 width={500}
                 height={400}
                 alt="Joëlle Villegas"
