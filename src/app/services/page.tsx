@@ -58,7 +58,7 @@ export default function ServicesPage() {
         "Recherche de sources d'eau et estimation de leur potentiel",
         'Détection de réseaux et influences énergétiques subtiles',
       ],
-      image: '/source (1).jpg',
+      image: '/source1.jpg',
       cta: 'Ecrivez-moi',
     },
     {
@@ -108,7 +108,7 @@ export default function ServicesPage() {
   return (
     <div className="flex flex-col items-center ">
       {/* Hero Section */}
-      <section className="relative w-full md:min-h-[85vh] flex items-center justify-center  ">
+      <section className="relative w-full min-h-[85vh] flex items-center justify-center  ">
         {/* Background image */}
         <div className="absolute  inset-0 z-0">
           <Image
@@ -140,7 +140,7 @@ export default function ServicesPage() {
       {/*Section Services List */}
       <div className="w-full ">
         <div className="bg-primary py-12 md:py-16 lg:py-20 flex flex-col text-primary items-center justify-center  space-y-4 text-center  ">
-          <h2 className="text-secondary">
+          <h2 className="text-secondary px-2">
             Découvrez mes domaines d’intervention
           </h2>
           <h3 className="text-secondary">
@@ -177,7 +177,7 @@ export default function ServicesPage() {
                     <CardDescription>{service.subtitle}</CardDescription>
                   </CardHeader>
                   <CardContent className="p-0">
-                    <ul className="space-y-2 mb-6">
+                    <ul className="space-y-2 text-left mb-6">
                       {service.features.map((feature, featureIndex) => (
                         <li
                           key={featureIndex}

@@ -32,7 +32,7 @@ export default function RootLayout({
 }>) {
   return (
     <html className={` ${spectral.variable} ${quicksand.variable}`} lang="fr">
-      <body className="h-full mx-2 md:mx-0 bg-secondary font-quicksand">
+      <body className="h-full bg-secondary font-quicksand">
         <Container>
           {children}
           <Analytics />

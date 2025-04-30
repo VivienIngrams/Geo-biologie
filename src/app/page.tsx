@@ -90,9 +90,9 @@ export default async function HomePage() {
               <div className="absolute inset-0 z-0 blur-mask rounded-lg" />
 
               {/* Foreground text content */}
-              <div className="relative z-10 ">
+              <div className="relative z-10 text-center md:text-left pt-8 ">
                 <h1 className="text-secondary">Joëlle Villegas</h1>
-                <h2 className="text-secondary tracking-wide font-quicksand font-light mb-1 md:-mt-1 md:mb-4 text-xl lg:text-3xl uppercase">
+                <h2 className="text-secondary  text-2xl md:text-3xl xl:text-4xl tracking-wide font-quicksand font-light mb-2 md:mt-1  uppercase">
                   Géobiologue
                 </h2>
                 <h4>
@@ -102,17 +102,12 @@ export default async function HomePage() {
               </div>
 
               {/* Buttons */}
-              <div className="relative z-10 flex flex-col gap-4  min-[400px]:flex-row ">
+              <div className="relative z-10 flex flex-col gap-4 jusitfy-center items-center min-[400px]:flex-row ">
                 <Link href="/contact">
-                  <Button className="w-full tracking-wide text-[16px]">
-                    Prendre rendez-vous
-                  </Button>
+                  <Button className=" w-fit">Prendre rendez-vous</Button>
                 </Link>
                 <Link href="/services">
-                  <Button
-                    variant="accent"
-                    className="w-full tracking-wide text-[16px]"
-                  >
+                  <Button variant="accent" className="w-fit">
                     Découvrir mes services
                   </Button>
                 </Link>
@@ -129,7 +124,7 @@ export default async function HomePage() {
           <div className="flex flex-col text-primary items-center justify-center  space-y-4 text-center">
             <div className="space-y-4 max-w-3xl mx-auto  ">
               <h2 className="text-primary">
-                Qu&apos;est-ce que la Géobiologie ?
+                Qu&apos;est-ce que la Géobiologie?
               </h2>
               <h4>
                 La géobiologie est l&apos;étude de l&apos;influence de
@@ -141,7 +136,7 @@ export default async function HomePage() {
               <Card bgColor="bg-secondary">
                 <CardHeader>
                   <div className="flex justify-center items-center">
-                    <Leaf className="h-10 w-10 mb-4" />
+                    <Leaf className="h-10 w-10 mb-2" />
                   </div>
                   <CardTitle>Harmonisation</CardTitle>
                   <CardDescription>
@@ -157,7 +152,7 @@ export default async function HomePage() {
               <Card bgColor="bg-secondary">
                 <CardHeader>
                   <div className="flex justify-center items-center">
-                    <Shield className="h-10 w-10 mb-4" />
+                    <Shield className="h-10 w-10 mb-2" />
                   </div>
                   <CardTitle>Protection</CardTitle>
                   <CardDescription>
@@ -172,7 +167,7 @@ export default async function HomePage() {
               <Card bgColor="bg-secondary">
                 <CardHeader>
                   <div className="flex justify-center items-center">
-                    <Map className="h-10 w-10 mb-4" />
+                    <Map className="h-10 w-10 mb-2" />
                   </div>
                   <CardTitle>Expertise</CardTitle>
                   <CardDescription>
@@ -188,7 +183,7 @@ export default async function HomePage() {
           </div>
         </div>
         {/* CTA */}
-        <div className="flex justify-center ">
+        <div className="flex justify-center my-4">
           <Link href="/geobiologie">
             <Button variant="accent" className="w-full">
               En savoir plus sur la géobiologie
@@ -199,14 +194,17 @@ export default async function HomePage() {
       </section>
 
       {/* Application Domains Section */}
-      <section className="bg-primary space-y-8 py-8 md:py-16 text-center rounded-md">
-        <h2 className="text-secondary">Mes domaines d&apos;expertise </h2>
-        <h3 className="text-secondary">
-          Lorsqu&apos;on ne peut pas changer un lieu, on peut néanmoins le
-          transformer et développer l&apos;art d&apos;habiter.
-        </h3>
+      <section className="bg-primary w-full px-4 md:px-6 py-12 md:py-16 lg:py-20 text-center">
+        <div className="flex flex-col max-w-3xl mx-auto items-center justify-center  space-y-4">
+          <h2 className="text-secondary">Mes domaines d&apos;expertise </h2>
+          <h4 className="text-secondary">
+            Lorsqu&apos;on ne peut pas changer un lieu, on peut néanmoins le
+            transformer et développer l&apos;art d&apos;habiter.
+          </h4>
+        </div>
+        <div className="mx-auto grid  max-w-5xl grid-cols-1 gap-6 md:gap-12 xl:gap-20 py-6 md:py-12 md:grid-cols-2 ">
 
-        <div className="grid gap-6 md:grid-cols-2">
+     
           {applicationDomains.map((domain, index) => (
             <Card
               bgColor="bg-primary"
@@ -224,7 +222,7 @@ export default async function HomePage() {
           ))}
         </div>
         {/* CTA */}
-        <div className="flex justify-center ">
+        <div className="flex justify-center my-4">
           <Link href="/services">
             <Button variant="accent" className="w-full">
               Connaître tous mes services
@@ -252,8 +250,8 @@ export default async function HomePage() {
           <div className="w-full md:w-1/2 flex items-center justify-center p-6">
             <div className="w-full md:max-w-xl space-y-4 text-center md:text-left">
               <CardContent className="p-0 space-y-4">
-                <div className="w-full md:max-w-xl space-y-6 text-center md:text-left">
-                  <div className="flex flex-col justify-center space-y-4">
+                <div className="w-full md:max-w-xl text-left">
+                  <div className="flex flex-col justify-center my-6 space-y-4">
                     <div className="space-y-2">
                       <h2 className="text-primary">À Propos de Moi</h2>
                       <h3 className="text-primary">
@@ -265,14 +263,14 @@ export default async function HomePage() {
                       pour vous aider à retrouver l&apos;harmonie dans votre
                       environnement.
                     </h4>
-                    <div className="flex flex-col gap-2 min-[400px]:flex-row">
+                   
                       <Link href="/a-propos">
-                        <Button className="w-full">
+                        <Button variant="accent" className="w-full mt-2">
                           En savoir plus sur mon parcours
                           <ArrowRight className="ml-2 h-4 w-4" />
                         </Button>
                       </Link>
-                    </div>
+                    
                   </div>
                 </div>
               </CardContent>

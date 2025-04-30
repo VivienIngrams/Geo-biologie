@@ -53,12 +53,12 @@ export default function GeobiologiePage() {
           className="flex flex-col md:flex-row min-h-[85vh]"
         >
           <div className="w-full md:w-1/2 flex items-center justify-center p-6">
-            <div className="w-full md:max-w-xl space-y-4 text-center md:text-left">
+            <div className="w-full md:max-w-xl space-y-4 text-center md:text-left py-4">
               <CardHeader className="space-y-2 p-0">
-                <CardTitle className="text-xl md:text-2xl text-primary">
+                <CardTitle className="text-2xl text-primary">
                   Qu’est-ce que la géobiologie ?
                 </CardTitle>
-                <CardDescription className="text-primary text-lg">
+                <CardDescription className="text-primary text-lg leading-snug">
                   La géobiologie est l’étude des interactions entre notre
                   environnement et notre bien-être, dans une approche à la fois
                   scientifique et énergétique.
@@ -66,7 +66,7 @@ export default function GeobiologiePage() {
               </CardHeader>
 
               <CardContent className="p-0 space-y-4">
-                <ul className="space-y-2 mb-6">
+                <ul className="space-y-3 mb-6 text-left">
                   <li className="flex items-start gap-2">
                     <Check className="h-5 w-5 text-primary shrink-0 mt-0.5" />
                     <span>
@@ -213,19 +213,19 @@ export default function GeobiologiePage() {
 
           {/* Text */}
           <div className="w-full md:w-1/2 flex items-center justify-center p-6">
-            <div className="w-full space-y-4 text-center md:text-left">
-              <CardHeader className="space-y-2 p-0">
-                <CardTitle className="text-xl md:text-2xl text-primary">
+            <div className="w-full space-y-4 text-center md:text-left py-4">
+              <CardHeader className="space-y-4 p-0">
+                <CardTitle className="text-2xl text-primary">
                   Pourquoi faire appel à un géobiologue ?
                 </CardTitle>
-                <CardDescription className="text-primary text-lg">
+                <CardDescription className="text-primary text-lg leading-snug">
                   Que ce soit pour une maison, un lieu de travail ou un projet
                   d&apos;aménagement, la géobiologie offre une approche globale
                   et personnalisée afin de :
                 </CardDescription>
               </CardHeader>
               <CardContent className="p-0 space-y-4">
-                <ul className="space-y-2 mb-6">
+                <ul className="space-y-3 text-left mb-6">
                   <li className="flex items-start gap-2">
                     <Check className="h-5 w-5 text-primary shrink-0 mt-0.5" />
                     <span> Créer un environnement équilibré et harmonieux</span>

@@ -182,7 +182,7 @@ export default function AboutPage() {
             {charterArticles.map((article, index) => (
               <Card key={index} bgColor="bg-secondary">
                
-                  <CardTitle className='px-6'> {article.title}</CardTitle>
+                  <CardTitle className='py-4 md:px-6'> {article.title}</CardTitle>
               
                 <CardContent>
                   {article.content}

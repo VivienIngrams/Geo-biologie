@@ -14,12 +14,12 @@ body {
 
 h1 {
   @apply font-normal text-secondary font-spectral;
-  @apply text-5xl md:text-6xl xl:text-7xl tracking-[-0.08em];
+  @apply text-[50px] md:text-6xl xl:text-7xl tracking-[-0.08em] leading-none ;
 }
 
 h2 {
-  @apply font-normal  text-secondary font-spectral;
-  @apply text-3xl md:text-4xl xl:text-6xl tracking-tighter;
+  @apply font-semibold  text-secondary font-spectral;
+  @apply text-4xl 2xl:text-5xl tracking-tighter;
 }
 
 h3 {
@@ -28,9 +28,8 @@ h3 {
 
 }
 
-
 h4 {
-  @apply text-base  md:text-[16px] xl:text-lg;
+  @apply text-base xl:text-lg 2xl:text-xl leading-snug;
  
 }
 

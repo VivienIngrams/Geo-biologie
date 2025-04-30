@@ -12,8 +12,8 @@ import {
 export default function ContactPage() {
   return (
     <div className="container py-12 ">
-      <div className="mx-auto max-w-5xl space-y-12">
-        <div className="space-y-4 text-center md:py-8">
+      <div className="mx-auto max-w-5xl  space-y-12">
+        <div className="space-y-4 text-center px-4 md:py-8">
           <h1 className="text-primary">Contactez-moi</h1>
           <h3 className="text-primary">
             N&apos;hésitez pas à me contacter pour toute question ou pour
@@ -22,47 +22,47 @@ export default function ContactPage() {
           <div className="my-4 mx-auto max-w-[100px] border-b border-primary" />
         </div>
 
-        <div className="mx-auto text-center grid text-secondary max-w-5xl grid-cols-1 gap-6 md:gap-12 xl:gap-20 py-6 md:grid-cols-2 lg:grid-cols-3">
-        <Card bgColor="bg-secondary">
-          <CardHeader>
-            <div className="flex justify-center items-center">
-              <Phone className="h-10 w-10 mb-4" />
-            </div>
-            <CardTitle>Téléphone</CardTitle>
-            <CardDescription>Appelez-moi directement</CardDescription>
-          </CardHeader>
-          <CardContent>
-            <p>+33 6 03 91 57 34</p>
-          </CardContent>
-        </Card>
-        <Card bgColor="bg-secondary">
-          <CardHeader>
-            <div className="flex justify-center items-center">
-              <Mail className="h-10 w-10 mb-4" />
-            </div>
-            <CardTitle>Email</CardTitle>
-            <CardDescription>Écrivez-moi</CardDescription>
-          </CardHeader>
-          <CardContent>
-            <p>jo.villegas2a@gmail.com</p>
-          </CardContent>
-        </Card>
-        <Card bgColor="bg-secondary">
-          <CardHeader>
-            <div className="flex justify-center items-center">
-              <MapPin className="h-10 w-10 mb-4" />
-            </div>
-            <CardTitle>Localisation</CardTitle>
-            <CardDescription>Région/Ville/département</CardDescription>
-          </CardHeader>
-          <CardContent>
-            <p>Déplacements possibles dans toute la France et le monde</p>
-          </CardContent>
-        </Card>
+        <div className=" px-4 mx-auto text-center grid text-secondary max-w-5xl grid-cols-1 gap-6 md:gap-12 xl:gap-20 py-6 md:grid-cols-2 lg:grid-cols-3">
+          <Card bgColor="bg-secondary">
+            <CardHeader>
+              <div className="flex justify-center items-center">
+                <Phone className="h-10 w-10 mb-4" />
+              </div>
+              <CardTitle>Téléphone</CardTitle>
+              <CardDescription>Appelez-moi directement</CardDescription>
+            </CardHeader>
+            <CardContent>
+              <p>+33 6 03 91 57 34</p>
+            </CardContent>
+          </Card>
+          <Card bgColor="bg-secondary">
+            <CardHeader>
+              <div className="flex justify-center items-center">
+                <Mail className="h-10 w-10 mb-4" />
+              </div>
+              <CardTitle>Email</CardTitle>
+              <CardDescription>Écrivez-moi</CardDescription>
+            </CardHeader>
+            <CardContent>
+              <p>jo.villegas2a@gmail.com</p>
+            </CardContent>
+          </Card>
+          <Card bgColor="bg-secondary">
+            <CardHeader>
+              <div className="flex justify-center items-center">
+                <MapPin className="h-10 w-10 mb-4" />
+              </div>
+              <CardTitle>Localisation</CardTitle>
+              <CardDescription>Région/Ville/département</CardDescription>
+            </CardHeader>
+            <CardContent>
+              <p>Déplacements possibles dans toute la France et le monde</p>
+            </CardContent>
+          </Card>
         </div>
 
         <div className="grid gap-8  md:grid-cols-2">
-          <Card bgColor="bg-secondary" className="space-y-6  pt-4 ">
+          <Card bgColor="bg-secondary" className="space-y-6  p-4 ">
             <CardTitle className="text-primary">
               Envoyez-moi un message
             </CardTitle>
