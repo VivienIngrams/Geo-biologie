@@ -48,14 +48,14 @@ export default function NavMenu() {
           ))}
         </nav>
 
-        <Button
-          variant="ghost"
-          className="px-2 md:hidden"
+        <div
+          
+          className="mr-2 md:hidden"
           onClick={() => setIsOpen(!isOpen)}
         >
           <span className="sr-only">Menu</span>
-          {isOpen ? <X className="h-6 w-6" /> : <Menu className="text-primary h-10 w-10" />}
-        </Button>
+          {isOpen ? <X className="h-6 w-6" /> : <Menu className="text-primary h-6 w-6" />}
+        </div>
       </div>
 
       {isOpen && (

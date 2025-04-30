@@ -108,7 +108,7 @@ export default function ServicesPage() {
   return (
     <div className="flex flex-col items-center ">
       {/* Hero Section */}
-      <section className="relative w-full min-h-[85vh] flex items-center justify-center  ">
+      <section className="relative w-full min-h-[85vh] bg-primary flex items-center justify-center  ">
         {/* Background image */}
         <div className="absolute  inset-0 z-0">
           <Image
@@ -169,9 +169,9 @@ export default function ServicesPage() {
 
               {/* Text */}
               <div className="w-full md:w-1/2 flex items-center justify-center p-6">
-                <div className="w-full max-w-[450px] space-y-4 text-center md:text-left">
+                <div className="w-full max-w-[450px] space-y-6 py-6 text-center md:text-left">
                   <CardHeader className="space-y-2 p-0">
-                    <CardTitle className="text-xl md:text-2xl">
+                    <CardTitle className="text-2xl">
                       {service.title}
                     </CardTitle>
                     <CardDescription>{service.subtitle}</CardDescription>

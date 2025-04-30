@@ -102,7 +102,8 @@ export default async function HomePage() {
               </div>
 
               {/* Buttons */}
-              <div className="relative z-10 flex flex-col gap-4 jusitfy-center items-center min-[400px]:flex-row ">
+              <div className="relative z-10 flex flex-col gap-4   sm:flex-row ">
+                
                 <Link href="/contact">
                   <Button className=" w-fit">Prendre rendez-vous</Button>
                 </Link>
@@ -119,7 +120,7 @@ export default async function HomePage() {
         </div>
       </section>
 
-      <section className="w-full py-12 md:py-16 lg:py-20">
+      <section className="w-full py-16 lg:py-20">
         <div className="container px-4 md:px-6">
           <div className="flex flex-col text-primary items-center justify-center  space-y-4 text-center">
             <div className="space-y-4 max-w-3xl mx-auto  ">
@@ -194,7 +195,7 @@ export default async function HomePage() {
       </section>
 
       {/* Application Domains Section */}
-      <section className="bg-primary w-full px-4 md:px-6 py-12 md:py-16 lg:py-20 text-center">
+      <section className="bg-primary w-full px-4 md:px-6 py-16 lg:py-20 text-center">
         <div className="flex flex-col max-w-3xl mx-auto items-center justify-center  space-y-4">
           <h2 className="text-secondary">Mes domaines d&apos;expertise </h2>
           <h4 className="text-secondary">
@@ -202,7 +203,7 @@ export default async function HomePage() {
             transformer et développer l&apos;art d&apos;habiter.
           </h4>
         </div>
-        <div className="mx-auto grid  max-w-5xl grid-cols-1 gap-6 md:gap-12 xl:gap-20 py-6 md:py-12 md:grid-cols-2 ">
+        <div className="mx-auto grid  max-w-5xl grid-cols-1 gap-6 md:gap-12 xl:gap-20 py-12 md:grid-cols-2 ">
 
      
           {applicationDomains.map((domain, index) => (
@@ -235,7 +236,7 @@ export default async function HomePage() {
       <div className="w-full">
         <Card
           bgColor="bg-secondary"
-          className="flex flex-col md:flex-row min-h-[85vh]"
+          className="flex flex-col md:flex-row md:min-h-[85vh]"
         >
           {/* Image on the Left */}
           <div className="relative w-full md:w-1/2 aspect-square md:aspect-auto h-64 md:h-auto">
@@ -251,7 +252,7 @@ export default async function HomePage() {
             <div className="w-full md:max-w-xl space-y-4 text-center md:text-left">
               <CardContent className="p-0 space-y-4">
                 <div className="w-full md:max-w-xl text-left">
-                  <div className="flex flex-col justify-center my-6 space-y-4">
+                  <div className="flex flex-col justify-center my-8 space-y-4">
                     <div className="space-y-2">
                       <h2 className="text-primary">À Propos de Moi</h2>
                       <h3 className="text-primary">

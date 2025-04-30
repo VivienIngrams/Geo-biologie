@@ -15,7 +15,7 @@ export default function GeobiologiePage() {
   return (
     <div className="flex flex-col items-center ">
       {/* Hero Section */}
-      <section className="relative w-full min-h-[90vh] flex items-center justify-center xl:mx-20">
+      <section className="relative w-full bg-primary min-h-[90vh] flex items-center justify-center xl:mx-20">
         {/* Background image */}
         <div className="absolute inset-0 z-0">
           <Image
@@ -29,7 +29,7 @@ export default function GeobiologiePage() {
 
         {/* Foreground content */}
         <div className="relative z-10 container mx-auto px-4 grid gap-6 md:grid-cols-2 lg:grid-cols-3 items-center">
-          <div className="relative flex flex-col justify-center p-4 space-y-6 lg:col-span-2">
+          <div className="relative flex flex-col justify-center space-y-6 lg:col-span-2">
             {/* Blurred background layer */}
             <div className="absolute inset-0 z-0 blur-mask rounded-lg" />
 
@@ -50,15 +50,13 @@ export default function GeobiologiePage() {
       <div className="w-full">
         <Card
           bgColor="bg-secondary"
-          className="flex flex-col md:flex-row min-h-[85vh]"
+          className="flex flex-col md:flex-row md:min-h-[85vh]"
         >
           <div className="w-full md:w-1/2 flex items-center justify-center p-6">
             <div className="w-full md:max-w-xl space-y-4 text-center md:text-left py-4">
               <CardHeader className="space-y-2 p-0">
-                <CardTitle className="text-2xl text-primary">
-                  Qu’est-ce que la géobiologie ?
-                </CardTitle>
-                <CardDescription className="text-primary text-lg leading-snug">
+             
+                <CardDescription className="text-primary text-lg font-semibold  leading-snug">
                   La géobiologie est l’étude des interactions entre notre
                   environnement et notre bien-être, dans une approche à la fois
                   scientifique et énergétique.
@@ -198,7 +196,7 @@ export default function GeobiologiePage() {
       <div className="w-full">
         <Card
           bgColor="bg-secondary"
-          className="flex flex-col md:flex-row min-h-[90vh]"
+          className="flex flex-col md:flex-row md:min-h-[90vh]"
         >
           {/* Image */}
           <div className="relative w-full md:w-1/2 aspect-square md:aspect-auto h-64 md:h-auto">

@@ -51,7 +51,7 @@ export default function AboutPage() {
   return (
     <div className="flex flex-col items-center">
       {/* Hero Section */}
-      <section className="relative w-full min-h-[90vh] flex items-center justify-center xl:mx-20">
+      <section className="relative w-full min-h-[90vh] bg-primary flex items-center justify-center xl:mx-20">
         {/* Background image */}
         <div className="absolute inset-0 z-0">
           <Image
@@ -62,7 +62,7 @@ export default function AboutPage() {
             className=""
           />
         </div>
-        <div className="absolute inset-0 z-0 bg-black opacity-20" />
+
 
         {/* Foreground content */}
         <div className="relative z-10 container mx-auto px-4 text-secondary">
@@ -89,19 +89,9 @@ export default function AboutPage() {
 <div className="w-full">
   <Card
     bgColor="bg-secondary"
-    className="flex flex-col md:flex-row min-h-[85vh]"
+    className="flex flex-col md:flex-row md:min-h-[85vh]"
   >
-    
-    {/* Image Column */}
-    <div className="relative w-full md:w-1/2 aspect-square md:aspect-auto h-64 md:h-auto">
-      <Image
-        src="/JoelleDebout.jpg"
-        alt="Joëlle Villegas"
-        layout="fill"
-        className="object-cover"
-      />
-    </div>
-    {/* Text Column */}
+        {/* Text Column */}
     <div className="w-full md:w-1/2 flex items-center justify-center p-6">
       <div className="w-full md:max-w-xl space-y-4 text-center md:text-left">
         <CardHeader className="space-y-2 p-0">
@@ -137,7 +127,15 @@ export default function AboutPage() {
         </CardContent>
       </div>
     </div>
-
+ {/* Image Column */}
+ <div className="relative w-full md:w-1/2 aspect-square md:aspect-auto h-64 md:h-auto">
+      <Image
+        src="/JoelleDebout.jpg"
+        alt="Joëlle Villegas"
+        layout="fill"
+        className="object-cover"
+      />
+    </div>
   </Card>
 </div>
 
@@ -157,9 +155,11 @@ export default function AboutPage() {
               {competences.map((item, index) => (
                 <div
                   key={index}
-                  className="flex items-start space-x-3 hover:bg-muted/10 p-2 rounded-md transition"
+                  className="flex items-start space-x-3 hover:bg-muted/10 p-2  transition"
                 >
-                 <Check className="h-6 w-6 text-secondary" />
+                <div className="flex-shrink-0 pt-1">
+                    <Check className="h-6 w-6 text-secondary" />
+                  </div>
                   <p className="text-secondary">{item}</p>
                 </div>
               ))}
@@ -182,7 +182,7 @@ export default function AboutPage() {
             {charterArticles.map((article, index) => (
               <Card key={index} bgColor="bg-secondary">
                
-                  <CardTitle className='py-4 md:px-6'> {article.title}</CardTitle>
+                  <CardTitle className='py-4 '> {article.title}</CardTitle>
               
                 <CardContent>
                   {article.content}

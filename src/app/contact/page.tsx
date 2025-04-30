@@ -22,7 +22,7 @@ export default function ContactPage() {
           <div className="my-4 mx-auto max-w-[100px] border-b border-primary" />
         </div>
 
-        <div className=" px-4 mx-auto text-center grid text-secondary max-w-5xl grid-cols-1 gap-6 md:gap-12 xl:gap-20 py-6 md:grid-cols-2 lg:grid-cols-3">
+        <div className=" px-12 mx-auto text-center grid text-secondary max-w-5xl grid-cols-1 gap-6 md:gap-12 xl:gap-20 py-6 md:grid-cols-2 lg:grid-cols-3">
           <Card bgColor="bg-secondary">
             <CardHeader>
               <div className="flex justify-center items-center">

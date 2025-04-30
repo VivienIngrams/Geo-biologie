@@ -63,7 +63,7 @@ const CardContent = React.forwardRef<
   HTMLDivElement,
   React.HTMLAttributes<HTMLDivElement> & { bgColor?: string }
 >(({ className, bgColor, ...props }, ref) => (
-  <div ref={ref} className={cn("md:px-4 -mt-2 leading-snug", getTextColorForBg(bgColor), className)} {...props} />
+  <div ref={ref} className={cn(" -mt-2 leading-snug", getTextColorForBg(bgColor), className)} {...props} />
 ))
 CardContent.displayName = "CardContent"
 
