@@ -68,16 +68,17 @@ export default function AboutPage() {
         <div className="relative z-10 container mx-auto px-4 text-secondary">
           <div className="grid gap-6 lg:grid-cols-2 items-center">
             <div className="relative flex flex-col justify-center p-4 space-y-6">
+              <div className='relative w-fit'>
               {/* Blurred background layer */}
               <div className="absolute inset-0 z-0 blur-mask" />
 
               {/* Foreground text content */}
-              <div className="relative z-10">
+              <div className="relative  z-10">
                 <h1 className="text-secondary">Joëlle Villegas</h1>
                 <h3 className="text-white">
                   Géobiologue certifiée par Bioterres
                 </h3>
-              </div>
+              </div></div>
             </div>
             <div />
           </div>

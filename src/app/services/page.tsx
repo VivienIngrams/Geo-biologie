@@ -48,7 +48,7 @@ export default function ServicesPage() {
         'Harmonisation de l’espace avec des solutions adaptées',
         'Utilisation de géométrie et tracés régulateurs',
       ],
-      image: '/interieure (1).jpg',
+      image: '/interieure2.jpg',
       cta: 'En savoir plus',
     },
     {
@@ -68,7 +68,7 @@ export default function ServicesPage() {
         'Élimination des entités parasites et mémoires négatives',
         'Rééquilibrage des champs énergétiques des lieux',
       ],
-      image: '/house.jpg',
+      image: '/chapelle.jpg',
       cta: 'Prenez contact',
     },
     {
@@ -100,7 +100,7 @@ export default function ServicesPage() {
         'Solutions adaptées à vos besoins spécifiques',
         'Suivi personnalisé pour un bien-être durable',
       ],
-      image: '/mains (2).jpg',
+      image: '/mains.jpg',
       cta: 'Demandez une consultation',
     },
   ]
@@ -112,7 +112,7 @@ export default function ServicesPage() {
         {/* Background image */}
         <div className="absolute  inset-0 z-0">
           <Image
-            src="/interieure (3).jpg"
+            src="/interieure1.jpg"
             alt="Joëlle Villegas, géobiologue"
             layout="fill"
             objectFit="cover"

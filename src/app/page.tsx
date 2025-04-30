@@ -70,7 +70,7 @@ export default async function HomePage() {
 
   return (
     <div className="flex flex-col items-center">
-      <section className="relative w-full min-h-screen flex items-center justify-center  xl:mx-20">
+      <section className="relative w-full min-h-[90vh] flex items-center justify-center bg-primary xl:mx-20">
         {/* Background image */}
         <div className="absolute -top-20 inset-0 z-0">
           <Image
@@ -78,7 +78,7 @@ export default async function HomePage() {
             alt="Joëlle Villegas, géobiologue"
             layout="fill"
             objectFit="cover"
-            className="rounded-lg"
+            className=""
           />
         </div>
 
@@ -234,41 +234,52 @@ export default async function HomePage() {
         </div>
       </section>
 
-      <section className="w-full py-12 md:py-16 lg:py-24 xl:py-32  rounded-md">
-        <div className="container px-4 md:px-6">
-          <div className="grid gap-6 lg:grid-cols-2  lg:gap-12 items-center">
-            <div className="">
-              <Image
-                src="/Joelle.jpg"
-                width={500}
-                height={400}
-                alt="Joëlle Villegas"
-                className="mx-auto  overflow-hidden   object-cover"
-              />
-            </div>
-            <div className="flex flex-col justify-center space-y-4">
-              <div className="space-y-2">
-                <h2 className="text-primary">À Propos de Moi</h2>
-                <h3 className="text-primary">
-                  Joëlle Villegas, géobiologue certifiée Bioterres
-                </h3>
-              </div>
-              <h4 className="text-primary md:max-w-5xl font-medium">
-                Je mets mes compétences et mon expérience à votre service pour
-                vous aider à retrouver l&apos;harmonie dans votre environnement.
-              </h4>
-              <div className="flex flex-col gap-2 min-[400px]:flex-row">
-                <Link href="/a-propos">
-                  <Button className="w-full">
-                    En savoir plus sur mon parcours
-                    <ArrowRight className="ml-2 h-4 w-4" />
-                  </Button>
-                </Link>
-              </div>
+      <div className="w-full">
+        <Card
+          bgColor="bg-secondary"
+          className="flex flex-col md:flex-row min-h-[85vh]"
+        >
+          {/* Image on the Left */}
+          <div className="relative w-full md:w-1/2 aspect-square md:aspect-auto h-64 md:h-auto">
+            <Image
+              src="/Joelle.jpg"
+              alt="Joëlle Villegas"
+              layout="fill"
+              className="object-cover"
+            />
+          </div>
+
+          <div className="w-full md:w-1/2 flex items-center justify-center p-6">
+            <div className="w-full md:max-w-xl space-y-4 text-center md:text-left">
+              <CardContent className="p-0 space-y-4">
+                <div className="w-full md:max-w-xl space-y-6 text-center md:text-left">
+                  <div className="flex flex-col justify-center space-y-4">
+                    <div className="space-y-2">
+                      <h2 className="text-primary">À Propos de Moi</h2>
+                      <h3 className="text-primary">
+                        Joëlle Villegas, géobiologue certifiée Bioterres
+                      </h3>
+                    </div>
+                    <h4 className="text-primary md:max-w-5xl font-medium">
+                      Je mets mes compétences et mon expérience à votre service
+                      pour vous aider à retrouver l&apos;harmonie dans votre
+                      environnement.
+                    </h4>
+                    <div className="flex flex-col gap-2 min-[400px]:flex-row">
+                      <Link href="/a-propos">
+                        <Button className="w-full">
+                          En savoir plus sur mon parcours
+                          <ArrowRight className="ml-2 h-4 w-4" />
+                        </Button>
+                      </Link>
+                    </div>
+                  </div>
+                </div>
+              </CardContent>
             </div>
           </div>
-        </div>
-      </section>
+        </Card>
+      </div>
 
       <section className="w-full bg-primary py-12 md:py-16 lg:py-20">
         <div className="container px-4 md:px-6">

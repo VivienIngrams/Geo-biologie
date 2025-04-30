@@ -19,7 +19,7 @@ export default function GeobiologiePage() {
         {/* Background image */}
         <div className="absolute inset-0 z-0">
           <Image
-            src="/pierre.jpg"
+            src="/galaxie.jpg"
             alt="Joëlle Villegas, géobiologue"
             layout="fill"
             objectFit="cover"
@@ -203,7 +203,7 @@ export default function GeobiologiePage() {
           {/* Image */}
           <div className="relative w-full md:w-1/2 aspect-square md:aspect-auto h-64 md:h-auto">
             <Image
-              src="/interieure (2).jpg"
+              src="/interieure.jpg"
               alt="Joëlle Villegas"
               layout="fill"
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw"
@@ -221,7 +221,7 @@ export default function GeobiologiePage() {
                 <CardDescription className="text-primary text-lg">
                   Que ce soit pour une maison, un lieu de travail ou un projet
                   d&apos;aménagement, la géobiologie offre une approche globale
-                  et personnalisée pour :
+                  et personnalisée afin de :
                 </CardDescription>
               </CardHeader>
               <CardContent className="p-0 space-y-4">
