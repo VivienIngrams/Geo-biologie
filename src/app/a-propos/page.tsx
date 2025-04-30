@@ -62,7 +62,7 @@ export default function AboutPage() {
             className=""
           />
         </div>
-
+        <div className="absolute inset-0 z-5 bg-black/30" />
 
         {/* Foreground content */}
         <div className="relative z-10 container mx-auto px-4 text-secondary">

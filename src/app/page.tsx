@@ -90,7 +90,7 @@ export default async function HomePage() {
               <div className="absolute inset-0 z-0 blur-mask rounded-lg" />
 
               {/* Foreground text content */}
-              <div className="relative z-10 text-center md:text-left pt-8 ">
+              <div className="relative z-10 text-center sm:text-left pt-8 ">
                 <h1 className="text-secondary">Joëlle Villegas</h1>
                 <h2 className="text-secondary  text-2xl md:text-3xl xl:text-4xl tracking-wide font-quicksand font-light mb-2 md:mt-1  uppercase">
                   Géobiologue
@@ -102,15 +102,15 @@ export default async function HomePage() {
               </div>
 
               {/* Buttons */}
-              <div className="relative z-10 flex flex-col gap-4   sm:flex-row ">
-                
-                <Link href="/contact">
-                  <Button className=" w-fit">Prendre rendez-vous</Button>
-                </Link>
+              <div className="relative z-10 flex flex-col justify-center items-center gap-4 sm:flex-row sm:justify-start">
                 <Link href="/services">
                   <Button variant="accent" className="w-fit">
                     Découvrir mes services
                   </Button>
+                </Link>
+                
+                <Link href="/contact">
+                  <Button className=" w-fit">Prendre rendez-vous</Button>
                 </Link>
               </div>
             </div>
@@ -133,7 +133,7 @@ export default async function HomePage() {
                 la santé et le bien-être des êtres vivants.
               </h4>
             </div>
-            <div className="mx-auto grid text-secondary max-w-5xl grid-cols-1 gap-6 md:gap-12 xl:gap-20 py-6 md:grid-cols-2 lg:grid-cols-3">
+            <div className="mx-auto grid text-secondary max-w-5xl grid-cols-1 gap-6 md:gap-12 xl:gap-20 py-6  xl:grid-cols-3">
               <Card bgColor="bg-secondary">
                 <CardHeader>
                   <div className="flex justify-center items-center">
@@ -236,7 +236,7 @@ export default async function HomePage() {
       <div className="w-full">
         <Card
           bgColor="bg-secondary"
-          className="flex flex-col md:flex-row md:min-h-[85vh]"
+          className="flex flex-col md:flex-row md:min-h-[75vh]"
         >
           {/* Image on the Left */}
           <div className="relative w-full md:w-1/2 aspect-square md:aspect-auto h-64 md:h-auto">

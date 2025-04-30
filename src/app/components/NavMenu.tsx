@@ -32,16 +32,16 @@ export default function NavMenu() {
               alt="Géobiologie"
               className="overflow-hidden h-10 w-10 border-primary/30 border-[1px] ml-2 object-cover max-w-full"
             />
-            <span className="text-primary font-spectral font-medium tracking-tighter text-xl">Le Chemin du Vivant</span>
+            <div className="text-primary text-center font-spectral font-medium tracking-tighter text-xl">Le Chemin du Vivant</div>
           </Link>
         </div>
 
-        <nav className="hidden md:flex md:gap-6">
+        <nav className="hidden lg:flex md:gap-6">
           {navItems.map((item, index) => (
             <Link
               key={index}
               href={item.href}
-              className="text-base tracking-wide font-medium transition-colors text-primary hover:text-black"
+              className="text-base tracking-wide text-center font-medium transition-colors text-primary hover:text-black"
             >
               {item.label}
             </Link>
@@ -50,7 +50,7 @@ export default function NavMenu() {
 
         <div
           
-          className="mr-2 md:hidden"
+          className="mr-2 lg:hidden"
           onClick={() => setIsOpen(!isOpen)}
         >
           <span className="sr-only">Menu</span>

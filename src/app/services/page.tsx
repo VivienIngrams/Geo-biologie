@@ -108,7 +108,7 @@ export default function ServicesPage() {
   return (
     <div className="flex flex-col items-center ">
       {/* Hero Section */}
-      <section className="relative w-full min-h-[85vh] bg-primary flex items-center justify-center  ">
+      <section className="relative w-full min-h-[90vh] bg-primary flex items-center justify-center  ">
         {/* Background image */}
         <div className="absolute  inset-0 z-0">
           <Image
@@ -119,7 +119,7 @@ export default function ServicesPage() {
             className=""
           />
         </div>
-        <div className="absolute inset-0 z-5 bg-black/25" />
+        <div className="absolute inset-0 z-5 bg-black/30" />
         <div className="relative z-10 container mx-auto px-4 grid gap-6 lg:grid-cols-3 items-center">
           <div className="relative flex flex-col justify-center p-4 space-y-6 col-span-2">
             {/* Blurred background layer */}
