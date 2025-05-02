@@ -139,8 +139,8 @@ export default function ServicesPage() {
 
       {/*Section Services List */}
       <div className="w-full ">
-        <div className="bg-primary py-12 md:py-16 lg:py-20 flex flex-col text-primary items-center justify-center  space-y-4 text-center  ">
-          <h2 className="text-secondary px-2">
+        <div className="bg-primary px-4 py-16 lg:py-20 flex flex-col text-primary items-center justify-center  space-y-4 text-center  ">
+          <h2 className="text-secondary ">
             Découvrez mes domaines d’intervention
           </h2>
           <h3 className="text-secondary">
@@ -153,7 +153,7 @@ export default function ServicesPage() {
               bgColor="bg-secondary"
               className={`flex flex-col md:flex-row ${
                 index % 2 === 1 ? 'md:flex-row-reverse' : ''
-              } min-h-[70vh]`}
+              } md:min-h-[70vh]`}
               key={index}
             >
               {/* Image */}

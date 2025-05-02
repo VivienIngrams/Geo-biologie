@@ -210,7 +210,7 @@ export default function GeobiologiePage() {
           </div>
 
           {/* Text */}
-          <div className="w-full md:w-1/2 flex items-center justify-center p-6">
+          <div className="w-full md:w-1/2 flex items-center justify-center p-6 md:p-12">
             <div className="w-full space-y-4 text-center md:text-left py-4">
               <CardHeader className="space-y-4 p-0">
                 <CardTitle className="text-2xl text-primary">

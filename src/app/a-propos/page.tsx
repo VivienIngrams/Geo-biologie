@@ -92,31 +92,31 @@ export default function AboutPage() {
     className="flex flex-col md:flex-row md:min-h-[85vh]"
   >
         {/* Text Column */}
-    <div className="w-full md:w-1/2 flex items-center justify-center p-6">
-      <div className="w-full md:max-w-xl space-y-4 text-center md:text-left">
+    <div className="w-full md:w-1/2 flex items-center justify-center p-6  my-6">
+      <div className="w-full md:max-w-xl space-y-4 ">
         <CardHeader className="space-y-2 p-0">
-          <CardTitle className="text-xl md:text-2xl text-primary">
+          <CardTitle className="text-xl md:text-2xl text-center md:text-left text-primary">
             Mon Parcours
           </CardTitle>
         </CardHeader>
 
-        <CardContent className="p-0 space-y-4">
-          <ul className="space-y-2 mb-6">
-            <li className="flex items-start gap-2">
+        <CardContent className="p-0">
+          <ul className="space-y-4 ">
+            <li className="flex items-start">
               <span>
                 Passionnée par les liens entre l’être humain et son
                 environnement, j’ai suivi une formation rigoureuse auprès de{' '}
                 <strong>Bioterres</strong> pour devenir géobiologue certifiée.
               </span>
             </li>
-            <li className="flex items-start gap-2">
+            <li className="flex items-start">
               <span>
                 Ma démarche repose sur une approche <strong>holistique</strong>,
                 tenant compte de l’individu dans sa globalité et dans son
                 interaction avec le monde qui l’entoure.
               </span>
             </li>
-            <li className="flex items-start gap-2">
+            <li className="flex items-start">
               <span>
                 Aujourd’hui, je mets mes compétences à votre service pour{' '}
                 <strong>favoriser l’harmonie</strong> dans votre environnement
