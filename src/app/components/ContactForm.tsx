@@ -6,7 +6,7 @@ import { Card } from '../components/ui/card'
 
 const ContactForm: React.FC = () => {
   const [success, setSuccess] = useState(false)
-
+  const formRef = useRef<HTMLFormElement>(null)
 
   useEffect(() => {
     window.scrollTo(0, 0)
@@ -15,9 +15,8 @@ const ContactForm: React.FC = () => {
   async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault()
     setSuccess(false)
-  
 
-    const formData = new FormData(event.currentTarget)
+    const formData = new FormData(formRef.current!)
 
     try {
       const response = await fetch('/api', {
@@ -37,7 +36,7 @@ const ContactForm: React.FC = () => {
       if (!response.ok) throw new Error(`Form submission failed: ${response.status}`)
 
       setSuccess(true)
-      event.currentTarget.reset()
+      formRef.current?.reset()
     } catch (error) {
       console.error('Error submitting form:', error)
       alert('Une erreur est survenue lors de l\'envoi du formulaire. Veuillez réessayer plus tard.')    
@@ -47,12 +46,13 @@ const ContactForm: React.FC = () => {
   return (
     <Card bgColor='bg-secondary' className='p-4'>
       {success && (
-        <div className="mb-4 p-3 rounded   text-center font-semibold">
+        <div className="mb-4 p-3 rounded text-center font-semibold">
           Votre message a bien été envoyé. Merci pour votre prise de contact !
         </div>
       )}
      
       <form
+        ref={formRef}
         method="post"
         action="/api"
         encType="multipart/form-data"
