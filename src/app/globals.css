@@ -4,7 +4,7 @@
 
 html {
   font-weight: 400;
-  color: #90994B;
+  color: hsl(66, 39%, 35%);
   font-family: 'Quicksand', sans-serif;
 }
 
@@ -51,7 +51,7 @@ section {
     --card-foreground: 0 0% 3.9%;
     --popover: 0 0% 100%;
     --popover-foreground: 0 0% 3.9%;
-    --primary: 67 34% 45%;
+    --primary: 66 39% 35%;
     --primary-foreground: 0 0% 98%;
     --secondary: 74 68% 95%;
     --secondary-foreground: 0 0% 9%;

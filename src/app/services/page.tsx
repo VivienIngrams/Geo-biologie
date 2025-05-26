@@ -49,7 +49,7 @@ export default function ServicesPage() {
         'Utilisation de géométrie et tracés régulateurs',
       ],
       image: '/interieure2.jpg',
-      cta: 'En savoir plus',
+      cta: 'Contactez-moi',
     },
     {
       title: 'Radiesthésie',
@@ -79,7 +79,7 @@ export default function ServicesPage() {
         'Harmonisation des lieux de vie et élevages pour améliorer leur bien-être',
       ],
       image: '/brebis.jpg',
-      cta: 'En savoir plus',
+      cta: 'Demandez une consultation',
     },
     {
       title: 'Espaces verts et exploitations agricoles',
@@ -92,6 +92,18 @@ export default function ServicesPage() {
       image: '/mais.jpg',
       cta: 'Contactez-moi',
     },
+   {
+  title: 'Implantation des éoliennes',
+  subtitle: 'Analyse énergétique des sites d’implantation',
+  features: [
+    'Évaluation des caractéristiques énergétiques du sol avant implantation',
+    'Identification des zones de perturbations géobiologiques',
+    'Recommandations pour limiter l’impact sur les troupeaux et le voisinage',
+    'Accompagnement pour une meilleure acceptation locale des projets',
+  ],
+  image: '/eoliennes.jpg',
+  cta: 'Prenez contact',
+},
     {
       title: 'Conseils personnalisés',
       subtitle: 'Accompagnement sur mesure',
@@ -161,7 +173,7 @@ export default function ServicesPage() {
                 <Image
                   src={service.image}
                   alt={service.title}
-                  layout="fill"
+                  fill
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw"
                   className="object-cover"
                 />

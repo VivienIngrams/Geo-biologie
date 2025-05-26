@@ -41,7 +41,7 @@ export default function NavMenu() {
             <Link
               key={index}
               href={item.href}
-              className="text-base tracking-wide text-center font-medium transition-colors text-primary hover:text-black"
+              className="text-base tracking-wide text-center font-semibold transition-colors text-primary hover:text-black"
             >
               {item.label}
             </Link>

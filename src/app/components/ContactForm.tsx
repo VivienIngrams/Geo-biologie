@@ -9,27 +9,17 @@ import { Card } from '../components/ui/card'
 const ContactForm: React.FC = () => {
   const siteKey = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY || ''
   const recaptchaRef = useRef<ReCAPTCHA>(null)
-  const [isVerified, setIsVerified] = useState(false)
+
 
   useEffect(() => {
     window.scrollTo(0, 0)
   }, [])
   console.log(siteKey)
 
-  const handleCaptchaChange = (token: string | null) => {
-    if (token) setIsVerified(true)
-    else setIsVerified(false)
-  }
-
-  const handleCaptchaExpired = () => setIsVerified(false)
-
   async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault()
 
-    if (!isVerified) {
-      alert('Recaptcha error')
-      return
-    }
+ 
 
     const formData = new FormData(event.currentTarget)
     const token = recaptchaRef.current?.getValue()
@@ -141,7 +131,7 @@ const ContactForm: React.FC = () => {
         <div className="py-4 flex md:items-start md:justify-end">
           <Button
             type="submit"
-            disabled={!isVerified}
+            
           >
             Envoyer
           </Button>

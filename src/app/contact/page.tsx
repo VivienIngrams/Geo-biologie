@@ -28,11 +28,11 @@ export default function ContactPage() {
               <div className="flex justify-center items-center">
                 <Phone className="h-10 w-10 mb-4" />
               </div>
-              <CardTitle>Téléphone</CardTitle>
-              <CardDescription>Appelez-moi directement</CardDescription>
+              <CardDescription>Téléphone</CardDescription>
+              <CardTitle className='mt-2 text-sm'>+33 6 03 91 57 34</CardTitle>
             </CardHeader>
             <CardContent>
-              <p>+33 6 03 91 57 34</p>
+              <p>Appelez-moi directement</p>
             </CardContent>
           </Card>
           <Card bgColor="bg-secondary">
@@ -40,11 +40,11 @@ export default function ContactPage() {
               <div className="flex justify-center items-center">
                 <Mail className="h-10 w-10 mb-4" />
               </div>
-              <CardTitle>Email</CardTitle>
-              <CardDescription>Écrivez-moi</CardDescription>
+              <CardDescription>E-mail</CardDescription>
+              <CardTitle className='mt-2 text-sm'>jo.villegas2a@gmail.com</CardTitle>
             </CardHeader>
             <CardContent>
-              <p>jo.villegas2a@gmail.com</p>
+              <p>Écrivez-moi </p>
             </CardContent>
           </Card>
           <Card bgColor="bg-secondary">
@@ -52,8 +52,8 @@ export default function ContactPage() {
               <div className="flex justify-center items-center">
                 <MapPin className="h-10 w-10 mb-4" />
               </div>
-              <CardTitle>Localisation</CardTitle>
-              <CardDescription>Région/Ville/département</CardDescription>
+              <CardDescription>Localisation</CardDescription>
+              <CardTitle className='mt-2 text-sm'>La Corse</CardTitle>
             </CardHeader>
             <CardContent>
               <p>Déplacements possibles dans toute la France et le monde</p>

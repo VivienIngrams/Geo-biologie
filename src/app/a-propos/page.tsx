@@ -18,9 +18,8 @@ export default function AboutPage() {
     'Thérapie avec la trame de Jérémie Guerry',
     'Le langage des oiseaux avec Jérémie Guerry',
     'La Kabbale avec Jean Haab',
-    "L'alchimie avec Jean Haab",
     'Les plantes, huiles essentielles, gemmothérapie... Christian Escriva (méthode Goethe)',
-    "L'alchimie, thérapie au diapason... Tony Ceron",
+    "La thérapie au diapason... Tony Ceron",
     'Homéopathie avec Alain Launay',
   ]
 
