@@ -22,14 +22,14 @@ export default function ContactPage() {
           <div className="my-4 mx-auto max-w-[100px] border-b border-primary" />
         </div>
 
-        <div className=" px-12 mx-auto text-center grid text-secondary max-w-5xl grid-cols-1 gap-6 md:gap-12 xl:gap-20 py-6 md:grid-cols-2 lg:grid-cols-3">
+        <div className=" px-4 mx-auto text-center grid text-secondary max-w-6xl grid-cols-1 gap-6  py-6 md:grid-cols-2 lg:grid-cols-3">
           <Card bgColor="bg-secondary">
             <CardHeader>
               <div className="flex justify-center items-center">
                 <Phone className="h-10 w-10 mb-4" />
               </div>
               <CardDescription>Téléphone</CardDescription>
-              <CardTitle className='mt-2 text-sm'>+33 6 03 91 57 34</CardTitle>
+              <CardTitle className='pt-2 '><h3 className=' font-semibold text-primary'>+33 6 03 91 57 34</h3> </CardTitle>
             </CardHeader>
             <CardContent>
               <p>Appelez-moi directement</p>
@@ -41,7 +41,7 @@ export default function ContactPage() {
                 <Mail className="h-10 w-10 mb-4" />
               </div>
               <CardDescription>E-mail</CardDescription>
-              <CardTitle className='mt-2 text-sm'>jo.villegas2a@gmail.com</CardTitle>
+                <CardTitle className='pt-2 '><h3 className=' font-semibold text-primary'>jo.villegas2a@gmail.com</h3> </CardTitle>
             </CardHeader>
             <CardContent>
               <p>Écrivez-moi </p>
@@ -53,7 +53,7 @@ export default function ContactPage() {
                 <MapPin className="h-10 w-10 mb-4" />
               </div>
               <CardDescription>Localisation</CardDescription>
-              <CardTitle className='mt-2 text-sm'>La Corse</CardTitle>
+                <CardTitle className='pt-2 '><h3 className=' font-semibold text-primary'>La Corse </h3></CardTitle>
             </CardHeader>
             <CardContent>
               <p>Déplacements possibles dans toute la France et le monde</p>
