@@ -129,7 +129,7 @@ export default function AboutPage() {
  {/* Image Column */}
  <div className="relative w-full md:w-1/2 aspect-square md:aspect-auto h-64 md:h-auto">
       <Image
-        src="/JoelleDebout.jpg"
+        src="/Joelle.jpg"
         alt="Joëlle Villegas"
         layout="fill"
         className="object-cover"
